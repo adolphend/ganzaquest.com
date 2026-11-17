@@ -1,0 +1,4 @@
+# Runtime files created on the server
+app/storage/*
+!app/storage/.htaccess
+!app/storage/.gitkeep
