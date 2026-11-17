@@ -1,6 +1,6 @@
 <footer class="site-footer">
 <div class="footer-top">
-<div><a class="footer-brand" href="<?= e(url('home')) ?>">GANZA QUEST<span><?= te('brand.motto') ?></span><span class="footer-owner"><?= te('brand.owner') ?></span></a></div>
+<div><a class="footer-brand" href="<?= e(url('home')) ?>"><span class="footer-logo"><?= nciata_mark(30, '#3975ed') ?>NCIATA</span><span><?= te('brand.motto') ?></span></a></div>
 <nav aria-label="<?= te('a11y.footer_nav') ?>">
 <?php foreach (array_slice(cfg('nav'), 1) as $item): ?>
 <a href="<?= e(url($item)) ?>"><?= te('nav.' . $item) ?></a>

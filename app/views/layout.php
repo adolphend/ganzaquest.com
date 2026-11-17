@@ -42,7 +42,9 @@ $canonical = $is404 ? null : absolute_url(url($page));
 <meta property="og:url" content="<?= e($canonical) ?>">
 <?php endif; ?>
 <meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="<?= e(asset('img/nciata-mark.svg')) ?>" type="image/svg+xml">
 <link rel="icon" href="<?= e(asset('img/favicon.png')) ?>" type="image/png">
+<link rel="apple-touch-icon" href="<?= e(asset('img/favicon.png')) ?>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap">

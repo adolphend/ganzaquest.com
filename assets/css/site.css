@@ -32,3 +32,12 @@
 @media(max-width:1100px){.header-cta{display:none}}
 @media(max-width:760px){.header-actions{display:none}}
 .brand small,.hero-bottom>span,.meaning>span{text-transform:uppercase}
+/* NCIATA logo */
+.nciata-mark{display:block;flex-shrink:0}
+.brand .brand-mark{padding:0;color:var(--navy);font-size:inherit;letter-spacing:0}
+.brand-word{letter-spacing:.2em}
+.brand-word small{letter-spacing:.2em}
+.footer-brand .footer-logo{display:flex;align-items:center;gap:12px;margin:0;font-size:17px;font-weight:800;letter-spacing:.2em;color:var(--navy)}
+.footer-brand .footer-logo+span{margin-top:16px}
+.hero-orbit span{padding:0}
+@media(max-width:760px){.brand .brand-mark{width:36px;height:40px}}

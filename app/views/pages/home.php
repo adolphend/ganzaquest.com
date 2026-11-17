@@ -1,6 +1,6 @@
 <section class="hero">
 <div class="hero-grid" aria-hidden="true"></div>
-<div class="hero-orbit" aria-hidden="true"><div></div><div></div><span>gq</span></div>
+<div class="hero-orbit" aria-hidden="true"><div></div><div></div><span><?= nciata_mark(190) ?></span></div>
 <div class="hero-content">
 <p class="eyebrow"><span class="status-dot"></span> <?= te('hero.eyebrow') ?></p>
 <h1><?= te('hero.title_1') ?><br><?= te('hero.title_2') ?> <span><?= te('hero.title_2_em') ?></span></h1>

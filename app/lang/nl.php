@@ -13,7 +13,7 @@ return [
 
     'a11y' => [
         'skip' => 'Naar de inhoud',
-        'home' => 'GanzaQuest, home',
+        'home' => 'NCIATA Ltd, home',
         'main_nav' => 'Hoofdnavigatie',
         'mobile_nav' => 'Mobiele navigatie',
         'footer_nav' => 'Navigatie in de voettekst',
