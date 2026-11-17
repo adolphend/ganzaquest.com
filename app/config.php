@@ -16,6 +16,12 @@ return [
     // Maximum contact-form messages per visitor per hour.
     'contact_rate_limit' => 5,
 
+    // Search engine verification codes (optional). Paste only the code from
+    // Google Search Console ("HTML tag" method) and Bing Webmaster Tools ("Meta tag").
+    // Leave empty if you verify through DNS or import Google into Bing instead.
+    'google_site_verification' => '',
+    'bing_site_verification' => '',
+
     // Image shown when a page is shared on social media.
     'social_image' => 'https://images.unsplash.com/photo-1675050757561-741bd739bc06?w=1344&h=768&fit=crop&q=80',
 

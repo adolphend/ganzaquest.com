@@ -1,18 +1,23 @@
-<section class="about-content section-rail">
+<section class="section">
+<div class="tile-grid">
 <?php foreach (t('about.meanings') as $meaning): ?>
-<div class="meaning">
-<span><?= e($meaning['tag']) ?></span>
-<h2><?= e($meaning['title']) ?></h2>
-<p><?= e($meaning['text']) ?></p>
-</div>
+<article class="tile">
+<p class="tile-tag"><?= e($meaning['tag']) ?></p>
+<h2 class="tile-headline"><?= e($meaning['title']) ?></h2>
+<p class="tile-text"><?= e($meaning['text']) ?></p>
+</article>
 <?php endforeach; ?>
-<div class="about-manifesto">
-<h2><?= tbr('about.manifesto_title') ?></h2>
-<p><?= te('about.manifesto_text') ?></p>
+<article class="tile tile-dark tile-wide">
+<h2 class="tile-headline"><?= tbr('about.manifesto_title') ?></h2>
+<p class="tile-text"><?= te('about.manifesto_text') ?></p>
+</article>
+<article class="tile tile-wide tile-feature">
+<div class="tile-feature-copy">
+<p class="tile-tag"><?= te('about.origin_tag') ?></p>
+<h2 class="tile-headline"><?= te('about.origin_title') ?></h2>
+<p class="tile-text"><?= te('about.origin_text') ?></p>
 </div>
-<div class="meaning origin">
-<span><?= te('about.origin_tag') ?></span>
-<h2><?= te('about.origin_title') ?></h2>
-<p><?= te('about.origin_text') ?></p>
+<div class="tile-feature-visual"><?= nciata_illustration(300, 'NCIATA') ?></div>
+</article>
 </div>
 </section>

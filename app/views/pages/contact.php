@@ -9,12 +9,12 @@ $errors = [
 ];
 $value = static fn(string $key): string => e($old[$key] ?? '');
 ?>
-<section class="contact-section section-rail">
+<section class="section contact-section">
 <aside>
-<p class="eyebrow dark-eyebrow"><?= te('contact.eyebrow') ?></p>
-<h2><?= te('contact.title') ?></h2>
-<p><?= te('contact.text') ?></p>
-<div class="contact-detail"><?= icon('lock', 22) ?><div><strong><?= te('contact.private_title') ?></strong><p><?= te('contact.private_text') ?></p></div></div>
+<p class="kicker"><?= te('contact.eyebrow') ?></p>
+<h2 class="headline"><?= te('contact.title') ?></h2>
+<p class="contact-text"><?= te('contact.text') ?></p>
+<div class="contact-detail"><?= icon('lock', 22, 1.6) ?><div><strong><?= te('contact.private_title') ?></strong><p><?= te('contact.private_text') ?></p></div></div>
 <p class="contact-footnote"><?= te('contact.footnote') ?></p>
 </aside>
 <form method="post" action="<?= e(url('contact')) ?>#formulario" class="contact-form" id="formulario" data-sending="<?= te('contact.sending') ?>">
@@ -35,7 +35,7 @@ $value = static fn(string $key): string => e($old[$key] ?? '');
 </label>
 <label><?= te('contact.message') ?> *<textarea name="message" required minlength="10" maxlength="5000" rows="5" placeholder="<?= te('contact.message_ph') ?>"><?= $value('message') ?></textarea></label>
 <label class="consent-label"><input type="checkbox" name="consent" value="true" required><span><?= te('contact.consent_before') ?> <a href="<?= e(url('privacy')) ?>"><?= te('contact.consent_link') ?></a> <?= te('contact.consent_after') ?> *</span></label>
-<button class="button button-blue" type="submit"><?= te('contact.submit') ?> <?= icon('arrow-up-right', 19) ?></button>
+<button class="pill" type="submit"><?= te('contact.submit') ?></button>
 <div aria-live="polite">
 <?php if (!empty($form['ok'])): ?>
 <p class="form-success"><?= icon('check-circle', 20) ?> <?= te('contact.success') ?></p>

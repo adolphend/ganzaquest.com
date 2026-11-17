@@ -1,7 +1,7 @@
-<section class="project-cta">
-<div>
-<p class="eyebrow"><?= te('cta.eyebrow') ?></p>
-<h2><?= tbr('cta.title') ?></h2>
+<section class="section">
+<div class="cta-tile">
+<p class="kicker"><?= te('cta.eyebrow') ?></p>
+<h2 class="headline"><?= tbr('cta.title') ?></h2>
+<a class="pill" href="<?= e(url('contact')) ?>"><?= te('cta.button') ?></a>
 </div>
-<a href="<?= e(url('contact')) ?>" class="button button-white"><?= te('cta.button') ?> <?= icon('arrow-up-right', 20) ?></a>
 </section>

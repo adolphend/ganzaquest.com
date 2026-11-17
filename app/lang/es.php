@@ -5,10 +5,29 @@ return [
     'locale' => 'es_ES',
 
     'meta' => [
-        'home_title' => 'GanzaQuest | Tecnología con propósito',
-        'home_description' => 'Convertimos ideas en soluciones digitales: aplicaciones móviles, IA y automatización, formación en ciberseguridad y software a medida. Hablemos.',
+        'home_title' => 'Desarrollo de apps, IA y ciberseguridad | GanzaQuest',
+        'home_description' => 'GanzaQuest (NCIATA Ltd): desarrollo de aplicaciones móviles iOS y Android, inteligencia artificial y automatización, formación en ciberseguridad y software a medida.',
         'not_found_title' => 'Página no encontrada | GanzaQuest',
         'not_found_description' => 'La página solicitada no está disponible.',
+    ],
+
+    'seo_titles' => [
+        'about' => 'Sobre nosotros: GanzaQuest y NCIATA Ltd',
+        'services' => 'Desarrollo de apps, IA, ciberseguridad y software a medida',
+        'products' => 'Productos digitales y soluciones de software',
+        'blog' => 'Blog de tecnología, IA y ciberseguridad',
+        'contact' => 'Contacto: cuéntanos tu proyecto digital',
+        'privacy' => 'Privacidad',
+    ],
+
+    'faq' => [
+        'title' => 'Preguntas frecuentes',
+        'items' => [
+            ['q' => '¿Qué servicios ofrece GanzaQuest?', 'a' => 'Desarrollo de aplicaciones móviles para iOS y Android, inteligencia artificial y automatización de procesos, formación en ciberseguridad para particulares y empresas, y desarrollo de software a medida con consultoría tecnológica.'],
+            ['q' => '¿Quién está detrás de GanzaQuest?', 'a' => 'GanzaQuest es una marca de NCIATA Ltd, empresa tecnológica registrada en Ruanda.'],
+            ['q' => '¿Trabajáis con particulares o solo con empresas?', 'a' => 'Con ambos. Puedes contactarnos como particular con una idea o en nombre de tu empresa para mejorar un proceso o crear un nuevo producto digital.'],
+            ['q' => '¿Cómo empiezo un proyecto con GanzaQuest?', 'a' => 'Cuéntanos tu idea o tu reto a través del formulario de contacto. Te responderemos para entender lo que necesitas y proponerte el siguiente paso.'],
+        ],
     ],
 
     'a11y' => [

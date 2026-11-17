@@ -5,10 +5,29 @@ return [
     'locale' => 'de_DE',
 
     'meta' => [
-        'home_title' => 'GanzaQuest | Technologie mit Sinn',
-        'home_description' => 'Wir verwandeln Ideen in digitale Lösungen: mobile Apps, KI und Automatisierung, Schulungen zur Cybersicherheit und individuelle Software. Sprechen wir darüber.',
+        'home_title' => 'App-Entwicklung, KI und Cybersicherheit | GanzaQuest',
+        'home_description' => 'GanzaQuest (NCIATA Ltd): Entwicklung mobiler Apps für iOS und Android, künstliche Intelligenz und Automatisierung, Schulungen zur Cybersicherheit und individuelle Software.',
         'not_found_title' => 'Seite nicht gefunden | GanzaQuest',
         'not_found_description' => 'Die angeforderte Seite ist nicht verfügbar.',
+    ],
+
+    'seo_titles' => [
+        'about' => 'Über uns: GanzaQuest und NCIATA Ltd',
+        'services' => 'App-Entwicklung, KI, Cybersicherheit und individuelle Software',
+        'products' => 'Digitale Produkte und Softwarelösungen',
+        'blog' => 'Blog zu Technologie, KI und Cybersicherheit',
+        'contact' => 'Kontakt: Erzählen Sie uns von Ihrem Projekt',
+        'privacy' => 'Datenschutz',
+    ],
+
+    'faq' => [
+        'title' => 'Häufige Fragen',
+        'items' => [
+            ['q' => 'Welche Leistungen bietet GanzaQuest an?', 'a' => 'Entwicklung mobiler Apps für iOS und Android, künstliche Intelligenz und Prozessautomatisierung, Schulungen zur Cybersicherheit für Privatpersonen und Unternehmen sowie individuelle Softwareentwicklung und Technologieberatung.'],
+            ['q' => 'Wer steht hinter GanzaQuest?', 'a' => 'GanzaQuest ist eine Marke der NCIATA Ltd, eines in Ruanda eingetragenen Technologieunternehmens.'],
+            ['q' => 'Arbeiten Sie mit Privatpersonen oder nur mit Unternehmen?', 'a' => 'Mit beiden. Sie können uns als Privatperson mit einer Idee kontaktieren oder im Namen Ihres Unternehmens, um einen Prozess zu verbessern oder ein neues digitales Produkt zu entwickeln.'],
+            ['q' => 'Wie starte ich ein Projekt mit GanzaQuest?', 'a' => 'Erzählen Sie uns über das Kontaktformular von Ihrer Idee oder Herausforderung. Wir melden uns, um Ihre Anforderungen zu verstehen und den nächsten Schritt vorzuschlagen.'],
+        ],
     ],
 
     'a11y' => [

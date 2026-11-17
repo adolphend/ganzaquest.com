@@ -5,10 +5,29 @@ return [
     'locale' => 'fr_FR',
 
     'meta' => [
-        'home_title' => 'GanzaQuest | Une technologie qui a du sens',
-        'home_description' => 'Nous transformons les idées en solutions numériques : applications mobiles, IA et automatisation, formation en cybersécurité et logiciels sur mesure. Parlons-en.',
+        'home_title' => 'Développement d’applications, IA et cybersécurité | GanzaQuest',
+        'home_description' => 'GanzaQuest (NCIATA Ltd) : développement d’applications mobiles iOS et Android, intelligence artificielle et automatisation, formation en cybersécurité et logiciels sur mesure.',
         'not_found_title' => 'Page introuvable | GanzaQuest',
         'not_found_description' => 'La page demandée n’est pas disponible.',
+    ],
+
+    'seo_titles' => [
+        'about' => 'À propos : GanzaQuest et NCIATA Ltd',
+        'services' => 'Applications mobiles, IA, cybersécurité et logiciels sur mesure',
+        'products' => 'Produits numériques et solutions logicielles',
+        'blog' => 'Blog technologie, IA et cybersécurité',
+        'contact' => 'Contact : parlez-nous de votre projet numérique',
+        'privacy' => 'Confidentialité',
+    ],
+
+    'faq' => [
+        'title' => 'Questions fréquentes',
+        'items' => [
+            ['q' => 'Quels services propose GanzaQuest ?', 'a' => 'Le développement d’applications mobiles iOS et Android, l’intelligence artificielle et l’automatisation des processus, la formation en cybersécurité pour les particuliers et les entreprises, ainsi que le développement de logiciels sur mesure et le conseil technologique.'],
+            ['q' => 'Qui est derrière GanzaQuest ?', 'a' => 'GanzaQuest est une marque de NCIATA Ltd, une entreprise technologique enregistrée au Rwanda.'],
+            ['q' => 'Travaillez-vous avec des particuliers ou seulement avec des entreprises ?', 'a' => 'Avec les deux. Vous pouvez nous contacter à titre personnel avec une idée, ou au nom de votre entreprise pour améliorer un processus ou créer un nouveau produit numérique.'],
+            ['q' => 'Comment démarrer un projet avec GanzaQuest ?', 'a' => 'Parlez-nous de votre idée ou de votre défi via le formulaire de contact. Nous vous répondrons pour comprendre vos besoins et vous proposer la prochaine étape.'],
+        ],
     ],
 
     'a11y' => [

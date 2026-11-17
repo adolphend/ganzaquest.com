@@ -5,10 +5,29 @@ return [
     'locale' => 'en_GB',
 
     'meta' => [
-        'home_title' => 'GanzaQuest | Technology with purpose',
-        'home_description' => 'We turn ideas into digital solutions: mobile apps, AI and automation, cybersecurity training and custom software. Let’s talk.',
+        'home_title' => 'App development, AI and cybersecurity | GanzaQuest',
+        'home_description' => 'GanzaQuest (NCIATA Ltd): iOS and Android mobile app development, artificial intelligence and automation, cybersecurity training and custom software development.',
         'not_found_title' => 'Page not found | GanzaQuest',
         'not_found_description' => 'The page you requested is not available.',
+    ],
+
+    'seo_titles' => [
+        'about' => 'About us: GanzaQuest and NCIATA Ltd',
+        'services' => 'App development, AI, cybersecurity and custom software',
+        'products' => 'Digital products and software solutions',
+        'blog' => 'Technology, AI and cybersecurity blog',
+        'contact' => 'Contact us about your digital project',
+        'privacy' => 'Privacy',
+    ],
+
+    'faq' => [
+        'title' => 'Frequently asked questions',
+        'items' => [
+            ['q' => 'What services does GanzaQuest offer?', 'a' => 'Mobile app development for iOS and Android, artificial intelligence and process automation, cybersecurity training for individuals and companies, and custom software development with technology consulting.'],
+            ['q' => 'Who is behind GanzaQuest?', 'a' => 'GanzaQuest is a brand of NCIATA Ltd, a technology company registered in Rwanda.'],
+            ['q' => 'Do you work with individuals or only with companies?', 'a' => 'Both. You can contact us as an individual with an idea, or on behalf of your company to improve a process or build a new digital product.'],
+            ['q' => 'How do I start a project with GanzaQuest?', 'a' => 'Tell us about your idea or challenge through the contact form. We will get back to you to understand what you need and suggest the next step.'],
+        ],
     ],
 
     'a11y' => [

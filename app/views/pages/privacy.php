@@ -1,4 +1,4 @@
-<section class="legal-content section-rail">
+<section class="section prose">
 <?php if (t('privacy.translation_note') !== ''): ?>
 <p class="translation-note"><?= te('privacy.translation_note') ?></p>
 <?php endif; ?>

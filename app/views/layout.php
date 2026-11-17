@@ -11,7 +11,10 @@ if ($isHome) {
     $title = t('meta.not_found_title');
     $description = t('meta.not_found_description');
 } else {
-    $title = t('nav.' . $page) . ' | GanzaQuest';
+    $title = t('seo_titles.' . $page);
+    if (!str_contains($title, 'GanzaQuest')) {
+        $title .= ' | GanzaQuest';
+    }
     $description = t('pages.' . $page . '.description');
 }
 $canonical = $is404 ? null : absolute_url(url($page));
@@ -47,13 +50,36 @@ $canonical = $is404 ? null : absolute_url(url($page));
 <link rel="apple-touch-icon" href="<?= e(asset('img/favicon.png')) ?>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap">
 <link rel="stylesheet" href="<?= e(asset('css/site.css')) ?>">
-<?php if ($isHome): ?>
-<script type="application/ld+json"><?= json_encode([
-    ['@context' => 'https://schema.org', '@type' => 'WebSite', 'name' => 'GanzaQuest', 'url' => cfg('site_url') . '/', 'inLanguage' => $LANG],
-    ['@context' => 'https://schema.org', '@type' => 'Organization', 'name' => 'GanzaQuest', 'legalName' => 'NCIATA Ltd', 'url' => cfg('site_url') . '/', 'logo' => cfg('site_url') . '/assets/img/favicon.png'],
-], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_HEX_TAG) ?></script>
+<?php
+$org = [
+    '@type' => 'Organization',
+    '@id' => cfg('site_url') . '/#organization',
+    'name' => 'NCIATA Ltd',
+    'legalName' => 'NCIATA Ltd',
+    'brand' => ['@type' => 'Brand', 'name' => 'GanzaQuest'],
+    'url' => cfg('site_url') . '/',
+    'logo' => cfg('site_url') . '/assets/img/favicon.png',
+    'address' => ['@type' => 'PostalAddress', 'addressCountry' => 'RW'],
+    'knowsLanguage' => cfg('languages'),
+    'makesOffer' => array_map(static fn($s) => ['@type' => 'Offer', 'itemOffered' => ['@type' => 'Service', 'name' => $s['title'], 'description' => $s['description']]], t('services.items')),
+];
+$graph = [$org];
+if ($isHome) {
+    $graph[] = ['@type' => 'WebSite', '@id' => cfg('site_url') . '/#website', 'name' => 'GanzaQuest', 'url' => cfg('site_url') . '/', 'inLanguage' => $LANG, 'publisher' => ['@id' => cfg('site_url') . '/#organization']];
+}
+if ($page === 'services') {
+    $graph[] = ['@type' => 'FAQPage', 'inLanguage' => $LANG, 'mainEntity' => array_map(static fn($f) => ['@type' => 'Question', 'name' => $f['q'], 'acceptedAnswer' => ['@type' => 'Answer', 'text' => $f['a']]], t('faq.items'))];
+}
+if (!$is404): ?>
+<script type="application/ld+json"><?= json_encode(['@context' => 'https://schema.org', '@graph' => $graph], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_HEX_TAG) ?></script>
+<?php endif; ?>
+<?php if (cfg('google_site_verification')): ?>
+<meta name="google-site-verification" content="<?= e(cfg('google_site_verification')) ?>">
+<?php endif; ?>
+<?php if (cfg('bing_site_verification')): ?>
+<meta name="msvalidate.01" content="<?= e(cfg('bing_site_verification')) ?>">
 <?php endif; ?>
 <script src="<?= e(asset('js/site.js')) ?>" defer></script>
 </head>

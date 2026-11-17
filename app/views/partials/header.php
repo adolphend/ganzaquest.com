@@ -10,7 +10,8 @@ $langSwitch = static function (string $class) use ($switchPage, $LANG): void { ?
 </div>
 <?php }; ?>
 <header class="site-header">
-<a href="<?= e(url('home')) ?>" class="brand" aria-label="<?= te('a11y.home') ?>"><?= nciata_mark(46, '#3975ed', 'nciata-mark brand-mark') ?><span class="brand-word">NCIATA<small><?= te('brand.tagline') ?></small></span></a>
+<div class="header-inner">
+<a href="<?= e(url('home')) ?>" class="brand" aria-label="<?= te('a11y.home') ?>"><?= nciata_mark(24, '#e8a317', 'nciata-mark brand-mark') ?><span class="brand-word">NCIATA</span></a>
 <nav class="desktop-nav" aria-label="<?= te('a11y.main_nav') ?>">
 <?php foreach (cfg('nav') as $item): ?>
 <a href="<?= e(url($item)) ?>"<?= $item === $page ? ' class="active" aria-current="page"' : '' ?>><?= te('nav.' . $item) ?></a>
@@ -18,14 +19,15 @@ $langSwitch = static function (string $class) use ($switchPage, $LANG): void { ?
 </nav>
 <div class="header-actions">
 <?php $langSwitch('lang-switch'); ?>
-<a class="header-cta" href="<?= e(url('contact')) ?>"><?= te('header_cta') ?> <?= icon('arrow-up-right', 17) ?></a>
+<a class="pill pill-small" href="<?= e(url('contact')) ?>"><?= te('header_cta') ?></a>
 </div>
 <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" data-label-open="<?= te('a11y.menu_open') ?>" data-label-close="<?= te('a11y.menu_close') ?>" aria-label="<?= te('a11y.menu_open') ?>">
-<span class="menu-icon-open"><?= icon('menu', 24) ?></span><span class="menu-icon-close"><?= icon('x', 24) ?></span>
+<span class="menu-icon-open"><?= icon('menu', 22, 1.6) ?></span><span class="menu-icon-close"><?= icon('x', 22, 1.6) ?></span>
 </button>
+</div>
 <nav class="mobile-nav" id="mobile-nav" aria-label="<?= te('a11y.mobile_nav') ?>" hidden>
 <?php foreach (cfg('nav') as $item): ?>
-<a href="<?= e(url($item)) ?>"<?= $item === $page ? ' class="active" aria-current="page"' : '' ?>><?= te('nav.' . $item) ?><?= icon('arrow-up-right', 18) ?></a>
+<a href="<?= e(url($item)) ?>"<?= $item === $page ? ' class="active" aria-current="page"' : '' ?>><?= te('nav.' . $item) ?></a>
 <?php endforeach; ?>
 <?php $langSwitch('lang-switch lang-switch-mobile'); ?>
 </nav>

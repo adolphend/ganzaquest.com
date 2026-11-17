@@ -5,10 +5,29 @@ return [
     'locale' => 'nl_NL',
 
     'meta' => [
-        'home_title' => 'GanzaQuest | Technologie met een doel',
-        'home_description' => 'Wij maken van ideeën digitale oplossingen: mobiele apps, AI en automatisering, cybersecuritytrainingen en software op maat. Laten we praten.',
+        'home_title' => 'App-ontwikkeling, AI en cybersecurity | GanzaQuest',
+        'home_description' => 'GanzaQuest (NCIATA Ltd): ontwikkeling van mobiele apps voor iOS en Android, kunstmatige intelligentie en automatisering, cybersecuritytraining en software op maat.',
         'not_found_title' => 'Pagina niet gevonden | GanzaQuest',
         'not_found_description' => 'De gevraagde pagina is niet beschikbaar.',
+    ],
+
+    'seo_titles' => [
+        'about' => 'Over ons: GanzaQuest en NCIATA Ltd',
+        'services' => 'App-ontwikkeling, AI, cybersecurity en software op maat',
+        'products' => 'Digitale producten en softwareoplossingen',
+        'blog' => 'Blog over technologie, AI en cybersecurity',
+        'contact' => 'Contact: vertel ons over je digitale project',
+        'privacy' => 'Privacy',
+    ],
+
+    'faq' => [
+        'title' => 'Veelgestelde vragen',
+        'items' => [
+            ['q' => 'Welke diensten biedt GanzaQuest aan?', 'a' => 'Ontwikkeling van mobiele apps voor iOS en Android, kunstmatige intelligentie en procesautomatisering, cybersecuritytraining voor particulieren en bedrijven, en software op maat met technologisch advies.'],
+            ['q' => 'Wie zit er achter GanzaQuest?', 'a' => 'GanzaQuest is een merk van NCIATA Ltd, een technologiebedrijf geregistreerd in Rwanda.'],
+            ['q' => 'Werken jullie met particulieren of alleen met bedrijven?', 'a' => 'Met allebei. Je kunt contact opnemen als particulier met een idee, of namens je bedrijf om een proces te verbeteren of een nieuw digitaal product te bouwen.'],
+            ['q' => 'Hoe start ik een project met GanzaQuest?', 'a' => 'Vertel ons via het contactformulier over je idee of uitdaging. We nemen contact op om te begrijpen wat je nodig hebt en stellen de volgende stap voor.'],
+        ],
     ],
 
     'a11y' => [

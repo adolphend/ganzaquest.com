@@ -53,3 +53,17 @@ Then open http://localhost:8080. (The local server ignores `.htaccess`; emails a
 - No `X-Powered-By` header, no `.php` in addresses, neutral session cookie name, errors logged privately in `app/storage/error.log`.
 - The contact form uses a CSRF token, a honeypot field and a per-visitor hourly limit. Messages are emailed, not stored.
 - Keep PHP up to date in hPanel → Advanced → PHP Configuration (8.1 or newer).
+
+## Search engines and AI assistants
+
+- `robots.txt` welcomes Google, Bing and AI assistants (ChatGPT, Claude, Perplexity, Gemini) and points to the sitemap.
+- `sitemap.xml` lists every page in all five languages with `hreflang` links.
+- `llms.txt` is a short plain-text summary of the company for AI tools.
+- Every page has structured data (schema.org): Organization (NCIATA Ltd, brand GanzaQuest), WebSite on the home page and FAQPage on the services page.
+- Page titles and descriptions per language: `seo_titles` and `meta` in `app/lang/*.php`. FAQ texts: `faq` in the same files.
+
+After the site is live:
+
+1. **Google Search Console** (search.google.com/search-console): Add property → Domain → `ganzaquest.com` → copy the TXT record → hPanel → Domains → DNS / Nameservers → add a TXT record → Verify. Then Sitemaps → submit `sitemap.xml`.
+2. **Bing Webmaster Tools** (bing.com/webmasters): sign in → Import from Google Search Console. Bing also feeds ChatGPT search and Copilot.
+3. If you prefer the HTML-tag method instead of DNS, paste the codes into `google_site_verification` / `bing_site_verification` in `app/config.php`.

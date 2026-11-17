@@ -124,6 +124,7 @@ function icon(string $name, int $size = 18, float $stroke = 2): string
         'x' => '<path d="M18 6 6 18"/><path d="m6 6 12 12"/>',
         'globe' => '<circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/>',
         'chevron-down' => '<path d="m6 9 6 6 6-6"/>',
+        'chevron-right' => '<path d="m9 18 6-6-6-6"/>',
     ];
     return '<svg class="icon" xmlns="http://www.w3.org/2000/svg" width="' . $size . '" height="' . $size
         . '" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="' . $stroke
@@ -147,6 +148,34 @@ function nciata_mark(int $height, string $sun = 'currentColor', string $class = 
         . '<line x1="22" y1="64" x2="78" y2="64" stroke-width="5"/><line x1="33" y1="75" x2="67" y2="75" stroke-width="5"/>'
         . '<line x1="43" y1="86" x2="57" y2="86" stroke-width="5"/></g>'
         . '<path d="M31 64 A19 19 0 0 1 69 64 Z" fill="' . e($sun) . '"/></svg>';
+}
+
+/** Large etched version of the NCIATA mark, with hatched sun, for hero and feature images. */
+function nciata_illustration(int $height, string $label = ''): string
+{
+    $width = (int) round($height * 100 / 110);
+    $rays = '';
+    foreach ([-180, -150, -120, -90, -60, -30, 0] as $angle) {
+        $r = deg2rad($angle);
+        $rays .= sprintf('<line x1="%.1f" y1="%.1f" x2="%.1f" y2="%.1f"/>', 50 + 25 * cos($r), 62 + 25 * sin($r), 50 + 33 * cos($r), 62 + 33 * sin($r));
+    }
+    $hatch = '';
+    for ($y = 44.5; $y <= 61; $y += 2.6) {
+        $hatch .= sprintf('<line x1="28" y1="%.1f" x2="72" y2="%.1f"/>', $y, $y);
+    }
+    $id = 'sun' . substr(md5((string) $height . $label), 0, 6);
+    $a11y = $label !== '' ? 'role="img" aria-label="' . e($label) . '"' : 'aria-hidden="true" focusable="false"';
+    return '<svg class="nciata-illustration" xmlns="http://www.w3.org/2000/svg" width="' . $width . '" height="' . $height
+        . '" viewBox="0 0 100 110" ' . $a11y . '>'
+        . '<defs><clipPath id="' . $id . '"><path d="M30 62 A20 20 0 0 1 70 62 Z"/></clipPath></defs>'
+        . '<g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">'
+        . '<path d="M50 4 L90 18 V52 C90 78 72 96 50 106 C28 96 10 78 10 52 V18 Z" stroke-width="1.6"/>'
+        . '<path d="M50 9.5 L85 22 V52 C85 74.5 69.5 90.5 50 100 C30.5 90.5 15 74.5 15 52 V22 Z" stroke-width=".6" opacity=".55"/>'
+        . '<path d="M30 62 A20 20 0 0 1 70 62" stroke-width="1.4"/>'
+        . '<g stroke-width="1.2">' . $rays . '</g>'
+        . '<line x1="20" y1="62" x2="80" y2="62" stroke-width="1.4"/>'
+        . '<g stroke-width="1"><line x1="29" y1="70" x2="71" y2="70"/><line x1="37" y1="78" x2="63" y2="78"/><line x1="44" y1="86" x2="56" y2="86"/></g></g>'
+        . '<g clip-path="url(#' . $id . ')" stroke="#e8a317" stroke-width=".9">' . $hatch . '</g></svg>';
 }
 
 function send_security_headers(): void
