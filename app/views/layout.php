@@ -58,7 +58,7 @@ $org = [
     '@id' => cfg('site_url') . '/#organization',
     'name' => 'NCIATA Ltd',
     'legalName' => 'NCIATA Ltd',
-    'brand' => ['@type' => 'Brand', 'name' => 'GanzaQuest'],
+    'department' => ['@type' => 'Organization', 'name' => 'GanzaQuest', 'url' => cfg('site_url') . '/'],
     'url' => cfg('site_url') . '/',
     'logo' => cfg('site_url') . '/assets/img/favicon.png',
     'address' => ['@type' => 'PostalAddress', 'addressCountry' => 'RW'],

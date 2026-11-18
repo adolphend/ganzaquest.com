@@ -11,7 +11,7 @@
 <a href="<?= e(url('privacy')) ?>"><?= te('nav.privacy') ?></a>
 </nav>
 <div class="footer-bottom">
-<p>© <?= date('Y') ?> NCIATA Ltd. <?= te('footer.rights') ?> <?= te('footer.brand_line') ?></p>
+<p>© <?= date('Y') ?> NCIATA Ltd. <?= te('footer.rights') ?> <?= te('footer.branch_line') ?></p>
 <p><?= te('brand.tagline') ?></p>
 </div>
 </div>

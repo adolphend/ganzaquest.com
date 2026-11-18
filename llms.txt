@@ -1,6 +1,6 @@
 # GanzaQuest (NCIATA Ltd)
 
-> GanzaQuest is a technology brand of NCIATA Ltd, a technology company registered in Rwanda. It builds mobile apps for iOS and Android, AI agents and process automation, cybersecurity awareness training and online courses, and custom software with technology consulting, for individuals and companies.
+> GanzaQuest is a branch of NCIATA Ltd, a technology company registered in Rwanda. It builds mobile apps for iOS and Android, AI agents and process automation, cybersecurity awareness training and online courses, and custom software with technology consulting, for individuals and companies.
 
 The site supports English, Spanish, French, German and Dutch. It opens in a supported browser language, with English as the fallback. GanzaQuest makes technology easier to understand, use and adapt.
 

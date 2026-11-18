@@ -24,7 +24,7 @@ return [
         'title' => 'Häufige Fragen',
         'items' => [
             ['q' => 'Welche Leistungen bietet GanzaQuest an?', 'a' => 'Entwicklung mobiler Apps für iOS und Android, künstliche Intelligenz und Prozessautomatisierung, Schulungen zur Cybersicherheit für Privatpersonen und Unternehmen sowie individuelle Softwareentwicklung und Technologieberatung.'],
-            ['q' => 'Wer steht hinter GanzaQuest?', 'a' => 'GanzaQuest ist eine Marke der NCIATA Ltd, eines in Ruanda eingetragenen Technologieunternehmens.'],
+            ['q' => 'Wer steht hinter GanzaQuest?', 'a' => 'GanzaQuest ist ein Geschäftsbereich der NCIATA Ltd, eines in Ruanda eingetragenen Technologieunternehmens.'],
             ['q' => 'Arbeiten Sie mit Privatpersonen oder nur mit Unternehmen?', 'a' => 'Mit beiden. Sie können uns als Privatperson mit einer Idee kontaktieren oder im Namen Ihres Unternehmens, um einen Prozess zu verbessern oder ein neues digitales Produkt zu entwickeln.'],
             ['q' => 'Wie starte ich ein Projekt mit GanzaQuest?', 'a' => 'Erzählen Sie uns über das Kontaktformular von Ihrer Idee oder Herausforderung. Wir melden uns, um Ihre Anforderungen zu verstehen und den nächsten Schritt vorzuschlagen.'],
         ],
@@ -44,7 +44,7 @@ return [
     'brand' => [
         'tagline' => 'Technologie mit Sinn',
         'motto' => 'Wir erkunden Möglichkeiten. Wir schaffen Fortschritt.',
-        'owner' => 'Eine Marke der NCIATA Ltd',
+        'owner' => 'Ein Geschäftsbereich der NCIATA Ltd',
     ],
 
     'nav' => [
@@ -97,7 +97,7 @@ return [
     ],
 
     'pages' => [
-        'about' => ['label' => 'Wer wir sind', 'title' => 'Technologie, die Sie sich zu eigen machen können', 'intro' => 'GanzaQuest ist eine Marke der NCIATA Ltd, eines in Ruanda eingetragenen Technologieunternehmens. Wir entwickeln Apps, Software und KI-Werkzeuge, die leicht zu bedienen sind und zur Arbeitsweise der Menschen passen.', 'description' => 'Erfahren Sie, wie GanzaQuest Apps, Software und KI so entwickelt, dass sie leicht zu bedienen sind und zur Arbeitsweise der Menschen passen.'],
+        'about' => ['label' => 'Wer wir sind', 'title' => 'Technologie, die Sie sich zu eigen machen können', 'intro' => 'GanzaQuest ist ein Geschäftsbereich der NCIATA Ltd, eines in Ruanda eingetragenen Technologieunternehmens. Wir entwickeln Apps, Software und KI-Werkzeuge, die leicht zu bedienen sind und zur Arbeitsweise der Menschen passen.', 'description' => 'Erfahren Sie, wie GanzaQuest Apps, Software und KI so entwickelt, dass sie leicht zu bedienen sind und zur Arbeitsweise der Menschen passen.'],
         'services' => ['label' => 'Was wir tun', 'title' => 'Ihr nächster Schritt, mit der richtigen Technologie.', 'intro' => 'Vier Fachbereiche. Ein Ansatz: verstehen, was Sie brauchen, und daraus eine nützliche Lösung machen.', 'description' => 'Entdecken Sie unsere Leistungen: mobile Apps, KI und Automatisierung, Schulungen zur Cybersicherheit, individuelle Software und Technologieberatung.'],
         'products' => ['label' => 'Digitale Lösungen', 'title' => 'Ideen mit Sinn. Lösungen mit Zukunft.', 'intro' => 'Ein Ort, um die digitalen Produkte von GanzaQuest kennenzulernen.', 'description' => 'Entdecken Sie die digitalen Produkte von GanzaQuest und kontaktieren Sie uns, um mehr über die verfügbaren Lösungen für Ihr Projekt zu erfahren.'],
         'blog' => ['label' => 'Perspektiven', 'title' => 'Wissen, um weiter voranzukommen.', 'intro' => 'Technologie, künstliche Intelligenz, digitale Sicherheit und neue Arbeitsweisen.', 'description' => 'Der GanzaQuest-Blog: Artikel über Technologie, künstliche Intelligenz, Automatisierung und digitale Sicherheit.'],
@@ -118,7 +118,7 @@ return [
     'contact' => [
         'eyebrow' => 'Direkter Kontakt',
         'title' => 'Ihre Idee beginnt hier.',
-        'text' => 'Über dieses Formular erreichen Sie GanzaQuest, eine Marke der NCIATA Ltd. Sie können uns als Privatperson oder im Namen Ihres Unternehmens kontaktieren.',
+        'text' => 'Über dieses Formular erreichen Sie GanzaQuest, ein Geschäftsbereich der NCIATA Ltd. Sie können uns als Privatperson oder im Namen Ihres Unternehmens kontaktieren.',
         'private_title' => 'Ein vertrauliches Gespräch',
         'private_text' => 'Wir verwenden Ihre Daten ausschließlich zur Bearbeitung Ihrer Anfrage. Sie werden nicht auf der Website veröffentlicht.',
         'footnote' => 'E-Mail-Adresse, Telefonnummer und Anschrift des Unternehmens werden ergänzt, sobald sie bestätigt sind.',
@@ -158,7 +158,7 @@ return [
     'footer' => [
         'connect' => 'Kontakt aufnehmen',
         'rights' => 'Alle Rechte vorbehalten.',
-        'brand_line' => 'GanzaQuest ist eine Marke der NCIATA Ltd.',
+        'branch_line' => 'GanzaQuest ist ein Geschäftsbereich der NCIATA Ltd, eines in Ruanda eingetragenen Technologieunternehmens.',
     ],
 
     'not_found' => [

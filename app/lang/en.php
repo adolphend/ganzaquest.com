@@ -24,7 +24,7 @@ return [
         'title' => 'Frequently asked questions',
         'items' => [
             ['q' => 'What services does GanzaQuest offer?', 'a' => 'Mobile app development for iOS and Android, artificial intelligence and process automation, cybersecurity training for individuals and companies, and custom software development with technology consulting.'],
-            ['q' => 'Who is behind GanzaQuest?', 'a' => 'GanzaQuest is a brand of NCIATA Ltd, a technology company registered in Rwanda.'],
+            ['q' => 'Who is behind GanzaQuest?', 'a' => 'GanzaQuest is a branch of NCIATA Ltd, a technology company registered in Rwanda.'],
             ['q' => 'Do you work with individuals or only with companies?', 'a' => 'Both. You can contact us as an individual with an idea, or on behalf of your company to improve a process or build a new digital product.'],
             ['q' => 'How do I start a project with GanzaQuest?', 'a' => 'Tell us about your idea or challenge through the contact form. We will get back to you to understand what you need and suggest the next step.'],
         ],
@@ -44,7 +44,7 @@ return [
     'brand' => [
         'tagline' => 'Technology with purpose',
         'motto' => 'We explore possibilities. We create progress.',
-        'owner' => 'A brand of NCIATA Ltd',
+        'owner' => 'A branch of NCIATA Ltd',
     ],
 
     'nav' => [
@@ -97,7 +97,7 @@ return [
     ],
 
     'pages' => [
-        'about' => ['label' => 'Who we are', 'title' => 'Technology should feel like yours', 'intro' => 'GanzaQuest is a brand of NCIATA Ltd, a technology company registered in Rwanda. We build apps, software and AI tools that are easy to use and fit the way people work.', 'description' => 'Learn how GanzaQuest makes apps, software and AI easier to use and adapt to the way people work.'],
+        'about' => ['label' => 'Who we are', 'title' => 'Technology should feel like yours', 'intro' => 'GanzaQuest is a branch of NCIATA Ltd, a technology company registered in Rwanda. We build apps, software and AI tools that are easy to use and fit the way people work.', 'description' => 'Learn how GanzaQuest makes apps, software and AI easier to use and adapt to the way people work.'],
         'services' => ['label' => 'What we do', 'title' => 'Your next step, with the right technology.', 'intro' => 'Four areas of expertise. One approach: understand what you need and turn it into a useful solution.', 'description' => 'Explore our services: mobile apps, AI and automation, cybersecurity training, custom software and technology consulting.'],
         'products' => ['label' => 'Digital solutions', 'title' => 'Ideas with purpose. Solutions built to last.', 'intro' => 'A place to discover GanzaQuest’s digital products.', 'description' => 'Discover GanzaQuest’s digital products and contact us to learn about the solutions available for your project.'],
         'blog' => ['label' => 'Insights', 'title' => 'Knowledge to keep moving forward.', 'intro' => 'Technology, artificial intelligence, digital security and new ways of working.', 'description' => 'The GanzaQuest blog: articles on technology, artificial intelligence, automation and digital security.'],
@@ -118,7 +118,7 @@ return [
     'contact' => [
         'eyebrow' => 'Direct contact',
         'title' => 'Your idea starts here.',
-        'text' => 'Use this form to contact GanzaQuest, a brand of NCIATA Ltd. You can get in touch as an individual or on behalf of your company.',
+        'text' => 'Use this form to contact GanzaQuest, a branch of NCIATA Ltd. You can get in touch as an individual or on behalf of your company.',
         'private_title' => 'A private conversation',
         'private_text' => 'We use your details only to respond to your enquiry. They are never published on the site.',
         'footnote' => 'The company’s email, phone number and address will be added once confirmed.',
@@ -158,7 +158,7 @@ return [
     'footer' => [
         'connect' => 'Get in touch',
         'rights' => 'All rights reserved.',
-        'brand_line' => 'GanzaQuest is a brand of NCIATA Ltd.',
+        'branch_line' => 'GanzaQuest is a branch of NCIATA Ltd, a technology company registered in Rwanda.',
     ],
 
     'not_found' => [

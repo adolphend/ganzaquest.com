@@ -24,7 +24,7 @@ return [
         'title' => 'Veelgestelde vragen',
         'items' => [
             ['q' => 'Welke diensten biedt GanzaQuest aan?', 'a' => 'Ontwikkeling van mobiele apps voor iOS en Android, kunstmatige intelligentie en procesautomatisering, cybersecuritytraining voor particulieren en bedrijven, en software op maat met technologisch advies.'],
-            ['q' => 'Wie zit er achter GanzaQuest?', 'a' => 'GanzaQuest is een merk van NCIATA Ltd, een technologiebedrijf geregistreerd in Rwanda.'],
+            ['q' => 'Wie zit er achter GanzaQuest?', 'a' => 'GanzaQuest is een onderdeel van NCIATA Ltd, een technologiebedrijf geregistreerd in Rwanda.'],
             ['q' => 'Werken jullie met particulieren of alleen met bedrijven?', 'a' => 'Met allebei. Je kunt contact opnemen als particulier met een idee, of namens je bedrijf om een proces te verbeteren of een nieuw digitaal product te bouwen.'],
             ['q' => 'Hoe start ik een project met GanzaQuest?', 'a' => 'Vertel ons via het contactformulier over je idee of uitdaging. We nemen contact op om te begrijpen wat je nodig hebt en stellen de volgende stap voor.'],
         ],
@@ -44,7 +44,7 @@ return [
     'brand' => [
         'tagline' => 'Technologie met een doel',
         'motto' => 'We verkennen mogelijkheden. We creëren vooruitgang.',
-        'owner' => 'Een merk van NCIATA Ltd',
+        'owner' => 'Een onderdeel van NCIATA Ltd',
     ],
 
     'nav' => [
@@ -97,7 +97,7 @@ return [
     ],
 
     'pages' => [
-        'about' => ['label' => 'Wie we zijn', 'title' => 'Technologie die als de jouwe voelt', 'intro' => 'GanzaQuest is een merk van NCIATA Ltd, een technologiebedrijf dat in Rwanda is geregistreerd. We maken apps, software en AI-tools die eenvoudig te gebruiken zijn en passen bij de manier waarop mensen werken.', 'description' => 'Ontdek hoe GanzaQuest apps, software en AI gebruiksvriendelijk maakt en afstemt op de manier waarop mensen werken.'],
+        'about' => ['label' => 'Wie we zijn', 'title' => 'Technologie die als de jouwe voelt', 'intro' => 'GanzaQuest is een onderdeel van NCIATA Ltd, een technologiebedrijf dat in Rwanda is geregistreerd. We maken apps, software en AI-tools die eenvoudig te gebruiken zijn en passen bij de manier waarop mensen werken.', 'description' => 'Ontdek hoe GanzaQuest apps, software en AI gebruiksvriendelijk maakt en afstemt op de manier waarop mensen werken.'],
         'services' => ['label' => 'Wat we doen', 'title' => 'Je volgende stap, met de juiste technologie.', 'intro' => 'Vier vakgebieden. Eén aanpak: begrijpen wat je nodig hebt en er een bruikbare oplossing van maken.', 'description' => 'Ontdek onze diensten: mobiele apps, AI en automatisering, cybersecuritytraining, software op maat en technologisch advies.'],
         'products' => ['label' => 'Digitale oplossingen', 'title' => 'Ideeën met een doel. Oplossingen die blijven.', 'intro' => 'Een plek om de digitale producten van GanzaQuest te ontdekken.', 'description' => 'Ontdek de digitale producten van GanzaQuest en neem contact met ons op voor de beschikbare oplossingen voor je project.'],
         'blog' => ['label' => 'Inzichten', 'title' => 'Kennis om vooruit te blijven gaan.', 'intro' => 'Technologie, kunstmatige intelligentie, digitale veiligheid en nieuwe manieren van werken.', 'description' => 'De blog van GanzaQuest: artikelen over technologie, kunstmatige intelligentie, automatisering en digitale veiligheid.'],
@@ -118,7 +118,7 @@ return [
     'contact' => [
         'eyebrow' => 'Direct contact',
         'title' => 'Je idee begint hier.',
-        'text' => 'Gebruik dit formulier om contact op te nemen met GanzaQuest, een merk van NCIATA Ltd. Je kunt ons benaderen als particulier of namens je bedrijf.',
+        'text' => 'Gebruik dit formulier om contact op te nemen met GanzaQuest, een onderdeel van NCIATA Ltd. Je kunt ons benaderen als particulier of namens je bedrijf.',
         'private_title' => 'Een vertrouwelijk gesprek',
         'private_text' => 'We gebruiken je gegevens alleen om je vraag te beantwoorden. Ze worden nooit op de site gepubliceerd.',
         'footnote' => 'Het e-mailadres, telefoonnummer en adres van het bedrijf worden toegevoegd zodra ze bevestigd zijn.',
@@ -158,7 +158,7 @@ return [
     'footer' => [
         'connect' => 'Neem contact op',
         'rights' => 'Alle rechten voorbehouden.',
-        'brand_line' => 'GanzaQuest is een merk van NCIATA Ltd.',
+        'branch_line' => 'GanzaQuest is een onderdeel van NCIATA Ltd, een technologiebedrijf dat in Rwanda is geregistreerd.',
     ],
 
     'not_found' => [

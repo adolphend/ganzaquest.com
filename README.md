@@ -1,6 +1,6 @@
 # ganzaquest.com
 
-Website of **GanzaQuest, a brand of NCIATA Ltd**. Plain PHP and HTML: no database, no build step, runs on Hostinger Premium Web Hosting.
+Website of **GanzaQuest, a branch of NCIATA Ltd, a technology company registered in Rwanda**. Plain PHP and HTML: no database, no build step, runs on Hostinger Premium Web Hosting.
 
 Languages: English (fallback, at `/`), Spanish (`/es`), French (`/fr`), German (`/de`), Dutch (`/nl`). The homepage follows the browser language when supported and remembers a manual selection.
 
@@ -59,7 +59,7 @@ Then open http://localhost:8080. (The local server ignores `.htaccess`; emails a
 - `robots.txt` welcomes Google, Bing and AI assistants (ChatGPT, Claude, Perplexity, Gemini) and points to the sitemap.
 - `sitemap.xml` lists every page in all five languages with `hreflang` links.
 - `llms.txt` is a short plain-text summary of the company for AI tools.
-- Every page has structured data (schema.org): Organization (NCIATA Ltd, brand GanzaQuest), WebSite on the home page and FAQPage on the services page.
+- Every page has structured data (schema.org): Organization (NCIATA Ltd, with GanzaQuest as a branch), WebSite on the home page and FAQPage on the services page.
 - Page titles and descriptions per language: `seo_titles` and `meta` in `app/lang/*.php`. FAQ texts: `faq` in the same files.
 
 After the site is live:

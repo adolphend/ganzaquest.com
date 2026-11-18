@@ -24,7 +24,7 @@ return [
         'title' => 'Preguntas frecuentes',
         'items' => [
             ['q' => '¿Qué servicios ofrece GanzaQuest?', 'a' => 'Desarrollo de aplicaciones móviles para iOS y Android, inteligencia artificial y automatización de procesos, formación en ciberseguridad para particulares y empresas, y desarrollo de software a medida con consultoría tecnológica.'],
-            ['q' => '¿Quién está detrás de GanzaQuest?', 'a' => 'GanzaQuest es una marca de NCIATA Ltd, empresa tecnológica registrada en Ruanda.'],
+            ['q' => '¿Quién está detrás de GanzaQuest?', 'a' => 'GanzaQuest es una división de NCIATA Ltd, empresa tecnológica registrada en Ruanda.'],
             ['q' => '¿Trabajáis con particulares o solo con empresas?', 'a' => 'Con ambos. Puedes contactarnos como particular con una idea o en nombre de tu empresa para mejorar un proceso o crear un nuevo producto digital.'],
             ['q' => '¿Cómo empiezo un proyecto con GanzaQuest?', 'a' => 'Cuéntanos tu idea o tu reto a través del formulario de contacto. Te responderemos para entender lo que necesitas y proponerte el siguiente paso.'],
         ],
@@ -44,7 +44,7 @@ return [
     'brand' => [
         'tagline' => 'Tecnología con propósito',
         'motto' => 'Exploramos posibilidades. Creamos progreso.',
-        'owner' => 'Una marca de NCIATA Ltd',
+        'owner' => 'Una división de NCIATA Ltd',
     ],
 
     'nav' => [
@@ -97,7 +97,7 @@ return [
     ],
 
     'pages' => [
-        'about' => ['label' => 'Nuestra esencia', 'title' => 'La tecnología debe sentirse tuya', 'intro' => 'GanzaQuest es una marca de NCIATA Ltd, empresa tecnológica registrada en Ruanda. Creamos aplicaciones, software y herramientas de IA fáciles de usar y adaptadas a la forma de trabajar de las personas.', 'description' => 'Descubre cómo GanzaQuest crea aplicaciones, software e IA fáciles de usar y adaptados a la forma de trabajar de las personas.'],
+        'about' => ['label' => 'Nuestra esencia', 'title' => 'La tecnología debe sentirse tuya', 'intro' => 'GanzaQuest es una división de NCIATA Ltd, empresa tecnológica registrada en Ruanda. Creamos aplicaciones, software y herramientas de IA fáciles de usar y adaptadas a la forma de trabajar de las personas.', 'description' => 'Descubre cómo GanzaQuest crea aplicaciones, software e IA fáciles de usar y adaptados a la forma de trabajar de las personas.'],
         'services' => ['label' => 'Lo que hacemos', 'title' => 'Tu próximo paso, con la tecnología adecuada.', 'intro' => 'Cuatro áreas de especialización. Un mismo enfoque: entender lo que necesitas y convertirlo en una solución útil.', 'description' => 'Explora nuestros servicios de aplicaciones móviles, IA y automatización, formación en ciberseguridad, software a medida y consultoría tecnológica.'],
         'products' => ['label' => 'Soluciones digitales', 'title' => 'Ideas con un propósito. Soluciones con recorrido.', 'intro' => 'Un espacio para conocer los productos digitales de GanzaQuest.', 'description' => 'Conoce el espacio de productos digitales de GanzaQuest y contacta con nosotros para informarte sobre las soluciones disponibles para tu proyecto.'],
         'blog' => ['label' => 'Perspectivas', 'title' => 'Conocimiento para seguir avanzando.', 'intro' => 'Tecnología, inteligencia artificial, seguridad digital y nuevas formas de trabajar.', 'description' => 'El blog de GanzaQuest: un espacio para compartir artículos sobre tecnología, inteligencia artificial, automatización y seguridad digital.'],
@@ -118,7 +118,7 @@ return [
     'contact' => [
         'eyebrow' => 'Contacto directo',
         'title' => 'Tu idea empieza aquí.',
-        'text' => 'Utiliza este formulario para contactar con GanzaQuest, una marca de NCIATA Ltd. Puedes consultarnos como particular o en nombre de tu empresa.',
+        'text' => 'Utiliza este formulario para contactar con GanzaQuest, una división de NCIATA Ltd. Puedes consultarnos como particular o en nombre de tu empresa.',
         'private_title' => 'Una conversación privada',
         'private_text' => 'Usamos tus datos únicamente para atender tu consulta. No se publican en el sitio.',
         'footnote' => 'Los datos de correo, teléfono y dirección de la empresa se incorporarán cuando estén confirmados.',
@@ -158,7 +158,7 @@ return [
     'footer' => [
         'connect' => 'Conecta con nosotros',
         'rights' => 'Todos los derechos reservados.',
-        'brand_line' => 'GanzaQuest es una marca de NCIATA Ltd.',
+        'branch_line' => 'GanzaQuest es una división de NCIATA Ltd, empresa tecnológica registrada en Ruanda.',
     ],
 
     'not_found' => [
