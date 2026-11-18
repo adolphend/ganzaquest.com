@@ -133,6 +133,49 @@ button, input, textarea, select { font: inherit; letter-spacing: inherit; color:
 .form-error { color: #c4211b; font-size: 15px; }
 .hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
 
+/* Product catalog and blog preview */
+.product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 360px), 1fr)); gap: 22px; align-items: start; }
+.product-grid:not(:has(.product-details[open])) { grid-auto-rows: 1fr; align-items: stretch; }
+.product-grid > li { min-width: 0; }
+.product-card { height: 100%; display: flex; flex-direction: column; overflow: hidden; border: 1px solid var(--line); border-radius: var(--radius-tile); background: var(--paper); box-shadow: 0 12px 28px #192e2b0b; }
+.product-art { min-height: 132px; display: grid; place-items: center; background: repeating-radial-gradient(circle at 50% 52%, transparent 0 24px, #b9d2c62e 25px 26px), linear-gradient(145deg, #33594d, var(--night)); color: var(--gold); }
+.product-art-agent { background: repeating-linear-gradient(135deg, #e6ce9630 0 1px, transparent 1px 27px), linear-gradient(145deg, #5b4b2f, var(--night)); }
+.product-art-plate { width: 69px; aspect-ratio: 1; display: grid; place-items: center; border: 1px solid #f5c77980; border-radius: 15px; background: var(--night); transform: rotate(-9deg); }
+.product-art-plate .icon { transform: rotate(9deg); }
+.product-content { flex: 1; display: flex; flex-direction: column; padding: clamp(18px, 2.4vw, 29px); }
+.product-category { display: flex; flex-wrap: wrap; align-items: center; gap: 5px 10px; min-height: 26px; color: var(--primary); font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: .1em; }
+.product-pace { padding: 3px 7px; border: 1px solid var(--line); border-radius: 4px; font-size: 12px; letter-spacing: 0; text-transform: none; }
+.product-content h2 { margin-top: 8px; font-family: var(--font-display); font-size: clamp(25px, 2.6vw, 35px); line-height: 1.11; letter-spacing: -.035em; overflow-wrap: anywhere; }
+.product-description { margin-top: 11px; color: var(--muted); font-size: 16px; }
+.product-content > .product-description { margin-bottom: auto; }
+.product-launch { display: inline-block; padding: 4px 8px; border-radius: 4px; background: var(--mist); color: var(--primary); font-size: 13px; font-weight: 700; }
+.product-details { margin-top: 18px; border-top: 1px solid var(--line); }
+.product-details summary { display: flex; align-items: center; justify-content: space-between; gap: 8px; min-height: 46px; color: var(--primary); font-weight: 700; cursor: pointer; list-style: none; }
+.product-details summary::-webkit-details-marker { display: none; }
+.product-details summary:hover { text-decoration: underline; text-underline-offset: 4px; }
+.product-details[open] summary .icon { transform: rotate(90deg); }
+.product-details-body { padding-top: 10px; }
+.product-offer { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 15px; margin-top: 15px; }
+.product-price { color: var(--muted); }
+.product-price strong { color: var(--ink); font-size: 21px; }
+.product-terms { display: flex; gap: 7px; align-items: flex-start; margin-top: 10px; color: var(--primary); font-size: 14px; font-weight: 700; }
+.product-terms .icon { margin-top: 2px; }
+.course-pricing-title, .course-interest h3 { font-family: var(--font-display); font-size: 21px; line-height: 1.15; }
+.course-pricing { display: grid; margin: 9px 0 0; }
+.course-pricing > div { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 3px 10px; padding: 9px 0; border-bottom: 1px solid var(--line); }
+.course-pricing dt { color: var(--muted); font-size: 14px; }
+.course-pricing dd { margin: 0; font-size: 15px; font-weight: 700; }
+.course-privacy { font-size: 12px; color: var(--muted); }
+.course-interest { padding-top: 21px; }
+.course-interest p { margin-top: 7px; font-size: 14px; }
+.course-interest .contact-form { gap: 11px; margin-top: 14px; }
+.course-interest .course-privacy { margin: 0; font-size: 12px; }
+.course-privacy a { color: var(--link); text-decoration: underline; text-underline-offset: 2px; }
+.blog-preview article { display: flex; gap: 18px; align-items: flex-start; max-width: 775px; padding: clamp(18px, 3vw, 36px); border: 1px solid var(--line); border-radius: var(--radius-tile); background: var(--mist); }
+.blog-preview .headline { font-size: clamp(27px, 3.25vw, 44px); }
+.blog-preview .lede { margin-top: 10px; }
+.blog-preview-mark { display: grid; flex: 0 0 44px; height: 44px; place-items: center; border-radius: var(--radius-field); background: var(--paper); color: var(--primary); }
+
 /* Privacy */
 .prose { max-width: 760px; }
 .prose h2 { font-family: var(--font-display); font-size: 28px; line-height: 1.15; font-weight: 700; margin: 44px 0 12px; }

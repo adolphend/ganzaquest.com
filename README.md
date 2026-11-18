@@ -6,10 +6,12 @@ Languages: English (fallback, at `/`), Spanish (`/es`), French (`/fr`), German (
 
 ## Before going live
 
-Open `app/config.php` and set:
+Set the following keys in a hosting-only `app/config.local.php` that returns a PHP array. It is ignored by Git and overrides the corresponding values in `app/config.php`:
 
 - `contact_to`: the email address that receives contact-form messages.
-- `contact_from`: a sender address on your domain, e.g. `no-reply@ganzaquest.com` (create it in hPanel → Emails).
+- `contact_from`: an active sender address on your domain.
+
+The cybersecurity course interest and custom AI agent request forms use the same sender and recipient as the contact form. The course collects an email address for launch follow-up; the agent form collects project details for a reply. Neither form takes payment.
 
 Then fill in the placeholders on the privacy page, in every file in `app/lang/` (search for `[`):
 RDB registration number, registered address and contact email.
@@ -52,7 +54,7 @@ Then open http://localhost:8080. (The local server ignores `.htaccess`; emails a
 - Only `index.php` runs; other PHP files and private folders return 404.
 - No `X-Powered-By` header, no `.php` in addresses, neutral session cookie name, errors logged privately in `app/storage/error.log`.
 - The contact form uses a CSRF token, a honeypot field and a per-visitor hourly limit. Messages are emailed, not stored.
-- Keep PHP up to date in hPanel → Advanced → PHP Configuration (8.1 or newer).
+- Keep PHP up to date in hPanel → Advanced → PHP Configuration (8.1 or newer, with `mbstring` enabled).
 
 ## Search engines and AI assistants
 

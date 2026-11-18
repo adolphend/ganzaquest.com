@@ -14,6 +14,10 @@ session_name('gq_s');
 const APP_DIR = __DIR__;
 
 $CONFIG = require APP_DIR . '/config.php';
+$localConfigPath = APP_DIR . '/config.local.php';
+if (is_file($localConfigPath)) {
+    $CONFIG = array_replace($CONFIG, require $localConfigPath);
+}
 $LANG = $CONFIG['default_lang'];
 $STRINGS = [];
 

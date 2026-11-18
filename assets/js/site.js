@@ -61,13 +61,12 @@
     });
   }
 
-  var form = document.querySelector('.contact-form');
-  if (form) {
+  document.querySelectorAll('.contact-form').forEach(function (form) {
     form.addEventListener('submit', function () {
       var button = form.querySelector('button[type="submit"]');
       if (!button) return;
       button.disabled = true;
       button.textContent = form.dataset.sending || button.textContent;
     });
-  }
+  });
 })();

@@ -121,30 +121,37 @@ function handle_contact(array $serviceTitles): array
         . 'Date: ' . gmdate('Y-m-d H:i') . " UTC\n\n"
         . $old['message'] . "\n";
 
-    $to = (string) cfg('contact_to');
-    $from = (string) cfg('contact_from');
-    if (!filter_var($to, FILTER_VALIDATE_EMAIL) || str_starts_with($to, 'CHANGE-ME')) {
-        error_log('Contact form: set contact_to in app/config.php');
+    if (!send_site_email('GanzaQuest – ' . $old['name'], $body, $old['email'])) {
         return ['ok' => false, 'error' => 'send', 'old' => $old];
     }
 
-    $subject = mb_encode_mimeheader('GanzaQuest – ' . $old['name'], 'UTF-8', 'B', "\r\n");
-    $fromName = mb_encode_mimeheader('GanzaQuest website', 'UTF-8', 'B', "\r\n");
+    $_SESSION['csrf'] = bin2hex(random_bytes(32));
+    return ['ok' => true, 'error' => null, 'old' => []];
+}
+
+/** Send a notification to the site's configured recipient. */
+function send_site_email(string $subject, string $body, string $replyTo): bool
+{
+    $to = (string) cfg('contact_to');
+    $from = (string) cfg('contact_from');
+    if (!filter_var($to, FILTER_VALIDATE_EMAIL) || str_starts_with($to, 'CHANGE-ME')
+        || !filter_var($from, FILTER_VALIDATE_EMAIL) || !filter_var($replyTo, FILTER_VALIDATE_EMAIL)) {
+        error_log('Website mail: configure valid contact_to and contact_from addresses');
+        return false;
+    }
+
+    $encodedSubject = mb_encode_mimeheader($subject, 'UTF-8', 'B', "\r\n");
     $headers = implode("\r\n", [
-        'From: ' . $fromName . ' <' . $from . '>',
-        'Reply-To: ' . $old['email'],
+        'From: GanzaQuest website <' . $from . '>',
+        'Reply-To: ' . $replyTo,
         'MIME-Version: 1.0',
         'Content-Type: text/plain; charset=UTF-8',
         'Content-Transfer-Encoding: 8bit',
     ]);
 
-    $sent = @mail($to, $subject, $body, $headers, '-f' . $from);
+    $sent = @mail($to, $encodedSubject, $body, $headers, '-f' . $from);
     if (!$sent) {
-        error_log('Contact form: mail() failed');
-        return ['ok' => false, 'error' => 'send', 'old' => $old];
+        error_log('Website mail: mail() failed');
     }
-
-    // New token after a successful message.
-    $_SESSION['csrf'] = bin2hex(random_bytes(32));
-    return ['ok' => true, 'error' => null, 'old' => []];
+    return $sent;
 }

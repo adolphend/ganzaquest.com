@@ -96,7 +96,7 @@ if ($isHome) {
 } else {
     render('partials/intro', ['label' => t("pages.$page.label"), 'title' => t("pages.$page.title"), 'intro' => t("pages.$page.intro")]);
     render('pages/' . $page, ['form' => $form]);
-    if (!in_array($page, ['contact', 'privacy'], true)) {
+    if (!in_array($page, ['contact', 'privacy', 'products', 'blog'], true)) {
         render('partials/cta');
     }
 }
