@@ -66,7 +66,7 @@ function tbr(string $path): string
     return nl2br(te($path), false);
 }
 
-/** Path of a page in a language, e.g. url('about', 'en') → /en/about */
+/** Path of a page in a language, e.g. url('about', 'en') → /about */
 function url(string $page, ?string $lang = null): string
 {
     global $LANG;
@@ -94,7 +94,7 @@ function resolve_route(string $path): ?array
 {
     $segments = array_values(array_filter(explode('/', trim($path, '/')), 'strlen'));
     $lang = cfg('default_lang');
-    if ($segments && in_array($segments[0], cfg('languages'), true) && $segments[0] !== cfg('default_lang')) {
+    if ($segments && in_array($segments[0], cfg('languages'), true)) {
         $lang = array_shift($segments);
     }
     if (count($segments) > 1) {
@@ -102,6 +102,13 @@ function resolve_route(string $path): ?array
     }
     $slug = $segments[0] ?? '';
     $page = array_search($slug, cfg('slugs')[$lang], true);
+    // Preserve former Spanish URLs whose slugs do not overlap with English.
+    if ($page === false && $lang === cfg('default_lang') && $path === '/' . $slug) {
+        $spanishPage = array_search($slug, cfg('slugs')['es'], true);
+        if ($spanishPage !== false) {
+            return ['es', $spanishPage];
+        }
+    }
     return $page === false ? null : [$lang, $page];
 }
 
@@ -133,7 +140,7 @@ function icon(string $name, int $size = 18, float $stroke = 2): string
 }
 
 /**
- * NCIATA logo mark: a sun rising inside a shield (Annonciate = good news, Mugema = protection).
+ * NCIATA logo mark: a sun rising inside a shield.
  * Lines use the current text colour; the sun uses $sun.
  */
 function nciata_mark(int $height, string $sun = 'currentColor', string $class = 'nciata-mark'): string

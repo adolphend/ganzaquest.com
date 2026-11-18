@@ -2,7 +2,7 @@
 
 Website of **GanzaQuest, a brand of NCIATA Ltd**. Plain PHP and HTML: no database, no build step, runs on Hostinger Premium Web Hosting.
 
-Languages: Spanish (default, at `/`), English (`/en`), French (`/fr`), German (`/de`), Dutch (`/nl`).
+Languages: English (fallback, at `/`), Spanish (`/es`), French (`/fr`), German (`/de`), Dutch (`/nl`). The homepage follows the browser language when supported and remembers a manual selection.
 
 ## Before going live
 

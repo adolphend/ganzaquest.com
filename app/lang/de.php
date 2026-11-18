@@ -90,17 +90,6 @@ return [
         ],
     ],
 
-    'story' => [
-        'eyebrow' => 'Mehr als ein Name',
-        'title_1' => 'Sich durchsetzen.',
-        'title_2' => 'Entdecken.',
-        'title_3' => 'Vorankommen.',
-        'large' => "Technologie ist das Mittel.\nFortschritt ist das Ziel.",
-        'p1' => '„Ganza“ bedeutet sich durchsetzen. „Quest“ steht für Entdeckung und Fortschritt. Zusammen beschreiben sie, wie wir jede Herausforderung angehen: Möglichkeiten entdecken und sinnvolle Lösungen schaffen.',
-        'p2' => 'Bei GanzaQuest verbinden wir die Bedürfnisse von Menschen und Unternehmen mit dem Potenzial der Technologie.',
-        'link' => 'Lernen Sie uns kennen',
-    ],
-
     'cta' => [
         'eyebrow' => 'Ihr nächster Schritt',
         'title' => "Ein gutes Gespräch\nkann alles verändern.",
@@ -108,7 +97,7 @@ return [
     ],
 
     'pages' => [
-        'about' => ['label' => 'Wer wir sind', 'title' => 'Entdecken. Gestalten. Sich durchsetzen.', 'intro' => 'GanzaQuest, eine Marke der NCIATA Ltd, entstand aus einer Idee: mit einem klaren Ziel vorankommen, in einer Welt, die sich ständig verändert.', 'description' => 'Lernen Sie GanzaQuest kennen, eine Marke der NCIATA Ltd: die Bedeutung unseres Namens, unsere Geschichte und unsere Vision von Technologie.'],
+        'about' => ['label' => 'Wer wir sind', 'title' => 'Technologie, die Sie sich zu eigen machen können', 'intro' => 'GanzaQuest ist eine Marke der NCIATA Ltd, eines in Ruanda eingetragenen Technologieunternehmens. Wir entwickeln Apps, Software und KI-Werkzeuge, die leicht zu bedienen sind und zur Arbeitsweise der Menschen passen.', 'description' => 'Erfahren Sie, wie GanzaQuest Apps, Software und KI so entwickelt, dass sie leicht zu bedienen sind und zur Arbeitsweise der Menschen passen.'],
         'services' => ['label' => 'Was wir tun', 'title' => 'Ihr nächster Schritt, mit der richtigen Technologie.', 'intro' => 'Vier Fachbereiche. Ein Ansatz: verstehen, was Sie brauchen, und daraus eine nützliche Lösung machen.', 'description' => 'Entdecken Sie unsere Leistungen: mobile Apps, KI und Automatisierung, Schulungen zur Cybersicherheit, individuelle Software und Technologieberatung.'],
         'products' => ['label' => 'Digitale Lösungen', 'title' => 'Ideen mit Sinn. Lösungen mit Zukunft.', 'intro' => 'Ein Ort, um die digitalen Produkte von GanzaQuest kennenzulernen.', 'description' => 'Entdecken Sie die digitalen Produkte von GanzaQuest und kontaktieren Sie uns, um mehr über die verfügbaren Lösungen für Ihr Projekt zu erfahren.'],
         'blog' => ['label' => 'Perspektiven', 'title' => 'Wissen, um weiter voranzukommen.', 'intro' => 'Technologie, künstliche Intelligenz, digitale Sicherheit und neue Arbeitsweisen.', 'description' => 'Der GanzaQuest-Blog: Artikel über Technologie, künstliche Intelligenz, Automatisierung und digitale Sicherheit.'],
@@ -117,15 +106,8 @@ return [
     ],
 
     'about' => [
-        'meanings' => [
-            ['tag' => '01 / Ganza', 'title' => 'Sich durchsetzen.', 'text' => 'Herausforderungen mit einer klaren Richtung begegnen. Nach nützlichen Lösungen suchen und im Blick behalten, was jede Person und jedes Unternehmen erreichen möchte.'],
-            ['tag' => '02 / Quest', 'title' => 'Entdecken.', 'text' => 'Neugier als Ausgangspunkt. Neue Möglichkeiten erkunden, lernen und technologisches Wissen in Fortschritt verwandeln.'],
-        ],
-        'manifesto_title' => "Der Mensch zuerst.\nTechnologie mit Sinn.",
-        'manifesto_text' => 'Wir arbeiten an der Schnittstelle von mobilen Apps, künstlicher Intelligenz, digitaler Sicherheit und individueller Software. Jedes Projekt beginnt damit, seinen Kontext zu verstehen – nicht mit der Wahl eines Werkzeugs.',
-        'origin_tag' => '03 / NCIATA',
-        'origin_title' => 'Unsere Geschichte.',
-        'origin_text' => 'GanzaQuest ist eine Marke der NCIATA Ltd, eines in Ruanda eingetragenen Technologieunternehmens. NCIATA ist nach Annonciate Mukamugema benannt, der Mutter unseres Gründers. Annonciate steht für die gute Nachricht, Mugema für den Schutz. GanzaQuest ist innerhalb von NCIATA entstanden: Technologie mit Sinn, im Dienst der Menschen.',
+        'approach' => 'Wir bringen die Möglichkeiten der Technik mit den Bedürfnissen der Menschen zusammen. Wir hören zuerst zu und setzen KI und andere Neuerungen dort ein, wo sie Aufgaben vereinfachen oder den Menschen mehr Kontrolle geben.',
+        'goal' => 'Menschen sollen ihre Werkzeuge verstehen, an ihre Bedürfnisse anpassen und auch bei technischen Veränderungen sicher nutzen können.',
     ],
 
     'empty' => [

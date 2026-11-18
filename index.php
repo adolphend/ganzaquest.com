@@ -33,6 +33,12 @@ if ($route === null) {
 }
 
 [$LANG, $page] = $route;
+$canonicalPath = url($page);
+if ($path !== $canonicalPath && in_array($_SERVER['REQUEST_METHOD'] ?? 'GET', ['GET', 'HEAD'], true)) {
+    $query = $_SERVER['QUERY_STRING'] ?? '';
+    header('Location: ' . $canonicalPath . ($query !== '' ? '?' . $query : ''), true, 301);
+    exit;
+}
 $STRINGS = load_strings($LANG);
 
 $form = ['ok' => isset($_GET['sent']), 'error' => null, 'old' => []];

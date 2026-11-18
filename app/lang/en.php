@@ -60,10 +60,10 @@ return [
 
     'hero' => [
         'eyebrow' => 'Technology with purpose',
-        'title_1' => 'The future isn’t waited for.',
-        'title_2' => 'It’s',
-        'title_2_em' => 'built.',
-        'description' => "We turn ideas into digital solutions.\nApps, artificial intelligence and technology\nthat help you take the next step.",
+        'title_1' => 'Technology that',
+        'title_2' => 'works for',
+        'title_2_em' => 'you.',
+        'description' => 'We build apps, software and AI tools that solve practical problems and are easy to use.',
         'cta_primary' => 'Let’s talk about your project',
         'cta_secondary' => 'Explore services',
         'note' => 'For people with ideas. For companies with vision.',
@@ -90,17 +90,6 @@ return [
         ],
     ],
 
-    'story' => [
-        'eyebrow' => 'More than a name',
-        'title_1' => 'Prevail.',
-        'title_2' => 'Explore.',
-        'title_3' => 'Move forward.',
-        'large' => "Technology is the means.\nProgress is the purpose.",
-        'p1' => '“Ganza” means to prevail. “Quest” stands for exploration and progress. Together they express how we approach every challenge: discovering possibilities and building meaningful solutions.',
-        'p2' => 'At GanzaQuest, we connect the needs of people and companies with the potential of technology.',
-        'link' => 'Discover who we are',
-    ],
-
     'cta' => [
         'eyebrow' => 'Your next step',
         'title' => "A good conversation\ncan change everything.",
@@ -108,7 +97,7 @@ return [
     ],
 
     'pages' => [
-        'about' => ['label' => 'Who we are', 'title' => 'Explore. Build. Prevail.', 'intro' => 'GanzaQuest, a brand of NCIATA Ltd, was born from one idea: moving forward with purpose in a world that never stops changing.', 'description' => 'Get to know GanzaQuest, a brand of NCIATA Ltd: the meaning of our name, our story and our vision of technology.'],
+        'about' => ['label' => 'Who we are', 'title' => 'Technology should feel like yours', 'intro' => 'GanzaQuest is a brand of NCIATA Ltd, a technology company registered in Rwanda. We build apps, software and AI tools that are easy to use and fit the way people work.', 'description' => 'Learn how GanzaQuest makes apps, software and AI easier to use and adapt to the way people work.'],
         'services' => ['label' => 'What we do', 'title' => 'Your next step, with the right technology.', 'intro' => 'Four areas of expertise. One approach: understand what you need and turn it into a useful solution.', 'description' => 'Explore our services: mobile apps, AI and automation, cybersecurity training, custom software and technology consulting.'],
         'products' => ['label' => 'Digital solutions', 'title' => 'Ideas with purpose. Solutions built to last.', 'intro' => 'A place to discover GanzaQuest’s digital products.', 'description' => 'Discover GanzaQuest’s digital products and contact us to learn about the solutions available for your project.'],
         'blog' => ['label' => 'Insights', 'title' => 'Knowledge to keep moving forward.', 'intro' => 'Technology, artificial intelligence, digital security and new ways of working.', 'description' => 'The GanzaQuest blog: articles on technology, artificial intelligence, automation and digital security.'],
@@ -117,15 +106,8 @@ return [
     ],
 
     'about' => [
-        'meanings' => [
-            ['tag' => '01 / Ganza', 'title' => 'Prevail.', 'text' => 'Facing challenges with a clear direction. Looking for useful solutions and staying focused on what each person or company wants to achieve.'],
-            ['tag' => '02 / Quest', 'title' => 'Explore.', 'text' => 'Curiosity as the starting point. Exploring new possibilities, learning, and turning technological knowledge into progress.'],
-        ],
-        'manifesto_title' => "People first.\nTechnology with meaning.",
-        'manifesto_text' => 'We work where mobile apps, artificial intelligence, digital security and custom software meet. Every project starts by understanding its context, not by choosing a tool.',
-        'origin_tag' => '03 / NCIATA',
-        'origin_title' => 'Our story.',
-        'origin_text' => 'GanzaQuest is a brand of NCIATA Ltd, a technology company registered in Rwanda. NCIATA is named after Annonciate Mukamugema, our founder’s mother. Annonciate evokes good news; Mugema, protection. GanzaQuest was born within NCIATA: technology with purpose, in the service of people.',
+        'approach' => 'We bridge the gap between what technology can do and what people need. We start by listening, then use AI and other advances where they can make a task simpler or give people more control.',
+        'goal' => 'We want people to understand the tools they use, shape them to their needs and feel confident using them as technology changes.',
     ],
 
     'empty' => [

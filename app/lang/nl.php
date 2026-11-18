@@ -90,17 +90,6 @@ return [
         ],
     ],
 
-    'story' => [
-        'eyebrow' => 'Meer dan een naam',
-        'title_1' => 'Zegevieren.',
-        'title_2' => 'Verkennen.',
-        'title_3' => 'Vooruitgaan.',
-        'large' => "Technologie is het middel.\nVooruitgang is het doel.",
-        'p1' => '‘Ganza’ betekent zegevieren. ‘Quest’ staat voor ontdekking en vooruitgang. Samen beschrijven ze hoe we elke uitdaging aanpakken: mogelijkheden ontdekken en zinvolle oplossingen bouwen.',
-        'p2' => 'Bij GanzaQuest verbinden we de behoeften van mensen en bedrijven met de mogelijkheden van technologie.',
-        'link' => 'Leer ons kennen',
-    ],
-
     'cta' => [
         'eyebrow' => 'Je volgende stap',
         'title' => "Een goed gesprek\nkan alles veranderen.",
@@ -108,7 +97,7 @@ return [
     ],
 
     'pages' => [
-        'about' => ['label' => 'Wie we zijn', 'title' => 'Verkennen. Bouwen. Zegevieren.', 'intro' => 'GanzaQuest, een merk van NCIATA Ltd, is ontstaan uit één idee: met een doel vooruitgaan in een wereld die voortdurend verandert.', 'description' => 'Maak kennis met GanzaQuest, een merk van NCIATA Ltd: de betekenis van onze naam, ons verhaal en onze visie op technologie.'],
+        'about' => ['label' => 'Wie we zijn', 'title' => 'Technologie die als de jouwe voelt', 'intro' => 'GanzaQuest is een merk van NCIATA Ltd, een technologiebedrijf dat in Rwanda is geregistreerd. We maken apps, software en AI-tools die eenvoudig te gebruiken zijn en passen bij de manier waarop mensen werken.', 'description' => 'Ontdek hoe GanzaQuest apps, software en AI gebruiksvriendelijk maakt en afstemt op de manier waarop mensen werken.'],
         'services' => ['label' => 'Wat we doen', 'title' => 'Je volgende stap, met de juiste technologie.', 'intro' => 'Vier vakgebieden. Eén aanpak: begrijpen wat je nodig hebt en er een bruikbare oplossing van maken.', 'description' => 'Ontdek onze diensten: mobiele apps, AI en automatisering, cybersecuritytraining, software op maat en technologisch advies.'],
         'products' => ['label' => 'Digitale oplossingen', 'title' => 'Ideeën met een doel. Oplossingen die blijven.', 'intro' => 'Een plek om de digitale producten van GanzaQuest te ontdekken.', 'description' => 'Ontdek de digitale producten van GanzaQuest en neem contact met ons op voor de beschikbare oplossingen voor je project.'],
         'blog' => ['label' => 'Inzichten', 'title' => 'Kennis om vooruit te blijven gaan.', 'intro' => 'Technologie, kunstmatige intelligentie, digitale veiligheid en nieuwe manieren van werken.', 'description' => 'De blog van GanzaQuest: artikelen over technologie, kunstmatige intelligentie, automatisering en digitale veiligheid.'],
@@ -117,15 +106,8 @@ return [
     ],
 
     'about' => [
-        'meanings' => [
-            ['tag' => '01 / Ganza', 'title' => 'Zegevieren.', 'text' => 'Uitdagingen aangaan met een duidelijke richting. Zoeken naar bruikbare oplossingen en gefocust blijven op wat iedere persoon of elk bedrijf wil bereiken.'],
-            ['tag' => '02 / Quest', 'title' => 'Verkennen.', 'text' => 'Nieuwsgierigheid als vertrekpunt. Nieuwe mogelijkheden verkennen, leren en technologische kennis omzetten in vooruitgang.'],
-        ],
-        'manifesto_title' => "Mensen eerst.\nTechnologie met betekenis.",
-        'manifesto_text' => 'We werken op het snijvlak van mobiele apps, kunstmatige intelligentie, digitale veiligheid en software op maat. Elk project begint met het begrijpen van de context, niet met het kiezen van een tool.',
-        'origin_tag' => '03 / NCIATA',
-        'origin_title' => 'Ons verhaal.',
-        'origin_text' => 'GanzaQuest is een merk van NCIATA Ltd, een technologiebedrijf geregistreerd in Rwanda. NCIATA is vernoemd naar Annonciate Mukamugema, de moeder van onze oprichter. Annonciate staat voor het goede nieuws, Mugema voor bescherming. GanzaQuest is ontstaan binnen NCIATA: technologie met een doel, in dienst van mensen.',
+        'approach' => 'We brengen de mogelijkheden van technologie dichter bij wat mensen nodig hebben. We beginnen met luisteren en zetten AI en andere vernieuwingen in waar ze taken eenvoudiger maken of mensen meer zeggenschap geven.',
+        'goal' => 'We willen dat mensen hun tools begrijpen, ze aan hun behoeften kunnen aanpassen en ze met vertrouwen blijven gebruiken terwijl de technologie verandert.',
     ],
 
     'empty' => [

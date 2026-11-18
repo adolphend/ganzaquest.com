@@ -25,9 +25,9 @@ return [
     // Image shown when a page is shared on social media.
     'social_image' => 'https://images.unsplash.com/photo-1675050757561-741bd739bc06?w=1344&h=768&fit=crop&q=80',
 
-    // Default language (served without a prefix, at the current URLs) and the others.
-    'default_lang' => 'es',
-    'languages' => ['es', 'en', 'fr', 'de', 'nl'],
+    // English uses the unprefixed URLs. Other languages use their language code.
+    'default_lang' => 'en',
+    'languages' => ['en', 'es', 'fr', 'de', 'nl'],
 
     // URL slug of every page, per language. '' is the home page.
     'slugs' => [

@@ -11,7 +11,7 @@ $langSwitch = static function (string $class) use ($switchPage, $LANG): void { ?
 <?php }; ?>
 <header class="site-header">
 <div class="header-inner">
-<a href="<?= e(url('home')) ?>" class="brand" aria-label="<?= te('a11y.home') ?>"><?= nciata_mark(24, '#e8a317', 'nciata-mark brand-mark') ?><span class="brand-word">NCIATA</span></a>
+<a href="<?= e(url('home')) ?>" class="brand" aria-label="<?= te('a11y.home') ?>"><?= nciata_mark(24, '#e8a317', 'nciata-mark brand-mark') ?><span class="brand-word">GanzaQuest</span></a>
 <nav class="desktop-nav" aria-label="<?= te('a11y.main_nav') ?>">
 <?php foreach (cfg('nav') as $item): ?>
 <a href="<?= e(url($item)) ?>"<?= $item === $page ? ' class="active" aria-current="page"' : '' ?>><?= te('nav.' . $item) ?></a>

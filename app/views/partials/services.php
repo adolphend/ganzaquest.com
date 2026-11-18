@@ -6,9 +6,9 @@
 <p class="lede"><?= tbr('services.intro') ?></p>
 </div>
 <div class="tile-grid">
-<?php foreach (t('services.items') as $i => $service): ?>
-<article class="tile<?= $i === 1 || $i === 2 ? ' tile-dark' : '' ?>">
-<span class="tile-icon"><?= icon($service['icon'], 40, 1.4) ?></span>
+<?php foreach (t('services.items') as $service): ?>
+<article class="tile">
+<span class="tile-icon"><?= icon($service['icon'], 25, 1.7) ?></span>
 <h3><?= e($service['title']) ?></h3>
 <p class="tile-short"><?= e($service['short']) ?></p>
 <?php if ($detailed): ?>

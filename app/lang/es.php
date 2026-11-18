@@ -90,17 +90,6 @@ return [
         ],
     ],
 
-    'story' => [
-        'eyebrow' => 'Más que un nombre',
-        'title_1' => 'Prevalecer.',
-        'title_2' => 'Explorar.',
-        'title_3' => 'Avanzar.',
-        'large' => "La tecnología es el medio.\nEl progreso es el propósito.",
-        'p1' => '«Ganza» significa prevalecer. «Quest» representa la exploración y el progreso. Juntos expresan nuestra forma de entender cada reto: descubrir posibilidades y construir soluciones con sentido.',
-        'p2' => 'En GanzaQuest conectamos las necesidades de personas y empresas con el potencial de la tecnología.',
-        'link' => 'Conoce nuestra esencia',
-    ],
-
     'cta' => [
         'eyebrow' => 'Tu próximo paso',
         'title' => "Una buena conversación\npuede cambiarlo todo.",
@@ -108,7 +97,7 @@ return [
     ],
 
     'pages' => [
-        'about' => ['label' => 'Nuestra esencia', 'title' => 'Explorar. Construir. Prevalecer.', 'intro' => 'GanzaQuest, una marca de NCIATA Ltd, nace de una idea: avanzar con propósito en un mundo que no deja de cambiar.', 'description' => 'Conoce GanzaQuest, una marca de NCIATA Ltd: el significado de nuestro nombre, nuestra historia y nuestra visión de la tecnología.'],
+        'about' => ['label' => 'Nuestra esencia', 'title' => 'La tecnología debe sentirse tuya', 'intro' => 'GanzaQuest es una marca de NCIATA Ltd, empresa tecnológica registrada en Ruanda. Creamos aplicaciones, software y herramientas de IA fáciles de usar y adaptadas a la forma de trabajar de las personas.', 'description' => 'Descubre cómo GanzaQuest crea aplicaciones, software e IA fáciles de usar y adaptados a la forma de trabajar de las personas.'],
         'services' => ['label' => 'Lo que hacemos', 'title' => 'Tu próximo paso, con la tecnología adecuada.', 'intro' => 'Cuatro áreas de especialización. Un mismo enfoque: entender lo que necesitas y convertirlo en una solución útil.', 'description' => 'Explora nuestros servicios de aplicaciones móviles, IA y automatización, formación en ciberseguridad, software a medida y consultoría tecnológica.'],
         'products' => ['label' => 'Soluciones digitales', 'title' => 'Ideas con un propósito. Soluciones con recorrido.', 'intro' => 'Un espacio para conocer los productos digitales de GanzaQuest.', 'description' => 'Conoce el espacio de productos digitales de GanzaQuest y contacta con nosotros para informarte sobre las soluciones disponibles para tu proyecto.'],
         'blog' => ['label' => 'Perspectivas', 'title' => 'Conocimiento para seguir avanzando.', 'intro' => 'Tecnología, inteligencia artificial, seguridad digital y nuevas formas de trabajar.', 'description' => 'El blog de GanzaQuest: un espacio para compartir artículos sobre tecnología, inteligencia artificial, automatización y seguridad digital.'],
@@ -117,15 +106,8 @@ return [
     ],
 
     'about' => [
-        'meanings' => [
-            ['tag' => '01 / Ganza', 'title' => 'Prevalecer.', 'text' => 'Avanzar frente a los retos con una dirección clara. Buscar soluciones útiles y mantener el foco en lo que cada persona o empresa quiere conseguir.'],
-            ['tag' => '02 / Quest', 'title' => 'Explorar.', 'text' => 'La curiosidad como punto de partida. Explorar nuevas posibilidades, aprender y convertir el conocimiento tecnológico en progreso.'],
-        ],
-        'manifesto_title' => "Personas primero.\nTecnología con sentido.",
-        'manifesto_text' => 'Trabajamos en el cruce entre aplicaciones móviles, inteligencia artificial, seguridad digital y software a medida. Cada proyecto empieza por comprender su contexto, no por elegir una herramienta.',
-        'origin_tag' => '03 / NCIATA',
-        'origin_title' => 'Nuestra historia.',
-        'origin_text' => 'GanzaQuest es una marca de NCIATA Ltd, empresa tecnológica registrada en Ruanda. NCIATA lleva el nombre de Annonciate Mukamugema, madre de nuestro fundador. Annonciate evoca la buena noticia; Mugema, la protección. Bajo NCIATA nace GanzaQuest: tecnología con propósito, al servicio de las personas.',
+        'approach' => 'Acercamos lo que la tecnología puede hacer a lo que las personas necesitan. Empezamos por escuchar y aplicamos la IA y otros avances cuando pueden simplificar una tarea o dar a las personas más control.',
+        'goal' => 'Queremos que las personas entiendan sus herramientas, puedan adaptarlas a sus necesidades y las utilicen con confianza a medida que cambia la tecnología.',
     ],
 
     'empty' => [

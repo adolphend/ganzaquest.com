@@ -2,27 +2,27 @@
 
 > GanzaQuest is a technology brand of NCIATA Ltd, a technology company registered in Rwanda. It builds mobile apps for iOS and Android, AI agents and process automation, cybersecurity awareness training and online courses, and custom software with technology consulting, for individuals and companies.
 
-The site is available in Spanish (default), English, French, German and Dutch. NCIATA is named after Annonciate Mukamugema, the founder's mother. "Ganza" means to prevail; "Quest" stands for exploration and progress.
+The site supports English, Spanish, French, German and Dutch. It opens in a supported browser language, with English as the fallback. GanzaQuest makes technology easier to understand, use and adapt.
 
 ## Services
 
-- [Mobile apps](https://ganzaquest.com/en/services): iOS and Android app development, including AI-powered apps and user experience design.
-- [AI and automation](https://ganzaquest.com/en/services): AI agents, intelligent automation and workflow engineering to reduce repetitive work.
-- [Cybersecurity training](https://ganzaquest.com/en/services): awareness training and online courses for individuals and companies.
-- [Software and consulting](https://ganzaquest.com/en/services): custom software development and technology consulting.
+- [Mobile apps](https://ganzaquest.com/services): iOS and Android app development, including AI-powered apps and user experience design.
+- [AI and automation](https://ganzaquest.com/services): AI agents, intelligent automation and workflow engineering to reduce repetitive work.
+- [Cybersecurity training](https://ganzaquest.com/services): awareness training and online courses for individuals and companies.
+- [Software and consulting](https://ganzaquest.com/services): custom software development and technology consulting.
 
 ## Key pages
 
-- [Home (English)](https://ganzaquest.com/en)
-- [About GanzaQuest and NCIATA Ltd](https://ganzaquest.com/en/about)
-- [Services and FAQ](https://ganzaquest.com/en/services)
-- [Contact](https://ganzaquest.com/en/contact)
-- [Inicio (español)](https://ganzaquest.com/)
+- [Home (English)](https://ganzaquest.com/)
+- [About GanzaQuest and NCIATA Ltd](https://ganzaquest.com/about)
+- [Services and FAQ](https://ganzaquest.com/services)
+- [Contact](https://ganzaquest.com/contact)
+- [Inicio (español)](https://ganzaquest.com/es)
 - [Accueil (français)](https://ganzaquest.com/fr)
 - [Startseite (Deutsch)](https://ganzaquest.com/de)
 - [Home (Nederlands)](https://ganzaquest.com/nl)
 
 ## Optional
 
-- [Privacy](https://ganzaquest.com/en/privacy)
+- [Privacy](https://ganzaquest.com/privacy)
 - [Sitemap](https://ganzaquest.com/sitemap.xml)

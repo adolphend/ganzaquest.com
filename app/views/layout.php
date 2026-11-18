@@ -50,7 +50,7 @@ $canonical = $is404 ? null : absolute_url(url($page));
 <link rel="apple-touch-icon" href="<?= e(asset('img/favicon.png')) ?>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap">
 <link rel="stylesheet" href="<?= e(asset('css/site.css')) ?>">
 <?php
 $org = [
@@ -83,7 +83,7 @@ if (!$is404): ?>
 <?php endif; ?>
 <script src="<?= e(asset('js/site.js')) ?>" defer></script>
 </head>
-<body>
+<body<?= $isHome && $LANG === cfg('default_lang') ? ' data-language-entry' : '' ?>>
 <a class="skip-link" href="#contenido"><?= te('a11y.skip') ?></a>
 <?php render('partials/header', ['page' => $page]); ?>
 <main id="contenido">

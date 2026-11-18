@@ -1,7 +1,7 @@
 <footer class="site-footer">
 <div class="footer-inner">
 <div class="footer-top">
-<a class="footer-brand" href="<?= e(url('home')) ?>"><?= nciata_mark(28, '#e8a317') ?><span>NCIATA</span></a>
+<a class="footer-brand" href="<?= e(url('home')) ?>"><?= nciata_mark(28, '#e8a317') ?><span>GanzaQuest</span></a>
 <p class="footer-motto"><?= te('brand.motto') ?></p>
 </div>
 <nav class="footer-nav" aria-label="<?= te('a11y.footer_nav') ?>">
