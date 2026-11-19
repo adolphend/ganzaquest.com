@@ -1,10 +1,5 @@
-<section class="section blog-preview" aria-label="<?= te('nav.blog') ?>">
-<article>
-<div class="blog-preview-mark" aria-hidden="true"><?= icon('book-open', 26, 1.6) ?></div>
-<div>
-<h2 class="headline"><?= te('blog_preview.title') ?></h2>
-<p class="lede"><?= te('blog_preview.example') ?></p>
-<p class="lede"><?= te('blog_preview.takeaway') ?></p>
-</div>
-</article>
-</section>
+<section class="journal-index section" aria-label="<?= e($storyUI['articles']) ?>">
+<article class="journal-feature" lang="<?= e($LANG) ?>">
+<a class="journal-image" href="<?= e(url('door-story')) ?>" tabindex="-1" aria-hidden="true"><img src="<?= e(asset('img/mary-chris-door.webp')) ?>" width="1536" height="1024" alt=""></a>
+<div><p class="journal-topic"><?= e($story[0]) ?></p><h2><a href="<?= e(url('door-story')) ?>"><?= e($storyUI['title']) ?></a></h2><p><?= e($storyUI['excerpt']) ?></p><a class="pill" href="<?= e(url('door-story')) ?>"><?= e($storyUI['read']) ?></a><p class="journal-time"><?= e($storyUI['time']) ?></p></div>
+</article></section>

@@ -3,8 +3,16 @@
 $form = $form ?? ['ok' => false, 'error' => null, 'old' => []];
 $isHome = $page === 'home';
 $is404 = $page === '404';
+$isArticle = $page === 'door-story';
+if ($isArticle || $page === 'blog') {
+    $story = json_decode(file_get_contents(APP_DIR . '/lang/door-story/' . $LANG . '.json'), true, 512, JSON_THROW_ON_ERROR);
+    $storyUI = json_decode(file_get_contents(APP_DIR . '/lang/door-story/ui.json'), true, 512, JSON_THROW_ON_ERROR)[$LANG];
+}
 
-if ($isHome) {
+if ($isArticle) {
+    $title = $storyUI['seo'] . ' | GanzaQuest';
+    $description = $storyUI['description'];
+} elseif ($isHome) {
     $title = t('meta.home_title');
     $description = t('meta.home_description');
 } elseif ($is404) {
@@ -30,16 +38,16 @@ $canonical = $is404 ? null : absolute_url(url($page));
 <meta name="robots" content="noindex">
 <?php else: ?>
 <link rel="canonical" href="<?= e($canonical) ?>">
-<?php foreach (cfg('languages') as $code): ?>
+<?php foreach (cfg('languages') as $code): if (!isset(cfg('slugs')[$code][$page])) continue; ?>
 <link rel="alternate" hreflang="<?= e($code) ?>" href="<?= e(absolute_url(url($page, $code))) ?>">
 <?php endforeach; ?>
 <link rel="alternate" hreflang="x-default" href="<?= e(absolute_url(url($page, cfg('default_lang')))) ?>">
 <?php endif; ?>
-<meta property="og:type" content="website">
+<meta property="og:type" content="<?= $isArticle ? 'article' : 'website' ?>">
 <meta property="og:site_name" content="GanzaQuest">
 <meta property="og:title" content="<?= e($title) ?>">
 <meta property="og:description" content="<?= e($description) ?>">
-<meta property="og:image" content="<?= e(cfg('social_image')) ?>">
+<meta property="og:image" content="<?= e($isArticle ? absolute_url('/assets/img/mary-chris-door.webp') : cfg('social_image')) ?>">
 <meta property="og:locale" content="<?= te('locale') ?>">
 <?php if ($canonical): ?>
 <meta property="og:url" content="<?= e($canonical) ?>">
@@ -66,6 +74,9 @@ $org = [
     'makesOffer' => array_map(static fn($s) => ['@type' => 'Offer', 'itemOffered' => ['@type' => 'Service', 'name' => $s['title'], 'description' => $s['description']]], t('services.items')),
 ];
 $graph = [$org];
+if ($isArticle) {
+    $graph[] = ['@type' => 'BlogPosting', 'headline' => $storyUI['title'], 'description' => $description, 'inLanguage' => $LANG, 'mainEntityOfPage' => $canonical, 'image' => absolute_url('/assets/img/mary-chris-door.webp'), 'publisher' => ['@id' => cfg('site_url') . '/#organization']];
+}
 if ($isHome) {
     $graph[] = ['@type' => 'WebSite', '@id' => cfg('site_url') . '/#website', 'name' => 'GanzaQuest', 'url' => cfg('site_url') . '/', 'inLanguage' => $LANG, 'publisher' => ['@id' => cfg('site_url') . '/#organization']];
 }
@@ -82,6 +93,10 @@ if (!$is404): ?>
 <meta name="msvalidate.01" content="<?= e(cfg('bing_site_verification')) ?>">
 <?php endif; ?>
 <script src="<?= e(asset('js/site.js')) ?>" defer></script>
+<?php if ($isArticle || $page === 'blog'): ?>
+<link rel="stylesheet" href="<?= e(asset('css/door-story.css')) ?>">
+<?php endif; ?>
+<?php if ($isArticle): ?><script src="<?= e(asset('js/door-story.js')) ?>" defer></script><?php endif; ?>
 </head>
 <body<?= $isHome && $LANG === cfg('default_lang') ? ' data-language-entry' : '' ?>>
 <a class="skip-link" href="#contenido"><?= te('a11y.skip') ?></a>
@@ -90,12 +105,14 @@ if (!$is404): ?>
 <?php
 if ($isHome) {
     render('pages/home');
+} elseif ($isArticle) {
+    render('pages/door-story', ['story' => $story, 'storyUI' => $storyUI]);
 } elseif ($is404) {
     render('partials/intro', ['label' => t('not_found.label'), 'title' => t('not_found.title'), 'intro' => t('not_found.intro')]);
     render('pages/404');
 } else {
     render('partials/intro', ['label' => t("pages.$page.label"), 'title' => t("pages.$page.title"), 'intro' => t("pages.$page.intro")]);
-    render('pages/' . $page, ['form' => $form]);
+    render('pages/' . $page, ['form' => $form, 'story' => $story ?? [], 'storyUI' => $storyUI ?? []]);
     if (!in_array($page, ['contact', 'privacy', 'products', 'blog'], true)) {
         render('partials/cta');
     }

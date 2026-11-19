@@ -101,10 +101,7 @@ function resolve_route(string $path): ?array
     if ($segments && in_array($segments[0], cfg('languages'), true)) {
         $lang = array_shift($segments);
     }
-    if (count($segments) > 1) {
-        return null;
-    }
-    $slug = $segments[0] ?? '';
+    $slug = implode('/', $segments);
     $page = array_search($slug, cfg('slugs')[$lang], true);
     // Preserve former Spanish URLs whose slugs do not overlap with English.
     if ($page === false && $lang === cfg('default_lang') && $path === '/' . $slug) {
