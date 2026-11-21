@@ -1,0 +1,34 @@
+# GanzaQuest (NCIATA Ltd)
+
+> GanzaQuest is a branch of NCIATA Ltd, a technology company registered in Rwanda. It builds mobile apps for iOS and Android, AI agents and process automation, cybersecurity awareness training and online courses, and custom software with technology consulting, for individuals and companies.
+
+The site supports English, Spanish, French, German and Dutch. It opens in a supported browser language, with English as the fallback. GanzaQuest makes technology easier to understand, use and adapt.
+
+## Services
+
+- [Mobile apps](https://ganzaquest.com/services): iOS and Android app development, including AI-powered apps and user experience design.
+- [AI and automation](https://ganzaquest.com/services): AI agents, intelligent automation and workflow engineering to reduce repetitive work.
+- [Cybersecurity training](https://ganzaquest.com/services): awareness training and online courses for individuals and companies.
+- [Software and consulting](https://ganzaquest.com/services): custom software development and technology consulting.
+
+## Products
+- [Cybersecurity Awareness Basics](https://ganzaquest.com/products#course-title): self-paced beginner training for small businesses and organizations, available January 2027. Starts at US$499 for teams of 1–50.
+- [Custom AI Agent Design & Deployment](https://ganzaquest.com/products#agent-title): custom agents with local and model API options, available December 2026. Starts at US$1,999. Customers pay only when satisfied.
+
+## Key pages
+
+- [Home (English)](https://ganzaquest.com/)
+- [About GanzaQuest and NCIATA Ltd](https://ganzaquest.com/about)
+- [Services and FAQ](https://ganzaquest.com/services)
+- [Products](https://ganzaquest.com/products)
+- [Blog](https://ganzaquest.com/blog)
+- [Contact](https://ganzaquest.com/contact)
+- [Inicio (español)](https://ganzaquest.com/es)
+- [Accueil (français)](https://ganzaquest.com/fr)
+- [Startseite (Deutsch)](https://ganzaquest.com/de)
+- [Home (Nederlands)](https://ganzaquest.com/nl)
+
+## Optional
+
+- [Privacy](https://ganzaquest.com/privacy)
+- [Sitemap](https://ganzaquest.com/sitemap.xml)
