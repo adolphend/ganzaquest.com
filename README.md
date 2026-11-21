@@ -69,3 +69,12 @@ After the site is live:
 1. **Google Search Console** (search.google.com/search-console): Add property → Domain → `ganzaquest.com` → copy the TXT record → hPanel → Domains → DNS / Nameservers → add a TXT record → Verify. Then Sitemaps → submit `sitemap.xml`.
 2. **Bing Webmaster Tools** (bing.com/webmasters): sign in → Import from Google Search Console. Bing also feeds ChatGPT search and Copilot.
 3. If you prefer the HTML-tag method instead of DNS, paste the codes into `google_site_verification` / `bing_site_verification` in `app/config.php`.
+
+
+## SuspensionLab article
+
+The English case study is available at `/blog/what-would-you-ask-it-to-do` and linked from `/blog`. Content lives in `app/views/pages/suspension-story.php`; its stylesheet, conceptual SVG, saved experiment plot, and numerical evidence are in `assets/`. No translated versions are claimed. Native details elements provide reader choices without requiring JavaScript.
+
+Editorial review covered five passes: narrative structure, plain-language explanations, relevance to simulation engineers, evidence and numerical claims, and final tone/reading flow. The article distinguishes supplied execution records from independent verification and includes the longer settling time and rough-road trade-offs.
+
+Validation on 2026-11-21 used a portable official PHP 8.4.28 runtime, with its download checked against the publisher's SHA-256. All 34 PHP files passed syntax checks. Local HTTP checks passed for the article, canonical URL, BlogPosting data, language links, English blog listing, existing door story, four translated blog pages, homepage, sitemap, and new assets. Reported improvements and physical limits were checked against the published evidence extract. Browser visual QA and live hosting deployment were not verified by these checks. The original MATLAB simulations were not rerun.

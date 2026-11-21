@@ -4,6 +4,7 @@ $switchPage = $page === '404' ? 'home' : $page;
 $langSwitch = static function (string $class) use ($switchPage, $LANG): void { ?>
 <div class="<?= e($class) ?>" role="group" aria-label="<?= te('a11y.language') ?>">
 <?php foreach (cfg('languages') as $code):
+    if (!isset(cfg('slugs')[$code][$switchPage])) continue;
     $name = load_strings($code)['lang_name'] ?? strtoupper($code); ?>
 <a href="<?= e(url($switchPage, $code)) ?>" hreflang="<?= e($code) ?>" lang="<?= e($code) ?>" title="<?= e($name) ?>"<?= $code === $LANG ? ' aria-current="true"' : '' ?>><span aria-hidden="true"><?= e(strtoupper($code)) ?></span><span class="sr-only"><?= e($name) ?></span></a>
 <?php endforeach; ?>
@@ -14,7 +15,7 @@ $langSwitch = static function (string $class) use ($switchPage, $LANG): void { ?
 <a href="<?= e(url('home')) ?>" class="brand" aria-label="<?= te('a11y.home') ?>"><?= nciata_mark(24, '#e8a317', 'nciata-mark brand-mark') ?><span class="brand-word">GanzaQuest</span></a>
 <nav class="desktop-nav" aria-label="<?= te('a11y.main_nav') ?>">
 <?php foreach (cfg('nav') as $item): ?>
-<a href="<?= e(url($item)) ?>"<?= $item === ($page === 'door-story' ? 'blog' : $page) ? ' class="active" aria-current="page"' : '' ?>><?= te('nav.' . $item) ?></a>
+<a href="<?= e(url($item)) ?>"<?= $item === (in_array($page, ['door-story', 'suspension-story'], true) ? 'blog' : $page) ? ' class="active" aria-current="page"' : '' ?>><?= te('nav.' . $item) ?></a>
 <?php endforeach; ?>
 </nav>
 <div class="header-actions">
@@ -27,7 +28,7 @@ $langSwitch = static function (string $class) use ($switchPage, $LANG): void { ?
 </div>
 <nav class="mobile-nav" id="mobile-nav" aria-label="<?= te('a11y.mobile_nav') ?>" hidden>
 <?php foreach (cfg('nav') as $item): ?>
-<a href="<?= e(url($item)) ?>"<?= $item === ($page === 'door-story' ? 'blog' : $page) ? ' class="active" aria-current="page"' : '' ?>><?= te('nav.' . $item) ?></a>
+<a href="<?= e(url($item)) ?>"<?= $item === (in_array($page, ['door-story', 'suspension-story'], true) ? 'blog' : $page) ? ' class="active" aria-current="page"' : '' ?>><?= te('nav.' . $item) ?></a>
 <?php endforeach; ?>
 <?php $langSwitch('lang-switch lang-switch-mobile'); ?>
 </nav>

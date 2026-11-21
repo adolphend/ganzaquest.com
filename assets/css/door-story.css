@@ -5,3 +5,5 @@
 @media(max-width:760px){.door-story .story-hero{grid-template-columns:1fr;padding:24px 22px 36px;gap:24px}.door-story .story-hero h1{font-size:58px}.story-illustration{max-width:550px;transform:none}.story-illustration img{border-radius:24px}.door-story .story-hero>*:not(.door-art){position:static}.journal-feature{grid-template-columns:1fr;gap:25px}.story-breadcrumb{padding:18px 22px;font-size:13px}.door-story .story-ending>p:nth-child(2){font-size:40px}}
 @media(prefers-reduced-motion:no-preference){.door-story details[open] p{animation:story-answer .18s ease-out}@keyframes story-answer{from{opacity:0}to{opacity:1}}}
 @media print{.site-header,.site-footer,.story-breadcrumb{display:none}.door-story .story-hero{display:block;padding:0}.story-illustration{max-width:300px}.door-story .story-body{padding:0}.door-story .story-chapter{padding:12px 0}}
+
+.suspension-feature{margin-top:80px;padding-top:60px;border-top:1px solid #c8cfc1}

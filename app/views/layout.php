@@ -3,10 +3,17 @@
 $form = $form ?? ['ok' => false, 'error' => null, 'old' => []];
 $isHome = $page === 'home';
 $is404 = $page === '404';
-$isArticle = $page === 'door-story';
-if ($isArticle || $page === 'blog') {
+$isSuspension = $page === 'suspension-story';
+$isDoor = $page === 'door-story';
+$isArticle = $isDoor || $isSuspension;
+$articleImage = $isSuspension ? '/assets/img/suspension-holdout.png' : '/assets/img/mary-chris-door.webp';
+if ($isDoor || $page === 'blog') {
     $story = json_decode(file_get_contents(APP_DIR . '/lang/door-story/' . $LANG . '.json'), true, 512, JSON_THROW_ON_ERROR);
     $storyUI = json_decode(file_get_contents(APP_DIR . '/lang/door-story/ui.json'), true, 512, JSON_THROW_ON_ERROR)[$LANG];
+}
+
+if ($isSuspension) {
+    $storyUI = ['title' => 'What Would You Ask It to Do?', 'seo' => 'What Would You Ask It to Do? AI Agents in MATLAB', 'description' => 'A speed bump, an AI agent, and an engineering investigation: how a carefully designed workflow turns MATLAB simulations into evidence you can examine.'];
 }
 
 if ($isArticle) {
@@ -47,7 +54,7 @@ $canonical = $is404 ? null : absolute_url(url($page));
 <meta property="og:site_name" content="GanzaQuest">
 <meta property="og:title" content="<?= e($title) ?>">
 <meta property="og:description" content="<?= e($description) ?>">
-<meta property="og:image" content="<?= e($isArticle ? absolute_url('/assets/img/mary-chris-door.webp') : cfg('social_image')) ?>">
+<meta property="og:image" content="<?= e($isArticle ? absolute_url($articleImage) : cfg('social_image')) ?>">
 <meta property="og:locale" content="<?= te('locale') ?>">
 <?php if ($canonical): ?>
 <meta property="og:url" content="<?= e($canonical) ?>">
@@ -75,7 +82,7 @@ $org = [
 ];
 $graph = [$org];
 if ($isArticle) {
-    $graph[] = ['@type' => 'BlogPosting', 'headline' => $storyUI['title'], 'description' => $description, 'inLanguage' => $LANG, 'mainEntityOfPage' => $canonical, 'image' => absolute_url('/assets/img/mary-chris-door.webp'), 'publisher' => ['@id' => cfg('site_url') . '/#organization']];
+    $graph[] = ['@type' => 'BlogPosting', 'headline' => $storyUI['title'], 'description' => $description, 'inLanguage' => $LANG, 'mainEntityOfPage' => $canonical, 'image' => absolute_url($articleImage), 'publisher' => ['@id' => cfg('site_url') . '/#organization']];
 }
 if ($isHome) {
     $graph[] = ['@type' => 'WebSite', '@id' => cfg('site_url') . '/#website', 'name' => 'GanzaQuest', 'url' => cfg('site_url') . '/', 'inLanguage' => $LANG, 'publisher' => ['@id' => cfg('site_url') . '/#organization']];
@@ -96,7 +103,8 @@ if (!$is404): ?>
 <?php if ($isArticle || $page === 'blog'): ?>
 <link rel="stylesheet" href="<?= e(asset('css/door-story.css')) ?>">
 <?php endif; ?>
-<?php if ($isArticle): ?><script src="<?= e(asset('js/door-story.js')) ?>" defer></script><?php endif; ?>
+<?php if ($isSuspension): ?><link rel="stylesheet" href="<?= e(asset('css/suspension-story.css')) ?>"><?php endif; ?>
+<?php if ($isDoor): ?><script src="<?= e(asset('js/door-story.js')) ?>" defer></script><?php endif; ?>
 </head>
 <body<?= $isHome && $LANG === cfg('default_lang') ? ' data-language-entry' : '' ?>>
 <a class="skip-link" href="#contenido"><?= te('a11y.skip') ?></a>
@@ -105,7 +113,9 @@ if (!$is404): ?>
 <?php
 if ($isHome) {
     render('pages/home');
-} elseif ($isArticle) {
+} elseif ($isSuspension) {
+    render('pages/suspension-story');
+} elseif ($isDoor) {
     render('pages/door-story', ['story' => $story, 'storyUI' => $storyUI]);
 } elseif ($is404) {
     render('partials/intro', ['label' => t('not_found.label'), 'title' => t('not_found.title'), 'intro' => t('not_found.intro')]);

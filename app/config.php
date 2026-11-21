@@ -32,7 +32,7 @@ return [
     // URL slug of every page, per language. '' is the home page.
     'slugs' => [
         'es' => ['door-story' => 'blog/abririas-la-puerta', 'home' => '', 'about' => 'sobre-nosotros', 'services' => 'servicios', 'products' => 'productos', 'blog' => 'blog', 'contact' => 'contacto', 'privacy' => 'privacidad'],
-        'en' => ['door-story' => 'blog/would-you-open-the-door', 'home' => '', 'about' => 'about', 'services' => 'services', 'products' => 'products', 'blog' => 'blog', 'contact' => 'contact', 'privacy' => 'privacy'],
+        'en' => ['suspension-story' => 'blog/what-would-you-ask-it-to-do', 'door-story' => 'blog/would-you-open-the-door', 'home' => '', 'about' => 'about', 'services' => 'services', 'products' => 'products', 'blog' => 'blog', 'contact' => 'contact', 'privacy' => 'privacy'],
         'fr' => ['door-story' => 'blog/ouvririez-vous-la-porte', 'home' => '', 'about' => 'a-propos', 'services' => 'services', 'products' => 'produits', 'blog' => 'blog', 'contact' => 'contact', 'privacy' => 'confidentialite'],
         'de' => ['door-story' => 'blog/wuerdest-du-die-tuer-oeffnen', 'home' => '', 'about' => 'ueber-uns', 'services' => 'leistungen', 'products' => 'produkte', 'blog' => 'blog', 'contact' => 'kontakt', 'privacy' => 'datenschutz'],
         'nl' => ['door-story' => 'blog/zou-jij-de-deur-openen', 'home' => '', 'about' => 'over-ons', 'services' => 'diensten', 'products' => 'producten', 'blog' => 'blog', 'contact' => 'contact', 'privacy' => 'privacy'],

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600" role="img" aria-labelledby="title desc">
+<title id="title">One corner of a car</title><desc id="desc">A body mass connected by a spring and damper to a wheel above a road bump. A conceptual illustration, not simulation output.</desc>
+<rect width="800" height="600" rx="24" fill="#e5eef2"/>
+<g stroke="#153b48" stroke-width="6" stroke-linejoin="round" fill="none">
+<rect x="180" y="80" width="440" height="105" rx="22" fill="#153b48"/>
+<path d="M285 185v30l-30 18 60 26-60 26 60 26-60 26 30 18v35"/>
+<path d="M495 185v65m-30 0h60v65h-60zm30 65v75"/>
+<path d="M260 390h260"/><circle cx="390" cy="438" r="48" fill="#fff"/><circle cx="390" cy="438" r="18"/>
+<path d="M60 535h180c60 0 80-49 150-49s90 49 150 49h200" stroke="#b27725"/>
+</g>
+<g font-family="Arial,sans-serif" font-size="24" text-anchor="middle">
+<text x="400" y="145" fill="#fff">Vehicle body</text>
+<g fill="#153b48"><text x="190" y="290">Spring</text><text x="600" y="290">Damper</text><text x="555" y="445">Wheel + tire</text><text x="400" y="580">Road input</text></g>
+</g></svg>
