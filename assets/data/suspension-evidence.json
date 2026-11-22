@@ -1,5 +1,5 @@
 {
-  "provenance": "Extracted from supplied SuspensionLab AI experiment manifests; not independently rerun for this article. Recorded source commit is not present in the local imported repository history.",
+  "provenance": "Results extracted from supplied SuspensionLab AI experiment manifests. The author states that the simulations were run for this article. The translation work used those records and did not run new simulations. The recorded source commit is not present in the local imported repository history.",
   "optimizationId": "20261121T131742056-optimization-b2194cbb-24c1-4418-8213-4563c4884923",
   "matlabVersion": "24.1.0.2537033 (R2024a)",
   "mcpServerVersion": "0.16.1",

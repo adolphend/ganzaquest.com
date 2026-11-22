@@ -1,14 +1,129 @@
 {
-  "hero":{"standfirst":"Eine Bodenschwelle, eine sanftere Fahrt und eine andere Art, KI einzusetzen.","meta":"Eine technische GanzaQuest-Fallstudie · 8 Minuten Lesezeit","start":"Beginnen wir mit der Schwelle","diagram_alt":"Vereinfachtes Modell einer Fahrzeugecke: Der Aufbau ist über eine Feder und einen Dämpfer mit einem Rad über einer Bodenschwelle verbunden.","labels":{"body":"Fahrzeugaufbau","spring":"Feder","damper":"Dämpfer","wheel":"Rad und Reifen","road":"Straße"},"caption":"Eine Ecke eines Autos. Genug, um eine Untersuchung zu beginnen."},
-  "bump":{"title":"Die Bodenschwelle, die du kennst","paragraphs":["Du siehst sie und bremst. Die Vorderräder fahren auf die Bodenschwelle. Du spürst einen Stoß im Sitz, dann bewegt sich das Auto auf und ab, bevor es zur Ruhe kommt.","Angenommen, du könntest die Federung ändern. Würde eine weichere Feder die Überfahrt sanfter machen? Würde das Auto schneller aufhören zu schwingen oder sich länger bewegen?","Hinter dieser alltäglichen Erfahrung steckt eine technische Untersuchung. Um sie zu beantworten, muss jemand ein Modell bauen, Messgrößen wählen, Einstellungen ausprobieren und die Ergebnisse verstehen.","Ich gab diese Untersuchung an einen KI-Agenten. Das Projekt hieß SuspensionLab AI; die Aufgabe verlangte von Codex, mit MATLAB und Simulink eine bessere Fahrwerkseinstellung zu untersuchen.","Bevor es um die Werkzeuge ging, war jedoch eine Frage zu klären."]},
-  "decision":{"label":"Ein Moment zum Entscheiden","title":"Was würde die Fahrt verbessern?","intro":"Entdecke eine Möglichkeit. Es gibt keine Punkte.","choices":[{"title":"Ein sanfterer Stoß","answer":"Das ist ein sinnvolles Ziel. Die Beschleunigung des Aufbaus zu messen, ermöglicht einen Vergleich. Wir sollten auch betrachten, was nach dem ersten Stoß geschieht."},{"title":"Weniger Nachschwingen","answer":"Auch das ist wichtig. Eine Einstellung mit geringerer Beschleunigung kann länger zum Ausschwingen brauchen. Beide Werte gehören vor der Entscheidung auf den Tisch."},{"title":"Gutes Verhalten auf anderen Straßen","answer":"Eine mit bestimmten Straßen gewählte Einstellung verdient einen neuen Test. Wir können andere Bedingungen zurückhalten und erst nach der Parameterwahl verwenden."}]},
-  "assignment":{"title":"Die Arbeit hinter der Antwort","paragraphs":["Die Aufgabe enthielt Anweisungen für den Agenten: Umgebung untersuchen, Software prüfen, das Modell vor dem Experiment testen, Einstellungen und Ergebnisse speichern und Fehler dokumentieren.","Gefordert waren außerdem ein Vergleich zwischen MATLAB und Simulink sowie ein abschließender Test auf Straßen, die nicht zur Wahl der Federung verwendet wurden.","Solche Anweisungen machen aus einem allgemeinen Ziel überprüfbare Arbeit. Scheint ein Ergebnis vielversprechend, sollten Modell, Eingaben, Berechnungen und Prüfungen nachvollziehbar sein. Bei Fehlern muss eine Untersuchung möglich sein.","Wer täglich simuliert, kennt den Ablauf: Parameter ändern, Modell starten, Diagramm betrachten und überlegen, ob eine unerwartete Kurve aus der Physik oder aus einem Fehler stammt. Anfangsbedingungen, Gleichungen oder Solver-Einstellungen werden geprüft und der Lauf wiederholt.","Ich wollte untersuchen, ob ein Agent diese Folge anhand einer technischen Aufgabenstellung ausführen kann."]},
-  "tools":{"title":"Kann er überhaupt ins Labor?","paragraphs":["Codex koordinierte die Arbeit. MATLAB führte die Berechnungen aus, Simulink lieferte eine weitere Implementierung des Modells. Dafür brauchte der Agent eine funktionierende Verbindung zur Software.","Diese Verbindung nutzte MCP, das Model Context Protocol. Stell dir einen Kollegen vor, der ein Programm um eine Berechnung bittet und das Ergebnis erhält. MCP gibt Agent und Werkzeugserver eine gemeinsame Form für solche Anfragen und Antworten.","Die protokollierten Verbindungstests waren bewusst klein: zwei Zahlen in MATLAB addieren, ein numerisches Problem lösen und einen Wert speichern und wieder lesen. So wurde geprüft, ob der Agent das vorgesehene Werkzeug tatsächlich nutzen konnte.","Die Begriffe werden damit klarer: Der Agent koordiniert Schritte; ein Werkzeug führt eine verfügbare Aktion aus, etwa MATLAB-Code; eine Fähigkeit enthält wiederverwendbare Anweisungen. Die Aufgabe ergänzt die Ziele und Regeln dieser Untersuchung.","Dem Agenten eine Ingenieurrolle zu geben, ist erst der Anfang. Der Ablauf muss auch festlegen, was vor der Annahme eines Ergebnisses zu prüfen ist."]},
-  "model":{"title":"Ein kleines Stück eines Autos","paragraphs":["Der Agent baute ein Viertelfahrzeugmodell: einen Teil des Aufbaus, eine Radbaugruppe, Feder und Dämpfer sowie einen durch seine Steifigkeit dargestellten Reifen. Die Straße bewegt sich unter dem Rad; die Gleichungen beschreiben die Reaktion von Rad und Aufbau.","Das ist bewusst vereinfacht. So lässt sich die Frage untersuchen, ohne jedes Fahrzeugteil darzustellen.","Die gespeicherten Prüfungen betreffen Gleichgewicht, Energiebilanz und die Empfindlichkeit gegenüber Einstellungen der numerischen Integration. Außerdem verglich der Agent MATLAB und Simulink mit denselben Straßeneingaben.","Unterwegs gab es Fehler: Bei einer Werkzeuganfrage fehlte ein Pflichtargument; eine andere verwendete beim Einrichten eines Simulink-Blocks einen falschen Parameternamen. Die Protokolle beschreiben Informationssuche, Korrektur und erneute Prüfung.","Das gehört zur Arbeit. Ein technischer Ablauf braucht eine Möglichkeit, Fehler zu untersuchen und festzuhalten."]},
-  "search":{"title":"Eine Straße. Und dann eine andere.","paragraphs":["Die Ausgangsfederung wurde auf drei simulierten Oberflächen getestet: einer fast glatten Straße, einer einzelnen Schwelle und einer unebenen Straße. Für jede wurden Aufbaubeschleunigung, Federweg und Radreaktion erfasst.","Danach suchte die Optimization Toolbox von MATLAB innerhalb vorgegebener Grenzen nach Feder- und Dämpfereinstellungen. Codex koordinierte den Ablauf; der MATLAB-Solver fmincon führte mit seinem SQP-Algorithmus die numerische Suche aus.","Die Suche bewertete 56 Einstellungen bei einem Budget von 60. Sie sollte die Beschleunigung verringern und Grenzen für Federweg und minimale Radlast einhalten. Es war eine begrenzte Suche; der Solver meldete ein mögliches lokales Minimum.","Nach der Auswahl folgte ein Test mit einer anderen Schwelle und einem anderen Profil der unebenen Straße. Ausgangs- und ausgewählte Federung erhielten dieselben neuen Eingaben."]},
-  "result":{"title":"Eine sanftere Fahrt. Längeres Nachschwingen.","before":["Auf der neuen Schwelle verringerte die gewählte Federung die RMS-Beschleunigung des Aufbaus um etwa 45 %. Auf der neuen unebenen Straße betrug die Verringerung etwa 28 %. Die RMS-Beschleunigung fasst die Stärke der Beschleunigung im simulierten Zeitraum zusammen; das Projekt nutzte sie als Komfortindikator.","Daneben steht eine weitere Zahl: Nach der neuen Schwelle kam der Ausgangsaufbau nach ungefähr 2,8 Sekunden zur Ruhe. Die gewählte Einstellung brauchte nach dem Kriterium des Experiments etwa 4 Sekunden.","Die Beschleunigung war geringer. Das Ausschwingen dauerte länger."],"plot_alt":"Gespeichertes Vergleichsdiagramm des unabhängigen Schwellentests mit den Reaktionen der Ausgangs- und der gewählten Federung.","plot_caption":"Gespeichertes Ergebnis des unabhängigen Vergleichs. Die Beschriftung ist Englisch: durchgezogenes Blau = Ausgangseinstellung; gestricheltes Orange = gewählte Einstellung. Bild zum Vergrößern öffnen.","after":["Zurück zur ersten Frage: Würdest du einen sanfteren Stoß akzeptieren, wenn sich der Aufbau länger bewegt? Das hängt vom Ziel ab. Das Ergebnis zeigt einen abzuwägenden Kompromiss.","Die gewählte Einstellung blieb in beiden unabhängigen Tests innerhalb der vorgegebenen Grenzen für Federweg und minimale Radlast. Auf der unebenen Straße nutzte sie jedoch mehr Federweg und erreichte eine niedrigere minimale Radlast als die Ausgangseinstellung. Eine Grenze einzuhalten bedeutet nicht, dass sich jede Messgröße verbessert hat.","Diese Ergebnisse beschreiben eine vereinfachte Simulation. Für Aussagen über ein echtes Fahrzeug wären weitere Modelle und physische Tests nötig."]},
-  "review":{"label":"Jetzt bist du dran","title":"Würdest du das Ergebnis akzeptieren?","summary":"Was würdest du vor der Wahl prüfen?","answer":"Betrachte neben der geringeren Beschleunigung die Kompromisse: Straßeneingaben, Modellannahmen, Ausschwingkriterium, Federweg und Radlast. Sind die unabhängigen Testbedingungen für den beabsichtigten Einsatz repräsentativ? Eine Verbesserung ist ein nützlicher Hinweis; die Entscheidung erfordert weiterhin Fachurteil."},
-  "work":{"title":"Die Fähigkeit liegt in der Gestaltung der Arbeit","paragraphs":["Für mich ist die Folge hinter den Zahlen besonders interessant. Der Agent nutzte technische Software, prüfte Modellverhalten, koordinierte eine numerische Suche und lieferte Ergebnisse aus getrennten Testbedingungen.","Dieser Ablauf verbindet Modellierung, numerische Analyse, Tests und Berichterstattung. Ein Agent kann dabei helfen, wenn geeignete Werkzeuge und klare Anweisungen vorliegen.","Stell dir den Alltag einer Person vor, die MATLAB und Simulation gut kennt: Ein Agent könnte einen Vergleich vorbereiten, Szenarien ausführen, Werkzeugfehler untersuchen und Nachweise ordnen. Die Fachkenntnis des Ingenieurs würde Aufgabe und zulässige Schlussfolgerungen bestimmen.","Den Ablauf zu entwerfen ist damit selbst eine Fähigkeit. Was soll gemessen werden? Welche Grenzen zählen? Was würde einen Fehler zeigen? Welcher Test bleibt außerhalb der Suche? Was muss gespeichert werden, damit andere die Arbeit nachvollziehen können?","Je besser wir diese Fragen beantworten, desto nützlichere Arbeit können wir einem Agenten übertragen.","Wir begannen mit einer Bodenschwelle. Denke jetzt an eine Aufgabe, die du wiederholst: die Werkzeuge, die Prüfungen und die Nachweise vor einer Entscheidung. Vielleicht kann ein Agent dich bei einer solchen Untersuchung unterstützen."]},
-  "ending":{"label":"Eine Frage zum Mitnehmen","question":"Was würdest du ihn tun lassen?","follow":"Und woran würdest du erkennen, dass die Arbeit gut gemacht wurde?","back":"Zurück zum Anfang"},
-  "evidence":{"title":"Das Experiment erkunden","intro":"Die Simulationen von SuspensionLab AI wurden für diesen Artikel ausgeführt. Die Projektunterlagen enthalten Quelldateien, Einstellungen, Vergleichsdiagramme und Korrekturprotokolle. Sie nennen MATLAB R2024a und MATLAB MCP Server 0.16.1, verbunden mit Codex über dessen native MATLAB-MCP-Verbindung. Der Artikel stützt sich auf die bereitgestellten Unterlagen; die Simulationen wurden für die Veröffentlichung nicht unabhängig wiederholt.","link":"Numerische Nachweise und Einstellungen lesen (JSON)","parameters":"Die Ausgangseinstellung nutzte eine Federsteifigkeit von 16 000 N/m und eine Dämpfung von 1 000 N·s/m; ausgewählt wurden 8 000 N/m und etwa 594 N·s/m. Die gewählte Federsteifigkeit erreichte die untere Suchgrenze. Das Ergebnis gilt für den gewählten Suchraum und belegt kein allgemeines Optimum.","projects":"Offizielle MathWorks-Projekte:"}
+  "hero": {
+    "standfirst": "Eine Bodenschwelle, eine sanftere Fahrt und eine andere Art, KI einzusetzen.",
+    "meta": "Eine technische GanzaQuest-Fallstudie · 8 Minuten Lesezeit",
+    "start": "Beginnen wir mit der Schwelle",
+    "diagram_alt": "Vereinfachtes Modell einer Fahrzeugecke: Der Aufbau ist über eine Feder und einen Dämpfer mit einem Rad über einer Bodenschwelle verbunden.",
+    "labels": {
+      "body": "Fahrzeugaufbau",
+      "spring": "Feder",
+      "damper": "Dämpfer",
+      "wheel": "Rad und Reifen",
+      "road": "Straße"
+    },
+    "caption": "Eine Ecke eines Autos. Genug, um eine Untersuchung zu beginnen."
+  },
+  "bump": {
+    "title": "Die Bodenschwelle, die du kennst",
+    "paragraphs": [
+      "Du siehst sie und bremst. Die Vorderräder fahren auf die Bodenschwelle. Du spürst einen Stoß im Sitz, dann bewegt sich das Auto auf und ab, bevor es zur Ruhe kommt.",
+      "Angenommen, du könntest die Federung ändern. Würde eine weichere Feder die Überfahrt sanfter machen? Würde das Auto schneller aufhören zu schwingen oder sich länger bewegen?",
+      "Hinter dieser alltäglichen Erfahrung steckt eine technische Untersuchung. Um sie zu beantworten, muss jemand ein Modell bauen, Messgrößen wählen, Einstellungen ausprobieren und die Ergebnisse verstehen.",
+      "Ich gab diese Untersuchung an einen KI-Agenten. Das Projekt hieß SuspensionLab AI; die Aufgabe verlangte von Codex, mit MATLAB und Simulink eine bessere Fahrwerkseinstellung zu untersuchen.",
+      "Bevor es um die Werkzeuge ging, war jedoch eine Frage zu klären."
+    ]
+  },
+  "decision": {
+    "label": "Ein Moment zum Entscheiden",
+    "title": "Was würde die Fahrt verbessern?",
+    "intro": "Entdecke eine Möglichkeit. Es gibt keine Punkte.",
+    "choices": [
+      {
+        "title": "Ein sanfterer Stoß",
+        "answer": "Das ist ein sinnvolles Ziel. Die Beschleunigung des Aufbaus zu messen, ermöglicht einen Vergleich. Wir sollten auch betrachten, was nach dem ersten Stoß geschieht."
+      },
+      {
+        "title": "Weniger Nachschwingen",
+        "answer": "Auch das ist wichtig. Eine Einstellung mit geringerer Beschleunigung kann länger zum Ausschwingen brauchen. Beide Werte gehören vor der Entscheidung auf den Tisch."
+      },
+      {
+        "title": "Gutes Verhalten auf anderen Straßen",
+        "answer": "Eine mit bestimmten Straßen gewählte Einstellung verdient einen neuen Test. Wir können andere Bedingungen zurückhalten und erst nach der Parameterwahl verwenden."
+      }
+    ]
+  },
+  "assignment": {
+    "title": "Die Arbeit hinter der Antwort",
+    "paragraphs": [
+      "Die Aufgabe enthielt Anweisungen für den Agenten: Umgebung untersuchen, Software prüfen, das Modell vor dem Experiment testen, Einstellungen und Ergebnisse speichern und Fehler dokumentieren.",
+      "Gefordert waren außerdem ein Vergleich zwischen MATLAB und Simulink sowie ein abschließender Test auf Straßen, die nicht zur Wahl der Federung verwendet wurden.",
+      "Solche Anweisungen machen aus einem allgemeinen Ziel überprüfbare Arbeit. Scheint ein Ergebnis vielversprechend, sollten Modell, Eingaben, Berechnungen und Prüfungen nachvollziehbar sein. Bei Fehlern muss eine Untersuchung möglich sein.",
+      "Wer täglich simuliert, kennt den Ablauf: Parameter ändern, Modell starten, Diagramm betrachten und überlegen, ob eine unerwartete Kurve aus der Physik oder aus einem Fehler stammt. Anfangsbedingungen, Gleichungen oder Solver-Einstellungen werden geprüft und der Lauf wiederholt.",
+      "Ich wollte untersuchen, ob ein Agent diese Folge anhand einer technischen Aufgabenstellung ausführen kann."
+    ]
+  },
+  "tools": {
+    "title": "Kann er überhaupt ins Labor?",
+    "paragraphs": [
+      "Codex koordinierte die Arbeit. MATLAB führte die Berechnungen aus, Simulink lieferte eine weitere Implementierung des Modells. Dafür brauchte der Agent eine funktionierende Verbindung zur Software.",
+      "Diese Verbindung nutzte MCP, das Model Context Protocol. Stell dir einen Kollegen vor, der ein Programm um eine Berechnung bittet und das Ergebnis erhält. MCP gibt Agent und Werkzeugserver eine gemeinsame Form für solche Anfragen und Antworten.",
+      "Die protokollierten Verbindungstests waren bewusst klein: zwei Zahlen in MATLAB addieren, ein numerisches Problem lösen und einen Wert speichern und wieder lesen. So wurde geprüft, ob der Agent das vorgesehene Werkzeug tatsächlich nutzen konnte.",
+      "Die Begriffe werden damit klarer: Der Agent koordiniert Schritte; ein Werkzeug führt eine verfügbare Aktion aus, etwa MATLAB-Code; eine Fähigkeit enthält wiederverwendbare Anweisungen. Die Aufgabe ergänzt die Ziele und Regeln dieser Untersuchung.",
+      "Dem Agenten eine Ingenieurrolle zu geben, ist erst der Anfang. Der Ablauf muss auch festlegen, was vor der Annahme eines Ergebnisses zu prüfen ist."
+    ]
+  },
+  "model": {
+    "title": "Ein kleines Stück eines Autos",
+    "paragraphs": [
+      "Der Agent baute ein Viertelfahrzeugmodell: einen Teil des Aufbaus, eine Radbaugruppe, Feder und Dämpfer sowie einen durch seine Steifigkeit dargestellten Reifen. Die Straße bewegt sich unter dem Rad; die Gleichungen beschreiben die Reaktion von Rad und Aufbau.",
+      "Das ist bewusst vereinfacht. So lässt sich die Frage untersuchen, ohne jedes Fahrzeugteil darzustellen.",
+      "Die gespeicherten Prüfungen betreffen Gleichgewicht, Energiebilanz und die Empfindlichkeit gegenüber Einstellungen der numerischen Integration. Außerdem verglich der Agent MATLAB und Simulink mit denselben Straßeneingaben.",
+      "Unterwegs gab es Fehler: Bei einer Werkzeuganfrage fehlte ein Pflichtargument; eine andere verwendete beim Einrichten eines Simulink-Blocks einen falschen Parameternamen. Die Protokolle beschreiben Informationssuche, Korrektur und erneute Prüfung.",
+      "Das gehört zur Arbeit. Ein technischer Ablauf braucht eine Möglichkeit, Fehler zu untersuchen und festzuhalten."
+    ]
+  },
+  "search": {
+    "title": "Eine Straße. Und dann eine andere.",
+    "paragraphs": [
+      "Die Ausgangsfederung wurde auf drei simulierten Oberflächen getestet: einer fast glatten Straße, einer einzelnen Schwelle und einer unebenen Straße. Für jede wurden Aufbaubeschleunigung, Federweg und Radreaktion erfasst.",
+      "Danach suchte die Optimization Toolbox von MATLAB innerhalb vorgegebener Grenzen nach Feder- und Dämpfereinstellungen. Codex koordinierte den Ablauf; der MATLAB-Solver fmincon führte mit seinem SQP-Algorithmus die numerische Suche aus.",
+      "Die Suche bewertete 56 Einstellungen bei einem Budget von 60. Sie sollte die Beschleunigung verringern und Grenzen für Federweg und minimale Radlast einhalten. Es war eine begrenzte Suche; der Solver meldete ein mögliches lokales Minimum.",
+      "Nach der Auswahl folgte ein Test mit einer anderen Schwelle und einem anderen Profil der unebenen Straße. Ausgangs- und ausgewählte Federung erhielten dieselben neuen Eingaben."
+    ]
+  },
+  "result": {
+    "title": "Eine sanftere Fahrt. Längeres Nachschwingen.",
+    "before": [
+      "Auf der neuen Schwelle verringerte die gewählte Federung die RMS-Beschleunigung des Aufbaus um etwa 45 %. Auf der neuen unebenen Straße betrug die Verringerung etwa 28 %. Die RMS-Beschleunigung fasst die Stärke der Beschleunigung im simulierten Zeitraum zusammen; das Projekt nutzte sie als Komfortindikator.",
+      "Daneben steht eine weitere Zahl: Nach der neuen Schwelle kam der Ausgangsaufbau nach ungefähr 2,8 Sekunden zur Ruhe. Die gewählte Einstellung brauchte nach dem Kriterium des Experiments etwa 4 Sekunden.",
+      "Die Beschleunigung war geringer. Das Ausschwingen dauerte länger."
+    ],
+    "plot_alt": "Gespeichertes Vergleichsdiagramm des unabhängigen Schwellentests mit den Reaktionen der Ausgangs- und der gewählten Federung.",
+    "plot_caption": "Gespeichertes Ergebnis des unabhängigen Vergleichs. Die Beschriftung ist Englisch: durchgezogenes Blau = Ausgangseinstellung; gestricheltes Orange = gewählte Einstellung. Bild zum Vergrößern öffnen.",
+    "after": [
+      "Zurück zur ersten Frage: Würdest du einen sanfteren Stoß akzeptieren, wenn sich der Aufbau länger bewegt? Das hängt vom Ziel ab. Das Ergebnis zeigt einen abzuwägenden Kompromiss.",
+      "Die gewählte Einstellung blieb in beiden unabhängigen Tests innerhalb der vorgegebenen Grenzen für Federweg und minimale Radlast. Auf der unebenen Straße nutzte sie jedoch mehr Federweg und erreichte eine niedrigere minimale Radlast als die Ausgangseinstellung. Eine Grenze einzuhalten bedeutet nicht, dass sich jede Messgröße verbessert hat.",
+      "Diese Ergebnisse beschreiben eine vereinfachte Simulation. Für Aussagen über ein echtes Fahrzeug wären weitere Modelle und physische Tests nötig."
+    ]
+  },
+  "review": {
+    "label": "Jetzt bist du dran",
+    "title": "Würdest du das Ergebnis akzeptieren?",
+    "summary": "Was würdest du vor der Wahl prüfen?",
+    "answer": "Betrachte neben der geringeren Beschleunigung die Kompromisse: Straßeneingaben, Modellannahmen, Ausschwingkriterium, Federweg und Radlast. Sind die unabhängigen Testbedingungen für den beabsichtigten Einsatz repräsentativ? Eine Verbesserung ist ein nützlicher Hinweis; die Entscheidung erfordert weiterhin Fachurteil."
+  },
+  "work": {
+    "title": "Die Fähigkeit liegt in der Gestaltung der Arbeit",
+    "paragraphs": [
+      "Für mich ist die Folge hinter den Zahlen besonders interessant. Der Agent nutzte technische Software, prüfte Modellverhalten, koordinierte eine numerische Suche und lieferte Ergebnisse aus getrennten Testbedingungen.",
+      "Dieser Ablauf verbindet Modellierung, numerische Analyse, Tests und Berichterstattung. Ein Agent kann dabei helfen, wenn geeignete Werkzeuge und klare Anweisungen vorliegen.",
+      "Stell dir den Alltag einer Person vor, die MATLAB und Simulation gut kennt: Ein Agent könnte einen Vergleich vorbereiten, Szenarien ausführen, Werkzeugfehler untersuchen und Nachweise ordnen. Die Fachkenntnis des Ingenieurs würde Aufgabe und zulässige Schlussfolgerungen bestimmen.",
+      "Den Ablauf zu entwerfen ist damit selbst eine Fähigkeit. Was soll gemessen werden? Welche Grenzen zählen? Was würde einen Fehler zeigen? Welcher Test bleibt außerhalb der Suche? Was muss gespeichert werden, damit andere die Arbeit nachvollziehen können?",
+      "Je besser wir diese Fragen beantworten, desto nützlichere Arbeit können wir einem Agenten übertragen.",
+      "Wir begannen mit einer Bodenschwelle. Denke jetzt an eine Aufgabe, die du wiederholst: die Werkzeuge, die Prüfungen und die Nachweise vor einer Entscheidung. Vielleicht kann ein Agent dich bei einer solchen Untersuchung unterstützen."
+    ]
+  },
+  "ending": {
+    "label": "Eine Frage zum Mitnehmen",
+    "question": "Was würdest du ihn tun lassen?",
+    "follow": "Und woran würdest du erkennen, dass die Arbeit gut gemacht wurde?",
+    "back": "Zurück zum Anfang"
+  },
+  "evidence": {
+    "title": "Das Experiment erkunden",
+    "intro": "Die Simulationen von SuspensionLab AI wurden vom Autor für diesen Artikel ausgeführt. Die Projektunterlagen enthalten Quelldateien, Einstellungen, Vergleichsdiagramme und Korrekturprotokolle. Sie nennen MATLAB R2024a und MATLAB MCP Server 0.16.1, verbunden mit Codex über dessen native MATLAB-MCP-Verbindung. Die Zahlen stammen aus den bereitgestellten Projektunterlagen.",
+    "link": "Numerische Nachweise und Einstellungen lesen (JSON)",
+    "parameters": "Die Ausgangseinstellung nutzte eine Federsteifigkeit von 16 000 N/m und eine Dämpfung von 1 000 N·s/m; ausgewählt wurden 8 000 N/m und etwa 594 N·s/m. Die gewählte Federsteifigkeit erreichte die untere Suchgrenze. Das Ergebnis gilt für den gewählten Suchraum und belegt kein allgemeines Optimum.",
+    "projects": "Offizielle MathWorks-Projekte:"
+  }
 }
