@@ -73,7 +73,7 @@ After the site is live:
 
 ## SuspensionLab article
 
-The English case study is available at `/blog/what-would-you-ask-it-to-do` and linked from `/blog`. Content lives in `app/views/pages/suspension-story.php`; its stylesheet, conceptual SVG, saved experiment plot, and numerical evidence are in `assets/`. No translated versions are claimed. Native details elements provide reader choices without requiring JavaScript.
+The case study is linked from the blog in English, Spanish, French, German and Dutch. The original English article is at `/blog/what-would-you-ask-it-to-do`; translated routes are configured in `app/config.php`. English content remains in `app/views/pages/suspension-story.php`; translated copy and metadata live in `app/lang/suspension-story/` and share `app/views/partials/suspension-translation.php`. The conceptual diagram is translated, and the saved experiment plot retains its original English labels with an explanatory caption. Native details elements provide reader choices without requiring JavaScript.
 
 Editorial review covered five passes: narrative structure, plain-language explanations, relevance to simulation engineers, evidence and numerical claims, and final tone/reading flow. The article distinguishes supplied execution records from independent verification and includes the longer settling time and rough-road trade-offs.
 

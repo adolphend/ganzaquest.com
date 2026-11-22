@@ -5,15 +5,29 @@ $isHome = $page === 'home';
 $is404 = $page === '404';
 $isSuspension = $page === 'suspension-story';
 $isDoor = $page === 'door-story';
-$isArticle = $isDoor || $isSuspension;
-$articleImage = $isSuspension ? '/assets/img/suspension-holdout.png' : '/assets/img/mary-chris-door.webp';
+$isHouse = $page === 'codex-house';
+$isArticle = $isDoor || $isSuspension || $isHouse;
+$articleImage = $isHouse ? '/assets/img/codex-house-model.png' : ($isSuspension ? '/assets/img/suspension-holdout.png' : '/assets/img/mary-chris-door.webp');
 if ($isDoor || $page === 'blog') {
     $story = json_decode(file_get_contents(APP_DIR . '/lang/door-story/' . $LANG . '.json'), true, 512, JSON_THROW_ON_ERROR);
     $storyUI = json_decode(file_get_contents(APP_DIR . '/lang/door-story/ui.json'), true, 512, JSON_THROW_ON_ERROR)[$LANG];
 }
 
-if ($isSuspension) {
-    $storyUI = ['title' => 'What Would You Ask It to Do?', 'seo' => 'What Would You Ask It to Do? AI Agents in MATLAB', 'description' => 'A speed bump, an AI agent, and an engineering investigation: how a carefully designed workflow turns MATLAB simulations into evidence you can examine.'];
+if ($isSuspension || $page === 'blog') {
+    $suspensionUI = json_decode(file_get_contents(APP_DIR . '/lang/suspension-story/ui.json'), true, 512, JSON_THROW_ON_ERROR)[$LANG];
+    if ($isSuspension) {
+        $storyUI = $suspensionUI;
+        if ($LANG !== 'en') {
+            $suspension = json_decode(file_get_contents(APP_DIR . '/lang/suspension-story/' . $LANG . '.json'), true, 512, JSON_THROW_ON_ERROR);
+        }
+    }
+}
+
+if ($isHouse || $page === 'blog') {
+    $house = json_decode(file_get_contents(APP_DIR . '/lang/codex-house/' . $LANG . '.json'), true, 512, JSON_THROW_ON_ERROR);
+    if ($isHouse) {
+        $storyUI = $house['ui'];
+    }
 }
 
 if ($isArticle) {
@@ -37,6 +51,20 @@ $canonical = $is404 ? null : absolute_url(url($page));
 <!doctype html>
 <html lang="<?= e($LANG) ?>">
 <head>
+<!-- Google Tag Manager -->
+<script>
+(function(w,d,s,l,i){
+  w[l]=w[l]||[];
+  w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});
+  var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),
+      dl=l!='dataLayer'?'&l='+l:'';
+  j.async=true;
+  j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+  f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-W9XL64CX');
+</script>
+<!-- End Google Tag Manager -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title><?= e($title) ?></title>
@@ -104,6 +132,7 @@ if (!$is404): ?>
 <link rel="stylesheet" href="<?= e(asset('css/door-story.css')) ?>">
 <?php endif; ?>
 <?php if ($isSuspension): ?><link rel="stylesheet" href="<?= e(asset('css/suspension-story.css')) ?>"><?php endif; ?>
+<?php if ($isHouse || $page === 'blog'): ?><link rel="stylesheet" href="<?= e(asset('css/codex-house.css')) ?>"><?php endif; ?>
 <?php if ($isDoor): ?><script src="<?= e(asset('js/door-story.js')) ?>" defer></script><?php endif; ?>
 </head>
 <body<?= $isHome && $LANG === cfg('default_lang') ? ' data-language-entry' : '' ?>>
@@ -114,7 +143,9 @@ if (!$is404): ?>
 if ($isHome) {
     render('pages/home');
 } elseif ($isSuspension) {
-    render('pages/suspension-story');
+    render('pages/suspension-story', ['suspension' => $suspension ?? [], 'suspensionUI' => $suspensionUI]);
+} elseif ($isHouse) {
+    render('pages/codex-house', ['house' => $house]);
 } elseif ($isDoor) {
     render('pages/door-story', ['story' => $story, 'storyUI' => $storyUI]);
 } elseif ($is404) {
@@ -122,7 +153,7 @@ if ($isHome) {
     render('pages/404');
 } else {
     render('partials/intro', ['label' => t("pages.$page.label"), 'title' => t("pages.$page.title"), 'intro' => t("pages.$page.intro")]);
-    render('pages/' . $page, ['form' => $form, 'story' => $story ?? [], 'storyUI' => $storyUI ?? []]);
+    render('pages/' . $page, ['form' => $form, 'story' => $story ?? [], 'storyUI' => $storyUI ?? [], 'house' => $house ?? [], 'suspensionUI' => $suspensionUI ?? []]);
     if (!in_array($page, ['contact', 'privacy', 'products', 'blog'], true)) {
         render('partials/cta');
     }

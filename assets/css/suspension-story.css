@@ -5,6 +5,7 @@
 .suspension-story .decision details{background:#fff;border-color:#a3bdc6}
 .suspension-story .story-illustration{transform:none}
 .suspension-story .story-illustration img{box-shadow:none;border-radius:20px}
+.suspension-story .story-illustration svg{display:block;width:100%;height:auto;border:1px solid #b8b8a2;border-radius:20px}
 .suspension-story .story-illustration figcaption,.suspension-result figcaption{font:1rem/1.6 Arial,sans-serif;margin-top:14px}
 .suspension-result{margin:32px 0}
 .suspension-result img{width:100%;height:auto;display:block;border:1px solid #bcccd2;border-radius:8px}
@@ -12,4 +13,5 @@
 .suspension-story .suspension-notes{border-top:1px solid #bcccd2;font-size:1rem}
 .suspension-story .story-ending>p:nth-child(3){font-size:1.3rem}
 .suspension-story code{overflow-wrap:anywhere}
+@media(max-width:420px){.suspension-story .story-hero h1{font-size:clamp(44px,12vw,50px);overflow-wrap:break-word}}
 @media print{.suspension-story details>p{display:block}.suspension-story .story-hero{min-height:0}.suspension-result{break-inside:avoid}}

@@ -1,0 +1,157 @@
+{
+  "ui": {
+    "title": "Codex peut-il aider à concevoir une maison ?",
+    "seo": "Codex peut-il aider à concevoir une maison ? Une expérience FreeCAD",
+    "description": "Suivez une expérience réelle avec Codex et FreeCAD, de la préparation sur Windows à une maison de trois chambres : durée, images et évaluation.",
+    "excerpt": "Un cahier des charges, un agent IA et une maison modifiable. Découvrez le modèle FreeCAD, le temps de l’essai et ce qui demande encore l’avis d’un concepteur.",
+    "topic": "Les agents IA dans la conception",
+    "read": "Découvrir l’expérience",
+    "time": "Environ 7 minutes de lecture",
+    "breadcrumb": "Fil d’Ariane"
+  },
+  "hero": {
+    "standfirst": "Un cahier des charges. Quatre versions. Et un regard sur ce qu’un agent IA peut apporter à la conception, avec ses limites.",
+    "meta": "Une expérience réelle de GanzaQuest · Windows · 22 novembre 2026",
+    "start": "Commencer l’expérience",
+    "alt": "Vue réelle dans FreeCAD d’un modèle de maison de plain-pied sans toit, avec les murs, les portes et les fenêtres.",
+    "caption": "Le quatrième modèle, exporté depuis FreeCAD. Une esquisse, pas un plan de construction."
+  },
+  "intro": {
+    "title": "Une maison commence par une question",
+    "paragraphs": [
+      "Imaginez un client qui décrit sa maison : trois chambres, deux salles de bain, une cuisine et un espace pour se retrouver. Avant de construire un mur, il faut transformer ces mots en quelque chose que le client et le concepteur peuvent examiner ensemble.",
+      "Codex, un agent IA de programmation, peut-il aider à créer et à modifier ce premier modèle dans FreeCAD ? Nous avons fait l’essai sur un ordinateur Windows, conservé les fichiers et examiné les possibilités comme les limites."
+    ]
+  },
+  "tour": {
+    "title": "Entrons dans la maison",
+    "intro": "Imaginez le toit retiré pour voir les pièces. Nous avons créé ces vues en angle à partir du modèle FreeCAD enregistré après la période mesurée, en ajoutant des couleurs et des numéros pour l’expliquer.",
+    "overview_alt": "Vue en angle depuis le côté de l’entrée de la maison sans toit. Les numéros désignent les chambres, salles de bain, séjour, cuisine et entrée dans la légende ci-dessous.",
+    "overview_caption": "Le quatrième modèle, vu du côté de l’entrée. Les numéros ont été ajoutés à la vue FreeCAD.",
+    "key_title": "Repérer les pièces",
+    "rooms": ["Chambre 2", "Chambre 3", "Chambre principale", "Salle de bain privée", "Séjour et coin repas", "Cuisine", "Entrée", "Salle de bain commune"],
+    "front_alt": "Vue en angle, plus basse, du mur avant de la maison avec l’ouverture de l’entrée et celles des fenêtres.",
+    "front_caption": "Depuis l’avant : on distingue l’ouverture de l’entrée et deux ouvertures de fenêtres dans le mur extérieur.",
+    "rear_alt": "Vue en angle de l’autre côté du modèle sans toit, montrant les murs des chambres et les ouvertures des fenêtres.",
+    "rear_caption": "Depuis l’autre côté : les murs des chambres et les ouvertures des fenêtres sont plus visibles.",
+    "note": "Le couloir traverse le centre. Le modèle montre des ouvertures : les portes, les vitres, le mobilier et le toit n’ont pas été ajoutés. Les couleurs indiquent les pièces, pas leurs finitions."
+  },
+  "question": {
+    "label": "À vous de choisir",
+    "title": "Qu’est-ce qui rendrait ce modèle utile ?",
+    "intro": "Explorez une réponse. Il n’y a pas de score.",
+    "choices": [
+      {
+        "title": "Une image convaincante",
+        "answer": "Une image peut lancer la discussion. Il faut aussi pouvoir examiner et modifier les pièces, les ouvertures et les dimensions."
+      },
+      {
+        "title": "Un modèle modifiable",
+        "answer": "Un fichier modifiable permet d’essayer une demande et de comparer les versions. Sa géométrie doit encore être examinée par une personne compétente."
+      },
+      {
+        "title": "Une maison prête à construire",
+        "answer": "Il faudrait bien davantage : un terrain réel, une étude de structure et des réseaux, les règles locales et l’examen de professionnels qualifiés."
+      }
+    ]
+  },
+  "brief": {
+    "title": "Le projet confié à l’agent",
+    "paragraphs": [
+      "Le guide demandait une maison de plain-pied avec trois chambres, une salle de bain privée pour la chambre principale, une salle de bain commune, un séjour avec coin repas, une cuisine, une entrée, des portes et des fenêtres.",
+      "Aucun terrain, style ou gabarit n’avait été approuvé. Pour démarrer l’essai, nous avons choisi provisoirement un rectangle de 12 × 10 mètres. Le toit a été omis pour rendre les pièces visibles. Ce n’est pas un projet approuvé par un client."
+    ]
+  },
+  "setup": {
+    "title": "D’abord, préparer l’atelier",
+    "paragraphs": [
+      "Le terminal est un endroit où l’on saisit des instructions pour l’ordinateur. Sous Windows, ouvrez Démarrer, cherchez PowerShell ou Windows Terminal, puis choisissez un onglet PowerShell. Les commandes ci-dessous sont un exemple : suivez la documentation officielle à jour pour votre système.",
+      "Pendant notre essai, Node.js, npm et Codex étaient déjà disponibles. Nous avons vérifié leurs versions et constaté que Codex était connecté avec ChatGPT ; nous n’avons pas refait une installation ni une première connexion."
+    ],
+    "steps": [
+      {
+        "title": "Vérifier les outils",
+        "text": "Exécutez node --version et npm --version. S’ils sont absents, installez Node.js depuis son site officiel, puis rouvrez le terminal."
+      },
+      {
+        "title": "Préparer Codex",
+        "text": "La commande npm ci-dessous est une méthode documentée. Ouvrez le dossier de votre projet, lancez codex et suivez les instructions de connexion affichées. Examinez les permissions de votre session avant d’autoriser un agent à modifier des fichiers."
+      },
+      {
+        "title": "Préparer FreeCAD",
+        "text": "Le site officiel propose un installeur Windows et une archive portable. Pour cet essai, nous avons téléchargé l’archive portable officielle de FreeCAD 1.1.4, comparé son empreinte SHA-256 aux informations de la version publiée, extrait les fichiers dans le projet et lancé FreeCAD.exe. Il ne s’agissait pas d’une installation globale."
+      }
+    ],
+    "code_intro": "Pour une nouvelle installation de Codex CLI avec npm :",
+    "code_note": "Les commandes d’installation et de connexion ci-dessus expliquent une nouvelle configuration ; elles n’ont pas été exécutées comme installation initiale pendant cet essai. Les versions et étapes peuvent changer.",
+    "codex_link": "Instructions Codex CLI",
+    "node_link": "Télécharger Node.js",
+    "freecad_link": "Télécharger FreeCAD"
+  },
+  "timing": {
+    "title": "Combien de temps a pris cet essai ?",
+    "intro": "Nous avons comparé les horodatages locaux des fichiers : création de l’archive téléchargée à 01 h 22 min 01 s, puis enregistrement des modèles le 22 novembre 2026, heure de Madrid.",
+    "first": "Jusqu’à l’enregistrement du premier modèle modifiable à 01 h 29 min 41 s.",
+    "last": "Jusqu’à l’enregistrement de la quatrième version à 01 h 32 min 48 s.",
+    "note": "Ces dur?es approximatives proviennent des horodatages, pas d?un chronom?tre. Elles comprennent la pr?paration, les scripts, les v?rifications, une premi?re r?ouverture et les attentes ; elles excluent la comparaison finale des quatre fichiers et le travail ?ditorial ult?rieur. Codex ?tait d?j? install? : un ordinateur et un essai ne constituent ni un test comparatif ni une promesse de rapidit?."
+  },
+  "evolution": {
+    "title": "Du cahier des charges à quatre versions",
+    "paragraphs": [
+      "Codex a écrit une macro FreeCAD qui crée des murs modifiables et découpe les ouvertures, avec des zones colorées pour les pièces. Nous avons ensuite rouvert chaque fichier dans FreeCAD.",
+      "Les plans ci-dessous sont des coupes des modèles réels à 1,10 mètre de hauteur. Ce sont des vues exportées de FreeCAD, pas des photos ni des illustrations générées."
+    ],
+    "before_alt": "Coupe du premier modèle FreeCAD, avec trois zones de chambres en haut et une cuisine séparée du séjour en bas.",
+    "after_alt": "Coupe du quatrième modèle montrant l’extension de la chambre principale et une ouverture élargie entre cuisine et séjour.",
+    "before_caption": "Version 1 · disposition initiale.",
+    "after_caption": "Version 4 · après trois modifications.",
+    "figure_note": "Chaque vue est ajustée séparément : les images ne sont donc pas à la même échelle visuelle. Les petites fenêtres hautes des salles de bain se trouvent au-dessus de la hauteur de coupe.",
+    "versions": [
+      {
+        "title": "Version 2 :",
+        "text": "Une bande de 1,76 × 1 mètre agrandit la chambre principale et modifie aussi la forme extérieure."
+      },
+      {
+        "title": "Version 3 :",
+        "text": "Une ouverture de 3 mètres relie davantage la cuisine et le séjour."
+      },
+      {
+        "title": "Version 4 :",
+        "text": "Deux fenêtres existantes sont élargies. Aucun calcul d’éclairement n’a été réalisé."
+      }
+    ],
+    "correction": "La première vue de dessus était légèrement inclinée et les linteaux masquaient les portes. Nous avons désactivé l’animation de la caméra puis créé ces coupes : un rappel qu’il faut examiner le résultat, pas seulement le message de succès.",
+    "legend": "Pour lire le plan : les chambres sont en haut ; la chambre principale est ? droite, pr?s de sa salle de bain priv?e. En bas, de gauche ? droite : s?jour-repas, cuisine, entr?e et salle de bain commune. Le couloir traverse le centre."
+  },
+  "review": {
+    "title": "Que vaut cette maison ?",
+    "paragraphs": [
+      "Comme support de discussion, le modèle est utile : les pièces sont distinctes, la chambre principale possède sa salle de bain et les changements sont visibles dans des fichiers modifiables séparés. Les quatre modèles rouverts contiennent chacun trois zones de chambre, deux de salle de bain et 19 contrôles géométriques d’ouverture réussis.",
+      "Comme maison, il reste une esquisse. La chambre principale comporte une partie étroite et irrégulière, la salle de bain commune et l’entrée prennent beaucoup de place, et le repère du couloir mesure environ 0,96 mètre de large. L’ameublement, les passages réels et la circulation demandent une étude de conception ; ces observations ne constituent pas un contrôle de conformité.",
+      "Il n’y a ni toit, ni mobilier, ni étude de structure, fondations, plomberie ou électricité. Nous n’avons pas vérifié le terrain, les règles locales, l’accessibilité, la sécurité incendie ou l’éclairement. Les contrôles portent sur certaines propriétés du modèle : ils ne prouvent pas qu’il soit habitable ou prêt à construire."
+    ]
+  },
+  "reflection": {
+    "label": "À vous d’examiner",
+    "title": "Que demanderiez-vous ensuite ?",
+    "summary": "Avant d’approuver l’esquisse",
+    "answer": "Placez du mobilier, étudiez la chambre et le couloir étroits, puis examinez le terrain, la lumière, la structure, les réseaux et les règles locales avec des professionnels qualifiés. Comparez ensuite une nouvelle version au cahier des charges."
+  },
+  "potential": {
+    "title": "Une autre manière d’explorer les possibilités",
+    "paragraphs": [
+      "Un concepteur et son client pourraient utiliser ce type de travail pour discuter d’une disposition, essayer un séjour plus ouvert, comparer des orientations ou documenter une modification. Des instructions claires — ce qui peut changer, ce qui doit rester et ce qu’il faut enregistrer — rendent l’échange plus productif.",
+      "Codex peut aider à préparer la géométrie et organiser les versions ; FreeCAD permet d’examiner le modèle. Un concepteur doit encore juger si la disposition convient à des personnes et à un terrain réels, et des architectes et ingénieurs doivent valider tout projet destiné à la construction."
+    ]
+  },
+  "ending": {
+    "label": "Une question à emporter",
+    "message": "Que changeriez-vous dans la prochaine version ?",
+    "back": "Revenir au début"
+  },
+  "evidence": {
+    "title": "Explorer les preuves",
+    "text": "L’essai utilisait FreeCAD 1.1.4 et une session existante de Codex CLI 0.171.0. Les images sont de véritables exports FreeCAD. Les durées proviennent des fichiers, pas d’un chronomètre. La première installation, le menu des permissions et la commande vocale n’ont pas été capturés.",
+    "link": "Consulter les données et la méthode de calcul des durées (JSON)"
+  }
+}

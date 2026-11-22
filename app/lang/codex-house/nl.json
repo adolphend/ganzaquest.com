@@ -1,0 +1,157 @@
+{
+  "ui": {
+    "title": "Kan Codex helpen een huis te ontwerpen?",
+    "seo": "Kan Codex helpen een huis te ontwerpen? Een FreeCAD-experiment",
+    "description": "Volg een echt experiment met Codex en FreeCAD: installatie op Windows, een huis met drie slaapkamers, tijden, beelden en een beoordeling.",
+    "excerpt": "Een opdracht, een AI-agent en een aanpasbaar huis. Bekijk het FreeCAD-model, de duur van de proef en de vragen die een ontwerper nog moet beantwoorden.",
+    "topic": "AI-agenten in het ontwerp",
+    "read": "Bekijk het experiment",
+    "time": "Ongeveer 7 minuten leestijd",
+    "breadcrumb": "Navigatiepad"
+  },
+  "hero": {
+    "standfirst": "Eén opdracht. Vier versies. Een blik op wat een AI-agent aan het ontwerp kan bijdragen en waar de grenzen liggen.",
+    "meta": "Een echt GanzaQuest-experiment · Windows · 22 november 2026",
+    "start": "Begin het experiment",
+    "alt": "Echte FreeCAD-weergave van een gelijkvloers huismodel zonder dak, met muren, deuren en ramen.",
+    "caption": "Het vierde model, geëxporteerd uit FreeCAD. Een concept, geen bouwtekening."
+  },
+  "intro": {
+    "title": "Een huis begint met een vraag",
+    "paragraphs": [
+      "Stel je voor dat een klant een huis beschrijft: drie slaapkamers, twee badkamers, een keuken en een plek om samen te komen. Voordat er een muur wordt gebouwd, moeten die woorden veranderen in iets dat klant en ontwerper samen kunnen bekijken.",
+      "Kan Codex, een AI-agent voor programmeerwerk, helpen om dat eerste model in FreeCAD te maken en aan te passen? We probeerden het op een Windows-computer, bewaarden de bestanden en bekeken zowel de mogelijkheden als de beperkingen."
+    ]
+  },
+  "tour": {
+    "title": "Kijk mee in het huis",
+    "intro": "Stel je voor dat het dak is weggehaald zodat je de kamers kunt zien. Deze schuine weergaven maakten we na de gemeten proef uit het opgeslagen FreeCAD-model; kleuren en nummers helpen je de ruimtes te herkennen.",
+    "overview_alt": "Schuine weergave vanaf de entreezijde van het huismodel zonder dak. Nummers verwijzen naar slaapkamers, badkamers, woonkamer, keuken en entree in de legenda hieronder.",
+    "overview_caption": "Het vierde model vanaf de entreezijde. De nummers zijn aan de FreeCAD-weergave toegevoegd.",
+    "key_title": "Vind de kamers",
+    "rooms": ["Slaapkamer 2", "Slaapkamer 3", "Hoofdslaapkamer", "Privébadkamer", "Woon- en eetruimte", "Keuken", "Entree", "Gedeelde badkamer"],
+    "front_alt": "Lagere schuine weergave van de voorgevel van het huismodel met de entreeopening en raamopeningen.",
+    "front_caption": "Van voren: in de buitenmuur zijn de entreeopening en twee raamopeningen zichtbaar.",
+    "rear_alt": "Schuine weergave vanaf de andere kant van het model zonder dak, met slaapkamermuren en raamopeningen.",
+    "rear_caption": "Vanaf de andere kant: de slaapkamermuren en raamopeningen zijn beter te zien.",
+    "note": "De gang loopt door het midden. Het model toont openingen: deurbladen, ruiten, meubels en een dak zijn niet toegevoegd. De vloerkleuren duiden kamers aan, geen afwerking."
+  },
+  "question": {
+    "label": "Een moment om te kiezen",
+    "title": "Wat maakt een AI-model bruikbaar?",
+    "intro": "Bekijk een antwoord. Er zijn geen punten.",
+    "choices": [
+      {
+        "title": "Een overtuigend beeld",
+        "answer": "Een beeld kan het gesprek op gang brengen. We moeten ook de kamers, openingen en afmetingen kunnen onderzoeken en aanpassen."
+      },
+      {
+        "title": "Een model dat we kunnen wijzigen",
+        "answer": "Met een bewerkbaar bestand kun je een verzoek uitproberen en versies vergelijken. Iemand met ontwerpkennis moet de geometrie nog steeds beoordelen."
+      },
+      {
+        "title": "Een huis dat klaar is om te bouwen",
+        "answer": "Daarvoor is veel meer nodig: een echt perceel, constructie- en installatieontwerp, lokale eisen en een beoordeling door bevoegde professionals."
+      }
+    ]
+  },
+  "brief": {
+    "title": "De opdracht",
+    "paragraphs": [
+      "De handleiding vroeg om een gelijkvloers huis met drie slaapkamers, een eigen badkamer bij de hoofdslaapkamer, een gedeelde badkamer, een woon- en eetruimte, een keuken, een entree, deuren en ramen.",
+      "Er waren nog geen perceel, stijl of afmetingen goedgekeurd. Om het experiment te beginnen gebruikten we voorlopig een rechthoek van 12 × 10 meter. We lieten het dak weg zodat de kamers zichtbaar bleven. Dit was een werkhypothese, geen door een klant goedgekeurd ontwerp."
+    ]
+  },
+  "setup": {
+    "title": "Eerst de werkplaats voorbereiden",
+    "paragraphs": [
+      "De terminal is een plek waar je instructies voor de computer typt. Open in Windows Start, zoek naar PowerShell of Windows Terminal en kies een PowerShell-tabblad. De opdrachten hieronder zijn een voorbeeld; volg de actuele officiële instructies voor je systeem.",
+      "Tijdens onze proef waren Node.js, npm en Codex al aanwezig. We controleerden de versies en zagen dat Codex was aangemeld met ChatGPT; we hebben geen nieuwe installatie of eerste aanmelding uitgevoerd."
+    ],
+    "steps": [
+      {
+        "title": "Controleer de hulpmiddelen",
+        "text": "Voer node --version en npm --version uit. Ontbreken ze, installeer dan Node.js vanaf de officiële website en open de terminal opnieuw."
+      },
+      {
+        "title": "Bereid Codex voor",
+        "text": "De npm-opdracht hieronder is een gedocumenteerde route. Open je projectmap, start codex en volg de getoonde aanmeldinstructies. Bekijk de machtigingen van je sessie voordat een agent bestanden mag wijzigen."
+      },
+      {
+        "title": "Bereid FreeCAD voor",
+        "text": "De officiële downloadpagina biedt een Windows-installatieprogramma en een draagbaar archief. Voor deze proef downloadden we het officiële draagbare archief van FreeCAD 1.1.4, vergeleken de SHA-256-hash met de publicatiegegevens, pakten het uit in het project en startten FreeCAD.exe. Dit was geen systeembrede installatie."
+      }
+    ],
+    "code_intro": "Voor een nieuwe installatie van Codex CLI met npm:",
+    "code_note": "De installatie- en aanmeldopdrachten hierboven beschrijven een nieuwe inrichting; ze zijn tijdens dit experiment niet als eerste installatie uitgevoerd. Versies en stappen kunnen veranderen.",
+    "codex_link": "Instructies voor Codex CLI",
+    "node_link": "Node.js downloaden",
+    "freecad_link": "FreeCAD downloaden"
+  },
+  "timing": {
+    "title": "Hoe lang duurde deze proef?",
+    "intro": "We vergeleken lokale bestandstijdstempels: het aanmaken van het downloadarchief om 01:22:01 en het opslaan van de modellen op 22 november 2026, tijdzone Madrid.",
+    "first": "Tot het eerste bewerkbare model om 01:29:41 was opgeslagen.",
+    "last": "Tot de vierde versie om 01:32:48 was opgeslagen.",
+    "note": "Dit zijn geschatte verstreken tijden op basis van bestandstijdstempels, geen stopwatchmetingen. Ze omvatten voorbereiding, scripts schrijven, controles, een eerste heropening en wachttijd; de laatste vergelijking van alle vier de bestanden en later redactiewerk tellen niet mee. Codex was al ge?nstalleerd. E?n computer en ??n proef vormen geen benchmark of snelheidsbelofte."
+  },
+  "evolution": {
+    "title": "Van opdracht naar vier versies",
+    "paragraphs": [
+      "Codex schreef een FreeCAD-macro die bewerkbare muren maakt en openingen uitsnijdt, met gekleurde vloervlakken voor de kamers. Daarna openden we elk opgeslagen bestand opnieuw in FreeCAD.",
+      "De plattegronden hieronder zijn doorsneden van de echte modellen op 1,1 meter hoogte. Het zijn FreeCAD-exports, geen foto’s of gegenereerde illustraties."
+    ],
+    "before_alt": "Doorsnede van het eerste FreeCAD-huismodel met drie slaapkamerzones boven en een gescheiden keuken en woonkamer onder.",
+    "after_alt": "Doorsnede van het vierde model met de uitbreiding van de hoofdslaapkamer en een bredere opening tussen keuken en woonkamer.",
+    "before_caption": "Versie 1 · de eerste indeling.",
+    "after_caption": "Versie 4 · na drie wijzigingen.",
+    "figure_note": "Elke weergave is afzonderlijk passend gemaakt; de afbeeldingen hebben dus niet dezelfde visuele schaal. De kleine hoge badkamerramen liggen boven de snijhoogte.",
+    "versions": [
+      {
+        "title": "Versie 2:",
+        "text": "Een strook van 1,76 × 1 meter vergroot de hoofdslaapkamer en verandert de buitenvorm."
+      },
+      {
+        "title": "Versie 3:",
+        "text": "Een opening van 3 meter verbindt de keuken en de woonkamer beter."
+      },
+      {
+        "title": "Versie 4:",
+        "text": "Twee bestaande ramen worden breder. Er is geen daglichtberekening uitgevoerd."
+      }
+    ],
+    "correction": "De eerste bovenaanzicht-export stond iets schuin en de lateien verborgen de deuren. We schakelden de camera-animatie uit en maakten deze doorsneden. Dat laat zien waarom je het resultaat moet bekijken, niet alleen een succesmelding.",
+    "legend": "Zo lees je de plattegrond: de slaapkamers liggen bovenaan; de hoofdslaapkamer ligt rechts naast de eigen badkamer. Onderaan liggen van links naar rechts de woon- en eetruimte, keuken, entree en gedeelde badkamer. De gang loopt door het midden."
+  },
+  "review": {
+    "title": "Hoe goed is het huis?",
+    "paragraphs": [
+      "Als startpunt voor een gesprek is het model bruikbaar: de kamers zijn herkenbaar, de hoofdslaapkamer heeft een eigen badkamer en de wijzigingen staan in aparte bewerkbare bestanden. Elk van de vier opnieuw geopende modellen bevatte drie slaapkamermarkeringen en twee badkamermarkeringen; telkens slaagden 19 geometrische controles van openingen.",
+      "Als woning blijft het een ruw concept. De hoofdslaapkamer heeft een smal, onregelmatig deel, de gedeelde badkamer en entree nemen veel ruimte in en de gangmarkering is slechts ongeveer 0,96 meter breed. Meubels, werkelijke doorgangen en looproutes verdienen een ontwerpbeoordeling; deze observaties zijn geen toets aan bouwregels.",
+      "Er zijn geen dak, meubels, constructieontwerp, fundering, sanitair of elektriciteitsplan. We hebben perceel, lokale regels, toegankelijkheid, brandveiligheid en daglicht niet beoordeeld. De controles bevestigen enkele modeleigenschappen, niet dat het huis bewoonbaar of bouwrijp is."
+    ]
+  },
+  "reflection": {
+    "label": "Jij bent aan zet",
+    "title": "Wat zou je hierna willen zien?",
+    "summary": "Voordat je het concept goedkeurt",
+    "answer": "Plaats meubels, onderzoek de smalle slaapkamer en gang en bekijk het perceel, licht, constructie, installaties en lokale eisen met bevoegde professionals. Vergelijk vervolgens een nieuwe versie met de opdracht."
+  },
+  "potential": {
+    "title": "Mogelijkheden op een andere manier verkennen",
+    "paragraphs": [
+      "Een ontwerper en klant zouden zo’n werkwijze kunnen gebruiken om indelingen te bespreken, een openere woonkamer te proberen, oriëntaties te vergelijken of een wijziging vast te leggen. Duidelijke instructies over wat mag veranderen, wat moet blijven en wat wordt opgeslagen maken het gesprek productiever.",
+      "Codex kan helpen met geometrie en versiebeheer; FreeCAD maakt het model controleerbaar. Een ontwerper moet nog steeds beoordelen of de indeling past bij echte mensen en een echt perceel. Architecten en ingenieurs moeten een ontwerp dat gebouwd moet worden valideren."
+    ]
+  },
+  "ending": {
+    "label": "Een vraag om mee te nemen",
+    "message": "Wat zou jij in de volgende versie veranderen?",
+    "back": "Terug naar het begin"
+  },
+  "evidence": {
+    "title": "Bekijk het bewijsmateriaal",
+    "text": "De proef gebruikte FreeCAD 1.1.4 en een bestaande Codex CLI-sessie met versie 0.171.0. De beelden zijn echte FreeCAD-exports. De tijden komen uit bestanden, niet van een stopwatch. De eerste installatie, het machtigingenmenu en de spraakbediening zijn niet vastgelegd.",
+    "link": "Bekijk de proefgegevens en de berekening van de tijden (JSON)"
+  }
+}

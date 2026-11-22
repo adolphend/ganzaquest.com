@@ -1,0 +1,157 @@
+{
+  "ui": {
+    "title": "¿Puede Codex ayudar a diseñar una casa?",
+    "seo": "¿Puede Codex ayudar a diseñar una casa? Un experimento con FreeCAD",
+    "description": "Sigue un experimento real con Codex y FreeCAD: preparación en Windows, una casa de tres dormitorios, tiempos, imágenes y evaluación.",
+    "excerpt": "Un encargo, un agente de IA y una casa editable. Descubre el modelo de FreeCAD, cuánto duró la prueba y qué requiere aún el criterio de un diseñador.",
+    "topic": "Agentes de IA en el diseño",
+    "read": "Explorar el experimento",
+    "time": "Unos 7 minutos de lectura",
+    "breadcrumb": "Ruta de navegación"
+  },
+  "hero": {
+    "standfirst": "Un encargo. Cuatro versiones. Una mirada a lo que un agente de IA puede aportar al diseño y a sus límites.",
+    "meta": "Un experimento real de GanzaQuest · Windows · 22 de noviembre de 2026",
+    "start": "Comenzar el experimento",
+    "alt": "Vista real de FreeCAD de una casa de una planta sin tejado, con paredes, puertas y ventanas.",
+    "caption": "El cuarto modelo, exportado desde FreeCAD. Es un concepto, no un plano de construcción."
+  },
+  "intro": {
+    "title": "Una casa empieza con una pregunta",
+    "paragraphs": [
+      "Imagina que un cliente describe su casa: tres dormitorios, dos baños, una cocina y un lugar para reunirse. Antes de levantar una pared, esas palabras deben convertirse en algo que el cliente y el diseñador puedan examinar juntos.",
+      "¿Podría Codex, un agente de programación con IA, ayudar a crear y modificar ese primer modelo en FreeCAD? Lo probamos en un ordenador Windows, guardamos los archivos y examinamos tanto las posibilidades como las limitaciones."
+    ]
+  },
+  "tour": {
+    "title": "Entremos en la casa",
+    "intro": "Imagina que retiramos el tejado para ver las habitaciones. Creamos estas vistas en ángulo a partir del modelo guardado en FreeCAD después del período medido, añadiendo colores y números para explicarlo.",
+    "overview_alt": "Vista en ángulo desde la entrada del modelo de casa sin tejado. Los números identifican dormitorios, baños, salón, cocina y entrada en la leyenda inferior.",
+    "overview_caption": "El cuarto modelo, visto desde la entrada. Los números se han añadido a la vista de FreeCAD.",
+    "key_title": "Identifica las habitaciones",
+    "rooms": ["Dormitorio 2", "Dormitorio 3", "Dormitorio principal", "Baño privado", "Salón y comedor", "Cocina", "Entrada", "Baño compartido"],
+    "front_alt": "Vista en ángulo desde una posición más baja de la fachada, con las aberturas de la entrada y las ventanas.",
+    "front_caption": "Desde delante: se distinguen la abertura de la entrada y dos aberturas de ventanas en la pared exterior.",
+    "rear_alt": "Vista en ángulo desde el otro lado del modelo sin tejado, con las paredes de los dormitorios y las aberturas de las ventanas.",
+    "rear_caption": "Desde el otro lado: las paredes de los dormitorios y las aberturas de las ventanas se ven mejor.",
+    "note": "El pasillo atraviesa el centro. El modelo muestra aberturas: no se han añadido hojas de puertas, cristales, mobiliario ni tejado. Los colores identifican habitaciones, no acabados."
+  },
+  "question": {
+    "label": "Un momento para decidir",
+    "title": "¿Qué haría útil un modelo creado con IA?",
+    "intro": "Explora una respuesta. No hay puntuación.",
+    "choices": [
+      {
+        "title": "Una imagen convincente",
+        "answer": "Una imagen puede iniciar la conversación. También hay que poder examinar y modificar las habitaciones, las aberturas y las dimensiones."
+      },
+      {
+        "title": "Un modelo que podamos modificar",
+        "answer": "Un archivo editable permite probar una petición y comparar versiones. Una persona con conocimientos debe revisar su geometría."
+      },
+      {
+        "title": "Una casa lista para construir",
+        "answer": "Haría falta mucho más: un terreno real, diseño estructural y de instalaciones, requisitos locales y revisión profesional cualificada."
+      }
+    ]
+  },
+  "brief": {
+    "title": "El encargo",
+    "paragraphs": [
+      "La guía pedía una casa de una planta con tres dormitorios, un baño privado para el dormitorio principal, un baño compartido, salón-comedor, cocina, entrada, puertas y ventanas.",
+      "No se había aprobado ningún terreno, estilo ni huella. Para iniciar el experimento utilizamos provisionalmente un rectángulo de 12 × 10 metros. Omitimos el tejado para poder ver las habitaciones. Era una hipótesis de trabajo, no un diseño aprobado por un cliente."
+    ]
+  },
+  "setup": {
+    "title": "Primero, preparar el taller",
+    "paragraphs": [
+      "La terminal es un lugar donde se escriben instrucciones para el ordenador. En Windows, abre Inicio, busca PowerShell o Windows Terminal y elige una pestaña de PowerShell. Los comandos siguientes son un ejemplo: consulta las instrucciones oficiales actuales para tu sistema.",
+      "En nuestra sesión, Node.js, npm y Codex ya estaban disponibles. Comprobamos sus versiones y que Codex había iniciado sesión con ChatGPT; no repetimos la instalación ni un primer inicio de sesión."
+    ],
+    "steps": [
+      {
+        "title": "Comprobar las herramientas",
+        "text": "Ejecuta node --version y npm --version. Si faltan, instala Node.js desde su sitio oficial y vuelve a abrir la terminal."
+      },
+      {
+        "title": "Preparar Codex",
+        "text": "El comando npm de abajo es una vía documentada. Abre la carpeta del proyecto, ejecuta codex y sigue las instrucciones de inicio de sesión. Revisa los permisos de la sesión antes de permitir que un agente modifique archivos."
+      },
+      {
+        "title": "Preparar FreeCAD",
+        "text": "La página oficial ofrece un instalador de Windows y un archivo portátil. En esta prueba descargamos el archivo portátil oficial de FreeCAD 1.1.4, comparamos su huella SHA-256 con los datos de la versión publicada, lo extrajimos en el proyecto y ejecutamos FreeCAD.exe. No fue una instalación global."
+      }
+    ],
+    "code_intro": "Para una nueva instalación de Codex CLI mediante npm:",
+    "code_note": "Los comandos de instalación e inicio de sesión son instrucciones para una configuración nueva; no se ejecutaron como instalación inicial en este experimento. Las versiones y los pasos pueden cambiar.",
+    "codex_link": "Instrucciones de Codex CLI",
+    "node_link": "Descargar Node.js",
+    "freecad_link": "Descargar FreeCAD"
+  },
+  "timing": {
+    "title": "¿Cuánto duró esta prueba?",
+    "intro": "Comparamos las marcas de tiempo locales: la creación del archivo descargado a las 01:22:01 y el guardado de los modelos el 22 de noviembre de 2026, hora de Madrid.",
+    "first": "Hasta guardar el primer modelo editable a las 01:29:41.",
+    "last": "Hasta guardar la cuarta versión a las 01:32:48.",
+    "note": "Son tiempos transcurridos aproximados calculados a partir de los archivos, no de un cron?metro. Incluyen preparaci?n, programaci?n, comprobaciones, una reapertura inicial y esperas; excluyen la comparaci?n final de los cuatro archivos y la edici?n posterior. Codex ya estaba instalado: un ordenador y una prueba no son una comparaci?n ni una promesa de rapidez."
+  },
+  "evolution": {
+    "title": "Del encargo a cuatro versiones",
+    "paragraphs": [
+      "Codex escribió una macro de FreeCAD que crea paredes editables y recorta las aberturas, con zonas de color para las habitaciones. Después volvimos a abrir cada archivo guardado en FreeCAD.",
+      "Los planos siguientes son secciones de los modelos reales a 1,1 metros de altura. Son vistas exportadas desde FreeCAD, no fotografías ni ilustraciones generadas."
+    ],
+    "before_alt": "Sección del primer modelo de FreeCAD, con tres zonas de dormitorio arriba y la cocina separada del salón abajo.",
+    "after_alt": "Sección del cuarto modelo, con la ampliación del dormitorio principal y una abertura mayor entre cocina y salón.",
+    "before_caption": "Versión 1 · distribución inicial.",
+    "after_caption": "Versión 4 · después de tres cambios.",
+    "figure_note": "Cada vista se ajusta por separado, por lo que las imágenes no tienen la misma escala visual. Las ventanas altas pequeñas de los baños quedan por encima de la altura de corte.",
+    "versions": [
+      {
+        "title": "Versión 2:",
+        "text": "Una franja de 1,76 × 1 metro amplía el dormitorio principal y cambia también el contorno exterior."
+      },
+      {
+        "title": "Versión 3:",
+        "text": "Una abertura de 3 metros conecta mejor la cocina y el salón."
+      },
+      {
+        "title": "Versión 4:",
+        "text": "Se amplían dos ventanas existentes. No se realizó ningún cálculo de iluminación natural."
+      }
+    ],
+    "correction": "La primera vista superior estaba algo inclinada y los dinteles ocultaban las puertas. Desactivamos la animación de la cámara y creamos estas secciones: conviene examinar el resultado, no solo el mensaje de éxito.",
+    "legend": "C?mo leer el plano: los dormitorios est?n en la parte superior; el principal est? a la derecha, junto a su ba?o privado. Abajo, de izquierda a derecha: sal?n-comedor, cocina, entrada y ba?o compartido. El pasillo atraviesa el centro."
+  },
+  "review": {
+    "title": "¿Qué tal es la casa?",
+    "paragraphs": [
+      "Como punto de partida para conversar, el modelo resulta útil: se distinguen las habitaciones, el dormitorio principal tiene baño privado y los cambios aparecen en archivos editables separados. Los cuatro modelos reabiertos tenían tres zonas de dormitorio, dos de baño y 19 comprobaciones geométricas de aberturas superadas cada uno.",
+      "Como vivienda sigue siendo un concepto preliminar. El dormitorio principal tiene una parte estrecha e irregular, el baño compartido y la entrada ocupan bastante espacio, y el indicador del pasillo mide aproximadamente 0,96 metros de ancho. Hay que estudiar la ubicación del mobiliario, los pasos reales y la circulación; estas observaciones no son una comprobación normativa.",
+      "No hay tejado, mobiliario, diseño estructural, cimentación, fontanería ni electricidad. No evaluamos el terreno, la normativa local, la accesibilidad, la seguridad contra incendios ni la iluminación natural. Las comprobaciones describen ciertas propiedades del modelo: no prueban que sea habitable o que esté listo para construir."
+    ]
+  },
+  "reflection": {
+    "label": "Tu turno de revisar",
+    "title": "¿Qué pedirías ver después?",
+    "summary": "Antes de aprobar el concepto",
+    "answer": "Coloca mobiliario, estudia el dormitorio y el pasillo estrechos y revisa el terreno, la luz, la estructura, las instalaciones y la normativa local con profesionales cualificados. Después compara una nueva versión con el encargo."
+  },
+  "potential": {
+    "title": "Otra forma de explorar posibilidades",
+    "paragraphs": [
+      "Un diseñador y su cliente podrían usar un proceso así para debatir distribuciones, probar un salón más abierto, comparar orientaciones o documentar un cambio. Las instrucciones claras —qué puede cambiar, qué debe conservarse y qué se debe guardar— hacen más productiva la conversación.",
+      "Codex puede ayudar a preparar la geometría y organizar versiones; FreeCAD permite examinar el modelo. Un diseñador aún debe valorar si la distribución sirve para personas y un terreno reales, y arquitectos e ingenieros deben validar cualquier proyecto destinado a construirse."
+    ]
+  },
+  "ending": {
+    "label": "Una pregunta para llevarte",
+    "message": "¿Qué cambiarías en la próxima versión?",
+    "back": "Volver al principio"
+  },
+  "evidence": {
+    "title": "Explorar los datos",
+    "text": "La prueba utilizó FreeCAD 1.1.4 y una sesión ya existente de Codex CLI 0.171.0. Las imágenes son exportaciones reales de FreeCAD. Los tiempos proceden de archivos, no de un cronómetro. No se capturaron la primera instalación, el menú de permisos ni los controles de voz.",
+    "link": "Consultar los datos y el método de cálculo de los tiempos (JSON)"
+  }
+}

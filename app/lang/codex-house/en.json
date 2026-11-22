@@ -1,0 +1,157 @@
+{
+  "ui": {
+    "title": "Could Codex Help Design a House?",
+    "seo": "Could Codex Help Design a House? A FreeCAD Experiment",
+    "description": "Follow a real Codex and FreeCAD experiment from Windows setup to a three-bedroom house concept, with timings, images and an honest review.",
+    "excerpt": "A brief, an AI agent and an editable house. See what we built in FreeCAD, how long this attempt took and what still needs a designer’s judgment.",
+    "topic": "AI agents in everyday design",
+    "read": "Explore the experiment",
+    "time": "About 7 minutes to read",
+    "breadcrumb": "Breadcrumb"
+  },
+  "hero": {
+    "standfirst": "One brief. Four versions. A closer look at what an AI agent can—and cannot—bring to the design table.",
+    "meta": "A real GanzaQuest experiment · Windows · 22 November 2026",
+    "start": "Start the experiment",
+    "alt": "Actual FreeCAD view of a roofless single-storey house model showing room walls, doors and windows.",
+    "caption": "The fourth model, exported from FreeCAD. A concept, not a construction plan."
+  },
+  "intro": {
+    "title": "A house begins with a question",
+    "paragraphs": [
+      "Imagine a client describing a home: three bedrooms, two bathrooms, a kitchen and a place to gather. Before anyone builds a wall, those words need to become something the client and designer can look at together.",
+      "Could Codex, an AI coding agent, help create and revise that first model in FreeCAD? We tried it on a Windows computer, kept the files, and looked closely at both the promise and the gaps."
+    ]
+  },
+  "tour": {
+    "title": "Take a look inside",
+    "intro": "Imagine the roof lifted off so you can see the rooms. We made these angled views from the saved FreeCAD model after the timed experiment, adding colours and numbered labels to help explain it.",
+    "overview_alt": "Angled view from the entrance side of the roofless house model. Numbered markers identify the bedrooms, bathrooms, living area, kitchen and entrance in the key below.",
+    "overview_caption": "The fourth model, viewed from the entrance side. The labels are added to the FreeCAD view.",
+    "key_title": "Find the rooms",
+    "rooms": ["Bedroom 2", "Bedroom 3", "Main bedroom", "Private bathroom", "Living and dining area", "Kitchen", "Entrance", "Shared bathroom"],
+    "front_alt": "Lower angled view of the front wall of the house model, with the entrance opening and window openings visible.",
+    "front_caption": "From the front: the entrance opening and two window openings are visible in the outside wall.",
+    "rear_alt": "Angled view from the other side of the roofless model, showing bedroom walls and window openings.",
+    "rear_caption": "From the other side: the bedroom walls and window openings are easier to see.",
+    "note": "The corridor runs through the middle. These are openings in the model: door panels, window glass, furniture and a roof have not been added. The floor colours identify rooms, not finishes."
+  },
+  "question": {
+    "label": "A moment to decide",
+    "title": "What would make an AI-made model useful?",
+    "intro": "Choose a starting point. There is no score.",
+    "choices": [
+      {
+        "title": "A picture that looks convincing",
+        "answer": "An image can start a conversation. We also need to know whether the rooms, openings and dimensions can be inspected and changed."
+      },
+      {
+        "title": "A model we can revise",
+        "answer": "An editable file lets us test a request and compare versions. Its geometry still needs review by someone who understands the design."
+      },
+      {
+        "title": "A house ready to build",
+        "answer": "That would require much more: a real site, structural and services design, local requirements and qualified professional review."
+      }
+    ]
+  },
+  "brief": {
+    "title": "The assignment",
+    "paragraphs": [
+      "The guide called for a single-storey house with three bedrooms, a private bathroom for the main bedroom, a shared bathroom, living and dining space, a kitchen, an entrance, doors and windows.",
+      "No plot, style or footprint had been approved. To begin the experiment, we used a provisional 12 × 10 metre rectangle. The roof was left out so the rooms could be seen. This was a working assumption, not a client-approved design."
+    ]
+  },
+  "setup": {
+    "title": "First, open the workshop",
+    "paragraphs": [
+      "The terminal is a place to type instructions for your computer. On Windows, open Start, search for PowerShell or Windows Terminal, and choose a PowerShell tab. The commands below are an example of how to start; follow the current official instructions for your system.",
+      "In our actual session, Node.js, npm and Codex were already available. We checked their versions and confirmed that Codex was signed in with ChatGPT; we did not repeat a fresh installation or record a first sign-in."
+    ],
+    "steps": [
+      {
+        "title": "Check the tools",
+        "text": "Run node --version and npm --version. If they are missing, install Node.js from its official site and reopen the terminal."
+      },
+      {
+        "title": "Set up Codex",
+        "text": "One documented route is the npm command below. Open your project folder, launch codex, and follow the sign-in instructions shown. Review the permissions available to your session before letting an agent change files."
+      },
+      {
+        "title": "Prepare FreeCAD",
+        "text": "The official download page offers a Windows installer and a portable archive. For this experiment we downloaded the official FreeCAD 1.1.4 portable archive, checked its SHA-256 against the release metadata, extracted it into the project and launched FreeCAD.exe. This was not a system-wide installation."
+      }
+    ],
+    "code_intro": "For a new Codex CLI setup using npm:",
+    "code_note": "The installation and sign-in commands above are instructions for a new setup; they were not run as a fresh install in this experiment. Versions and steps can change.",
+    "codex_link": "Codex CLI instructions",
+    "node_link": "Node.js downloads",
+    "freecad_link": "FreeCAD downloads"
+  },
+  "timing": {
+    "title": "How long did this attempt take?",
+    "intro": "We compared the local file timestamps from the creation of the FreeCAD download archive at 01:22:01 to the saved models on 22 November 2026, Madrid time.",
+    "first": "Until the first editable model was saved at 01:29:41.",
+    "last": "Until the fourth version was saved at 01:32:48.",
+    "note": "These are approximate elapsed clock times derived from file timestamps. They include preparation, scripting, checks, an early reopen and waits; they exclude the final comparison of all four files and the later editorial work. Codex was already installed, and this was one machine and one run?not a benchmark or a promise of typical speed."
+  },
+  "evolution": {
+    "title": "From a brief to four versions",
+    "paragraphs": [
+      "Codex wrote a FreeCAD macro that created editable wall boxes and cut openings, with coloured floor markers for the rooms. We then reopened each saved file in FreeCAD.",
+      "The plan views below are generated sections of the actual models at a height of 1.1 metres. They are FreeCAD exports, not photographs or generated illustrations."
+    ],
+    "before_alt": "Floor section of the first FreeCAD house model, with three bedroom zones at the top and a divided kitchen and living area below.",
+    "after_alt": "Floor section of the fourth model, showing the main-bedroom extension and a wider opening between kitchen and living area.",
+    "before_caption": "Version 1 · the initial layout.",
+    "after_caption": "Version 4 · after three revisions.",
+    "figure_note": "Each view is fitted separately, so the images are not at the same visual scale. The small high bathroom windows sit above the section height.",
+    "versions": [
+      {
+        "title": "Version 2:",
+        "text": "A 1.76 × 1 metre strip extends the main bedroom; the exterior footprint changes too."
+      },
+      {
+        "title": "Version 3:",
+        "text": "A 3 metre opening makes the kitchen and living area more connected."
+      },
+      {
+        "title": "Version 4:",
+        "text": "Two existing windows become wider. No daylight calculation was performed."
+      }
+    ],
+    "correction": "The first top-view export was slightly tilted and the full-height lintels hid the doors. We disabled the camera animation and made the section views instead—an early reminder to inspect the result, not just the success message.",
+    "legend": "Reading the plan: the bedrooms are along the top; the main bedroom is on the right, next to its private bathroom. Along the bottom, from left: living and dining, kitchen, entrance and shared bathroom. The corridor runs through the middle."
+  },
+  "review": {
+    "title": "How good is the house?",
+    "paragraphs": [
+      "As an early conversation piece, it is useful: the rooms are distinguishable, the main bedroom has a private bathroom, and the changes can be seen in separate editable files. All four reopened models contained three bedroom markers and two bathroom markers; 19 geometric opening checks passed in each.",
+      "As a home, it remains a rough concept. The main bedroom has a narrow, irregular portion, the shared bathroom and entrance take substantial space, and the corridor marker is only about 0.96 metres wide. Furniture placement, practical clearances and circulation need a proper design review; these are observations, not code-compliance findings.",
+      "There is no roof, furnishing, structural design, foundation, plumbing or electrical layout. We did not assess a site, local rules, accessibility, fire safety or daylight. The checks confirm selected properties of the model—not that it is habitable or ready to build."
+    ]
+  },
+  "reflection": {
+    "label": "Your turn to review",
+    "title": "What would you ask to see next?",
+    "summary": "Before approving the concept",
+    "answer": "Place furniture, study the narrow bedroom and corridor, and check the plot, daylight, structure, services and local requirements with qualified professionals. Then compare a new version against the brief."
+  },
+  "potential": {
+    "title": "A new way to explore possibilities",
+    "paragraphs": [
+      "A designer and client could use a workflow like this to discuss layouts, try a wider living space, compare orientations or document a revision. Clear instructions—what may change, what must stay and what to save—make the conversation more productive.",
+      "Codex can help prepare geometry and organize versions; FreeCAD makes the model inspectable. A designer still has to decide whether the layout works for real people and a real site, and architects and engineers must validate any design intended for construction."
+    ]
+  },
+  "ending": {
+    "label": "A question to take with you",
+    "message": "What would you change in the next version?",
+    "back": "Return to the beginning"
+  },
+  "evidence": {
+    "title": "Explore the evidence",
+    "text": "The experiment used FreeCAD 1.1.4 and an existing Codex CLI 0.171.0 session. The images show actual FreeCAD exports. The timing uses file timestamps, not a stopwatch. The first installation, permissions menu and voice controls were not captured.",
+    "link": "Read the experiment data and timing method (JSON)"
+  }
+}

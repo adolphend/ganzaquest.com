@@ -1,3 +1,9 @@
+<?php
+if ($LANG !== 'en') {
+    render('partials/suspension-translation', ['suspension' => $suspension, 'suspensionUI' => $suspensionUI]);
+    return;
+}
+?>
 <nav class="story-breadcrumb" aria-label="Breadcrumb">
 <a href="<?= e(url('home')) ?>">Home</a><span>/</span>
 <a href="<?= e(url('blog')) ?>">Blog</a><span>/</span>
@@ -66,8 +72,8 @@
 <p>The better we can answer those questions, the more useful work we can ask an agent to undertake.</p>
 <p>We started with a bump in the road. Think now about a task you repeat at your own desk: the tools you open, the checks you perform, and the evidence you need before making a decision. There may be an investigation there that an agent could help you carry out.</p></section>
 <footer class="story-ending"><p class="eyebrow">A question to take with you</p><p>What would you ask it to do?</p><p>And how would you know it had done the work well?</p><a href="#bump">Return to the story</a></footer>
-<section class="story-chapter suspension-notes" aria-labelledby="evidence-title"><h2 id="evidence-title">Behind this story</h2>
-<p>This article draws on supplied SuspensionLab AI source files, experiment manifests, comparison plots, and recovery logs. The records report MATLAB R2024a, MATLAB MCP Server 0.16.1, and execution through Codex's native MATLAB MCP connection. The simulations were not independently rerun for this article. Imported project documentation and local Git history are incomplete, so this story does not claim that every project phase was audited.</p>
+<section class="story-chapter suspension-notes" aria-labelledby="evidence-title"><h2 id="evidence-title">Explore the experiment</h2>
+<p>The SuspensionLab AI simulations were run specifically for this article. The project records include source files, experiment settings, comparison plots, and recovery logs. The investigation used MATLAB R2024a and MATLAB MCP Server 0.16.1, connected to Codex through its native MATLAB MCP connection. This article draws on the supplied records; the simulations were not independently rerun for publication.</p>
 <p><a href="<?= e(asset('data/suspension-evidence.json')) ?>">Read the numerical evidence and experiment settings (JSON)</a>. The baseline used spring stiffness of 16,000 N/m and damping of 1,000 N·s/m; the selected values were 8,000 N/m and approximately 594 N·s/m. The selected spring stiffness reached the search's lower bound, so this is a result within the chosen design space, not proof of a universal best setting.</p>
 <p>Explore the official MathWorks projects: <a href="https://github.com/matlab/agentic-toolkit-installer">Agentic Toolkit Installer</a>, <a href="https://github.com/matlab/matlab-mcp-server">MATLAB MCP Server</a>, <a href="https://github.com/matlab/matlab-agentic-toolkit">MATLAB Agentic Toolkit</a>, and <a href="https://github.com/matlab/simulink-agentic-toolkit">Simulink Agentic Toolkit</a>.</p></section>
 </div></article>
