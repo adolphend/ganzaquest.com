@@ -6,8 +6,9 @@ $is404 = $page === '404';
 $isSuspension = $page === 'suspension-story';
 $isDoor = $page === 'door-story';
 $isHouse = $page === 'codex-house';
-$isArticle = $isDoor || $isSuspension || $isHouse;
-$articleImage = $isHouse ? '/assets/img/codex-house-model.png' : ($isSuspension ? '/assets/img/suspension-holdout.png' : '/assets/img/mary-chris-door.webp');
+$isSweetHome = $page === 'sweet-home-story';
+$isArticle = $isDoor || $isSuspension || $isHouse || $isSweetHome;
+$articleImage = $isSweetHome ? '/assets/img/sweet-home-overview.png' : ($isHouse ? '/assets/img/codex-house-model.png' : ($isSuspension ? '/assets/img/suspension-holdout.png' : '/assets/img/mary-chris-door.webp'));
 if ($isDoor || $page === 'blog') {
     $story = json_decode(file_get_contents(APP_DIR . '/lang/door-story/' . $LANG . '.json'), true, 512, JSON_THROW_ON_ERROR);
     $storyUI = json_decode(file_get_contents(APP_DIR . '/lang/door-story/ui.json'), true, 512, JSON_THROW_ON_ERROR)[$LANG];
@@ -27,6 +28,13 @@ if ($isHouse || $page === 'blog') {
     $house = json_decode(file_get_contents(APP_DIR . '/lang/codex-house/' . $LANG . '.json'), true, 512, JSON_THROW_ON_ERROR);
     if ($isHouse) {
         $storyUI = $house['ui'];
+    }
+}
+
+if ($isSweetHome || $page === 'blog') {
+    $sweetHome = json_decode(file_get_contents(APP_DIR . '/lang/sweet-home/' . $LANG . '.json'), true, 512, JSON_THROW_ON_ERROR);
+    if ($isSweetHome) {
+        $storyUI = $sweetHome['ui'];
     }
 }
 
@@ -132,7 +140,7 @@ if (!$is404): ?>
 <link rel="stylesheet" href="<?= e(asset('css/door-story.css')) ?>">
 <?php endif; ?>
 <?php if ($isSuspension): ?><link rel="stylesheet" href="<?= e(asset('css/suspension-story.css')) ?>"><?php endif; ?>
-<?php if ($isHouse || $page === 'blog'): ?><link rel="stylesheet" href="<?= e(asset('css/codex-house.css')) ?>"><?php endif; ?>
+<?php if ($isHouse || $isSweetHome || $page === 'blog'): ?><link rel="stylesheet" href="<?= e(asset('css/codex-house.css')) ?>"><?php endif; ?>
 <?php if ($isDoor): ?><script src="<?= e(asset('js/door-story.js')) ?>" defer></script><?php endif; ?>
 </head>
 <body<?= $isHome && $LANG === cfg('default_lang') ? ' data-language-entry' : '' ?>>
@@ -146,6 +154,8 @@ if ($isHome) {
     render('pages/suspension-story', ['suspension' => $suspension ?? [], 'suspensionUI' => $suspensionUI]);
 } elseif ($isHouse) {
     render('pages/codex-house', ['house' => $house]);
+} elseif ($isSweetHome) {
+    render('pages/sweet-home-story', ['sweetHome' => $sweetHome]);
 } elseif ($isDoor) {
     render('pages/door-story', ['story' => $story, 'storyUI' => $storyUI]);
 } elseif ($is404) {
@@ -153,7 +163,7 @@ if ($isHome) {
     render('pages/404');
 } else {
     render('partials/intro', ['label' => t("pages.$page.label"), 'title' => t("pages.$page.title"), 'intro' => t("pages.$page.intro")]);
-    render('pages/' . $page, ['form' => $form, 'story' => $story ?? [], 'storyUI' => $storyUI ?? [], 'house' => $house ?? [], 'suspensionUI' => $suspensionUI ?? []]);
+    render('pages/' . $page, ['form' => $form, 'story' => $story ?? [], 'storyUI' => $storyUI ?? [], 'house' => $house ?? [], 'sweetHome' => $sweetHome ?? [], 'suspensionUI' => $suspensionUI ?? []]);
     if (!in_array($page, ['contact', 'privacy', 'products', 'blog'], true)) {
         render('partials/cta');
     }

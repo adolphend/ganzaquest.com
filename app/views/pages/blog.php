@@ -4,6 +4,10 @@
 <div><p class="journal-topic"><?= e($story[0]) ?></p><h2><a href="<?= e(url('door-story')) ?>"><?= e($storyUI['title']) ?></a></h2><p><?= e($storyUI['excerpt']) ?></p><a class="pill" href="<?= e(url('door-story')) ?>"><?= e($storyUI['read']) ?></a><p class="journal-time"><?= e($storyUI['time']) ?></p></div>
 </article>
 <article class="journal-feature codex-house-feature" lang="<?= e($LANG) ?>">
+<a class="journal-image" href="<?= e(url('sweet-home-story')) ?>" tabindex="-1" aria-hidden="true"><img src="<?= e(asset('img/sweet-home-overview.png')) ?>" width="1400" height="1050" loading="lazy" alt=""></a>
+<div><p class="journal-topic"><?= e($sweetHome['ui']['topic']) ?></p><h2><a href="<?= e(url('sweet-home-story')) ?>"><?= e($sweetHome['ui']['title']) ?></a></h2><p><?= e($sweetHome['ui']['excerpt']) ?></p><a class="pill" href="<?= e(url('sweet-home-story')) ?>"><?= e($sweetHome['ui']['read']) ?></a><p class="journal-time"><?= e($sweetHome['ui']['time']) ?></p></div>
+</article>
+<article class="journal-feature codex-house-feature" lang="<?= e($LANG) ?>">
 <a class="journal-image" href="<?= e(url('codex-house')) ?>" tabindex="-1" aria-hidden="true"><img src="<?= e(asset('img/codex-house-model.png')) ?>" width="1600" height="1200" loading="lazy" alt=""></a>
 <div><p class="journal-topic"><?= e($house['ui']['topic']) ?></p><h2><a href="<?= e(url('codex-house')) ?>"><?= e($house['ui']['title']) ?></a></h2><p><?= e($house['ui']['excerpt']) ?></p><a class="pill" href="<?= e(url('codex-house')) ?>"><?= e($house['ui']['read']) ?></a><p class="journal-time"><?= e($house['ui']['time']) ?></p></div>
 </article>

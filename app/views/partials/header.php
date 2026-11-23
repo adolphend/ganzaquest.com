@@ -15,7 +15,7 @@ $langSwitch = static function (string $class) use ($switchPage, $LANG): void { ?
 <a href="<?= e(url('home')) ?>" class="brand" aria-label="<?= te('a11y.home') ?>"><?= nciata_mark(24, '#e8a317', 'nciata-mark brand-mark') ?><span class="brand-word">GanzaQuest</span></a>
 <nav class="desktop-nav" aria-label="<?= te('a11y.main_nav') ?>">
 <?php foreach (cfg('nav') as $item): ?>
-<a href="<?= e(url($item)) ?>"<?= $item === (in_array($page, ['door-story', 'suspension-story', 'codex-house'], true) ? 'blog' : $page) ? ' class="active" aria-current="page"' : '' ?>><?= te('nav.' . $item) ?></a>
+<a href="<?= e(url($item)) ?>"<?= $item === (in_array($page, ['door-story', 'suspension-story', 'codex-house', 'sweet-home-story'], true) ? 'blog' : $page) ? ' class="active" aria-current="page"' : '' ?>><?= te('nav.' . $item) ?></a>
 <?php endforeach; ?>
 </nav>
 <div class="header-actions">
@@ -28,7 +28,7 @@ $langSwitch = static function (string $class) use ($switchPage, $LANG): void { ?
 </div>
 <nav class="mobile-nav" id="mobile-nav" aria-label="<?= te('a11y.mobile_nav') ?>" hidden>
 <?php foreach (cfg('nav') as $item): ?>
-<a href="<?= e(url($item)) ?>"<?= $item === (in_array($page, ['door-story', 'suspension-story', 'codex-house'], true) ? 'blog' : $page) ? ' class="active" aria-current="page"' : '' ?>><?= te('nav.' . $item) ?></a>
+<a href="<?= e(url($item)) ?>"<?= $item === (in_array($page, ['door-story', 'suspension-story', 'codex-house', 'sweet-home-story'], true) ? 'blog' : $page) ? ' class="active" aria-current="page"' : '' ?>><?= te('nav.' . $item) ?></a>
 <?php endforeach; ?>
 <?php $langSwitch('lang-switch lang-switch-mobile'); ?>
 </nav>
