@@ -6,6 +6,16 @@ $paragraphs = static function (array $items): void {
         echo '<p>' . e($item) . '</p>';
     }
 };
+$softwareTools = [
+    'qgis' => ['QGIS', 'https://qgis.org/'],
+    'blender' => ['Blender', 'https://docs.blender.org/manual/en/latest/render/introduction.html'],
+    'bonsai' => ['Bonsai / IFC', 'https://docs.ifcopenshell.org/bonsai'],
+    'openstudio' => ['OpenStudio', 'https://openstudio.net/'],
+    'energyplus' => ['EnergyPlus', 'https://energyplus.net/'],
+    'calculix' => ['CalculiX / FreeCAD FEM', 'https://blog.freecad.org/2025/09/16/getting-started-with-fem/'],
+    'sketchup' => ['SketchUp', 'https://help.sketchup.com/en/importing-and-exporting-ifc-files'],
+    'revit' => ['Revit', 'https://help.autodesk.com/cloudhelp/2022/ENU/Revit-Model/files/GUID-C61C2E42-0561-48C9-8459-3EAC10EC8E16.htm'],
+];
 ?>
 <nav class="story-breadcrumb" aria-label="<?= e($ui['breadcrumb']) ?>">
 <a href="<?= e(url('home')) ?>"><?= te('nav.home') ?></a><span>/</span>
@@ -52,6 +62,21 @@ codex</code></pre><p><?= e($house['setup']['code_note']) ?></p>
 <section class="story-chapter" id="review"><h2><?= e($house['review']['title']) ?></h2><?php $paragraphs($house['review']['paragraphs']); ?></section>
 <aside class="decision" aria-labelledby="house-review-title"><p class="eyebrow"><?= e($house['reflection']['label']) ?></p><h2 id="house-review-title"><?= e($house['reflection']['title']) ?></h2><details><summary><?= e($house['reflection']['summary']) ?></summary><p><?= e($house['reflection']['answer']) ?></p></details></aside>
 <section class="story-chapter" id="potential"><h2><?= e($house['potential']['title']) ?></h2><?php $paragraphs($house['potential']['paragraphs']); ?></section>
+<section class="story-chapter house-roadmap" id="other-design-tools" aria-labelledby="house-roadmap-title">
+<p class="eyebrow"><?= e($house['software_strategy']['label']) ?></p>
+<h2 id="house-roadmap-title"><?= e($house['software_strategy']['title']) ?></h2>
+<p><?= e($house['software_strategy']['intro']) ?></p>
+<ol class="house-roadmap-steps"><?php foreach ($house['software_strategy']['steps'] as $step): ?><li>
+<h3><?= e($step['title']) ?></h3><p><?= e($step['text']) ?></p>
+<p class="house-roadmap-meta"><strong><?= e($house['software_strategy']['tools_label']) ?>:</strong>
+<?php foreach ($step['tools'] as $index => $key): ?><?php if ($index > 0): ?> · <?php endif; ?><a href="<?= e($softwareTools[$key][1]) ?>"><?= e($softwareTools[$key][0]) ?></a><?php endforeach; ?></p>
+<p class="house-roadmap-meta"><strong><?= e($house['software_strategy']['output_label']) ?>:</strong> <?= e($step['output']) ?></p>
+</li><?php endforeach; ?></ol>
+<h3><?= e($house['software_strategy']['handoff_title']) ?></h3><p><?= e($house['software_strategy']['handoff']) ?></p>
+<h3><?= e($house['software_strategy']['prompt_title']) ?></h3><p><?= e($house['software_strategy']['prompt_intro']) ?></p>
+<blockquote class="house-roadmap-prompt"><p><?= e($house['software_strategy']['prompt']) ?></p></blockquote>
+<p><?= e($house['software_strategy']['alternatives']) ?> <a href="<?= e($softwareTools['sketchup'][1]) ?>">SketchUp</a> · <a href="<?= e($softwareTools['revit'][1]) ?>">Revit</a></p>
+</section>
 <footer class="story-ending"><p class="eyebrow"><?= e($house['ending']['label']) ?></p><p><?= e($house['ending']['message']) ?></p><a href="#begin"><?= e($house['ending']['back']) ?></a></footer>
 <section class="story-chapter house-notes" aria-labelledby="house-evidence-title"><h2 id="house-evidence-title"><?= e($house['evidence']['title']) ?></h2><p><?= e($house['evidence']['text']) ?></p><p><a href="<?= e(asset('data/codex-house-evidence.json')) ?>"><?= e($house['evidence']['link']) ?></a></p></section>
 </div></article>

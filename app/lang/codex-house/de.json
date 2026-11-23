@@ -6,7 +6,7 @@
     "excerpt": "Eine Aufgabe, ein KI-Agent und ein bearbeitbares Haus. Entdecke das FreeCAD-Modell, die Dauer des Versuchs und die Fragen an einen Planer.",
     "topic": "KI-Agenten im Entwurf",
     "read": "Das Experiment entdecken",
-    "time": "Etwa 7 Minuten Lesezeit",
+    "time": "Etwa 10 Minuten Lesezeit",
     "breadcrumb": "Navigationspfad"
   },
   "hero": {
@@ -143,6 +143,62 @@
       "Planer und Kunden könnten einen solchen Ablauf nutzen, um Grundrisse zu besprechen, einen offeneren Wohnbereich auszuprobieren, Ausrichtungen zu vergleichen oder Änderungen zu dokumentieren. Klare Anweisungen dazu, was sich ändern darf, was bleiben muss und was gespeichert wird, machen das Gespräch produktiver.",
       "Codex kann beim Erstellen der Geometrie und beim Ordnen von Versionen helfen; FreeCAD macht das Modell überprüfbar. Ein Planer muss weiterhin beurteilen, ob die Aufteilung zu realen Menschen und einem realen Grundstück passt. Architekten und Ingenieure müssen einen Entwurf für den Bau prüfen."
     ]
+  },
+  "software_strategy": {
+    "label": "Ein Plan für die nächsten Schritte",
+    "title": "Wie könnten andere Programme das Haus weiterbringen?",
+    "intro": "Das FreeCAD-Modell ist ein Ausgangspunkt. Der folgende Ablauf ist ein Vorschlag für ein zukünftiges Projekt und gehört nicht zum oben beschriebenen Experiment. Jede Phase liefert ein Ergebnis, das Planungsteam und Auftraggeber gemeinsam prüfen können.",
+    "tools_label": "Nützliche Werkzeuge",
+    "output_label": "Aufbewahren",
+    "steps": [
+      {
+        "title": "Mit einem realen Grundstück beginnen",
+        "text": "Mit QGIS verfügbare Karten, Geländedaten und eine Vermessung zusammenführen. Grundstücksgrenzen, Ausrichtung, Zufahrt und bekannte Einschränkungen festhalten und von Vermessungsfachleuten und lokalen Fachleuten prüfen lassen. Codex kann helfen, Quellen zu ordnen und offene Fragen aufzulisten.",
+        "output": "Einen Lageplan sowie eine Liste bestätigter Angaben und offener Fragen.",
+        "tools": [
+          "qgis"
+        ]
+      },
+      {
+        "title": "Die Räume anschaulicher machen",
+        "text": "Die bearbeitbare FreeCAD-Datei behalten und eine separate Netzkopie für Blender exportieren. Nach dem Import ein bekanntes Maß und die Achsenausrichtung prüfen; schräge Ansichten und einfache Materialstudien erstellen. Hinzugefügte Dächer, Möbel oder Außenanlagen als Vorschläge kennzeichnen.",
+        "output": "Das Originalmodell, eindeutig beschriftete Bilder und eine separate Visualisierungsdatei.",
+        "tools": [
+          "blender"
+        ]
+      },
+      {
+        "title": "Das Modell für die Zusammenarbeit vorbereiten",
+        "text": "Wenn das Team Building Information Modeling (BIM) benötigt, den Entwurf als Vorlage nutzen, um Wände, Türen und andere Elemente zu erstellen oder zu klassifizieren. Bonsai kann mit IFC arbeiten, einem Austauschformat für Bauwerksinformationen. Die IFC-Datei erneut öffnen und Geometrie und Eigenschaften prüfen: Einfache Körper werden nicht automatisch zu verlässlichen BIM-Objekten.",
+        "output": "Eine geprüfte IFC-Datei und ein Protokoll fehlender oder veränderter Informationen.",
+        "tools": [
+          "bonsai"
+        ]
+      },
+      {
+        "title": "Energieoptionen vergleichen",
+        "text": "In OpenStudio ein Energiemodell für EnergyPlus erstellen: mit definierten Räumen, Dach und weiteren Hüllflächen, lokalem Wetter sowie Annahmen zu Materialien, Nutzung und Gebäudetechnik. Varianten wie Ausrichtung oder Dämmung vergleichen und die Eingaben dokumentieren. Codex kann bei Dateien und Ergebnisübersichten für die fachliche Prüfung helfen.",
+        "output": "Ein Annahmenblatt und einen Vergleichsbericht, keine Vorhersage für das fertige Haus.",
+        "tools": [
+          "openstudio",
+          "energyplus"
+        ]
+      },
+      {
+        "title": "Tragwerksfachleute einbeziehen",
+        "text": "Eine Tragwerksplanerin oder ein Tragwerksplaner kann mit dem vorgesehenen Tragwerk, Materialwerten, Lasten und Auflagern eine separate Analyse erstellen. FreeCAD FEM mit CalculiX ist eine mögliche Wahl; die Fachperson wählt die Methode und prüft die Ergebnisse anhand der geltenden Anforderungen.",
+        "output": "Geprüfte Berechnungen und offene Fragen für das Planungsteam.",
+        "tools": [
+          "calculix"
+        ]
+      }
+    ],
+    "handoff_title": "Die Übergaben sorgfältig prüfen",
+    "handoff": "house_v04.FCStd und spätere Revisionen als Quelldateien behalten. Ein Netz wie STL eignet sich für die Visualisierung, bewahrt aber weder die bearbeitbare Modellhistorie noch die Klassifizierung der Bauteile; Maßstab und Ausrichtung müssen geprüft werden. Auch beim IFC-Austausch Maße, Öffnungen und Eigenschaften kontrollieren. Versionen, Annahmen und Prüfnachweise zu jedem Export aufbewahren.",
+    "prompt_title": "Ein konkreter nächster Auftrag für Codex",
+    "prompt_intro": "Wenn die nötigen Programme in der Sitzung verfügbar sind, könnte ein erster Auftrag lauten:",
+    "prompt": "Verwende eine Kopie von house_v04.FCStd als Referenz. Exportiere ein separates Netz für Blender, prüfe nach dem Import ein bekanntes Maß und die Ausrichtung und erstelle drei schräge Ansichten des aktuellen Grundrisses. Speichere die Blender-Szene separat, liste fehlende Details auf und kennzeichne vorgeschlagene Ergänzungen. Verändere die Originaldatei nicht.",
+    "alternatives": "Auch kommerzielle Programme sind möglich: SketchUp und Revit können an IFC-Abläufen teilnehmen. Vor der Entscheidung Edition, Lizenz und die bei einem Probeaustausch erhaltenen Informationen prüfen."
   },
   "ending": {
     "label": "Eine Frage zum Mitnehmen",

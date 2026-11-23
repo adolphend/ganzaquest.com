@@ -6,7 +6,7 @@
     "excerpt": "A brief, an AI agent and an editable house. See what we built in FreeCAD, how long this attempt took and what still needs a designer’s judgment.",
     "topic": "AI agents in everyday design",
     "read": "Explore the experiment",
-    "time": "About 7 minutes to read",
+    "time": "About 10 minutes to read",
     "breadcrumb": "Breadcrumb"
   },
   "hero": {
@@ -143,6 +143,62 @@
       "A designer and client could use a workflow like this to discuss layouts, try a wider living space, compare orientations or document a revision. Clear instructions—what may change, what must stay and what to save—make the conversation more productive.",
       "Codex can help prepare geometry and organize versions; FreeCAD makes the model inspectable. A designer still has to decide whether the layout works for real people and a real site, and architects and engineers must validate any design intended for construction."
     ]
+  },
+  "software_strategy": {
+    "label": "A plan for what comes next",
+    "title": "How could other tools take the house further?",
+    "intro": "The FreeCAD model gives us a starting point. The following is a proposed workflow for a future project, not work performed in the experiment above. Each stage produces something a designer and client can review before moving on.",
+    "tools_label": "Useful tools",
+    "output_label": "Keep",
+    "steps": [
+      {
+        "title": "Start with a real site",
+        "text": "Use QGIS to bring available maps, terrain data and a survey together. Record the plot boundary, orientation, access and known constraints; ask a surveyor and local professionals to verify the information. Codex can help organize the source files and list the questions that remain.",
+        "output": "A site plan and a list of confirmed facts and open questions.",
+        "tools": [
+          "qgis"
+        ]
+      },
+      {
+        "title": "Make the spaces easier to imagine",
+        "text": "Keep the editable FreeCAD file, then export a separate mesh copy for Blender. Check a known dimension and the axes after import; create angled views and simple material studies. Any roof, furniture or landscaping added for a view should be identified as a proposal.",
+        "output": "The original model plus clearly labelled images and a separate visualisation file.",
+        "tools": [
+          "blender"
+        ]
+      },
+      {
+        "title": "Prepare a model for collaboration",
+        "text": "If the team needs building information modelling (BIM), use the concept as a reference to create or classify walls, doors and other elements. Bonsai can work with IFC, an exchange format for building information. Reopen the IFC and inspect its geometry and properties: simple solids do not automatically become reliable BIM objects.",
+        "output": "A reviewed IFC file and a record of missing or changed information.",
+        "tools": [
+          "bonsai"
+        ]
+      },
+      {
+        "title": "Compare energy choices",
+        "text": "Build an energy model in OpenStudio for EnergyPlus using defined spaces, a roof and other envelope surfaces, local weather, materials, occupancy and system assumptions. Compare design options, such as orientations or insulation, and record the inputs. Codex can help prepare files and summarise results for an expert to review.",
+        "output": "An assumptions sheet and a comparison report, not a prediction of the finished home.",
+        "tools": [
+          "openstudio",
+          "energyplus"
+        ]
+      },
+      {
+        "title": "Bring in structural expertise",
+        "text": "A structural engineer can develop a separate analysis using the proposed structure, material properties, loads and supports. FreeCAD FEM with CalculiX is one possible tool; the engineer chooses the method and checks the results against applicable requirements.",
+        "output": "Reviewed engineering calculations and questions to resolve with the design team.",
+        "tools": [
+          "calculix"
+        ]
+      }
+    ],
+    "handoff_title": "Keep the handoffs honest",
+    "handoff": "Keep house_v04.FCStd and its later revisions as source files. A mesh such as STL is useful for a visualisation, but it does not preserve the editable design history or building classifications; check scale and orientation. An IFC exchange needs its own checks for dimensions, openings and properties. Keep versions, assumptions and review notes alongside each export.",
+    "prompt_title": "A practical next prompt for Codex",
+    "prompt_intro": "With the necessary software available to the session, a first request could be:",
+    "prompt": "Use a copy of house_v04.FCStd as the reference. Export a separate mesh for Blender, check a known dimension and orientation after import, and create three angled views of the current layout. Save the Blender scene separately, list missing details and label any proposed additions. Do not change the original file.",
+    "alternatives": "Commercial tools are also an option: SketchUp and Revit can participate in IFC workflows. Check the edition, licence and the information retained in a trial exchange before choosing."
   },
   "ending": {
     "label": "A question to take with you",

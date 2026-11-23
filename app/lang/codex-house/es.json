@@ -6,7 +6,7 @@
     "excerpt": "Un encargo, un agente de IA y una casa editable. Descubre el modelo de FreeCAD, cuánto duró la prueba y qué requiere aún el criterio de un diseñador.",
     "topic": "Agentes de IA en el diseño",
     "read": "Explorar el experimento",
-    "time": "Unos 7 minutos de lectura",
+    "time": "Unos 10 minutos de lectura",
     "breadcrumb": "Ruta de navegación"
   },
   "hero": {
@@ -143,6 +143,62 @@
       "Un diseñador y su cliente podrían usar un proceso así para debatir distribuciones, probar un salón más abierto, comparar orientaciones o documentar un cambio. Las instrucciones claras —qué puede cambiar, qué debe conservarse y qué se debe guardar— hacen más productiva la conversación.",
       "Codex puede ayudar a preparar la geometría y organizar versiones; FreeCAD permite examinar el modelo. Un diseñador aún debe valorar si la distribución sirve para personas y un terreno reales, y arquitectos e ingenieros deben validar cualquier proyecto destinado a construirse."
     ]
+  },
+  "software_strategy": {
+    "label": "Un plan para el siguiente paso",
+    "title": "¿Cómo podrían otros programas mejorar el diseño?",
+    "intro": "El modelo de FreeCAD nos da un punto de partida. La siguiente propuesta es un flujo de trabajo para un proyecto futuro, no una fase realizada en el experimento anterior. Cada etapa produce algo que el diseñador y el cliente pueden revisar antes de continuar.",
+    "tools_label": "Herramientas útiles",
+    "output_label": "Qué conservar",
+    "steps": [
+      {
+        "title": "Empezar por una parcela real",
+        "text": "Usar QGIS para reunir mapas disponibles, datos del terreno y un levantamiento topográfico. Registrar los límites de la parcela, la orientación, los accesos y las restricciones conocidas; pedir a un topógrafo y a profesionales locales que verifiquen la información. Codex puede ayudar a organizar las fuentes y enumerar las preguntas pendientes.",
+        "output": "Un plano del emplazamiento y una lista de datos confirmados y cuestiones abiertas.",
+        "tools": [
+          "qgis"
+        ]
+      },
+      {
+        "title": "Hacer más fáciles de imaginar los espacios",
+        "text": "Conservar el archivo editable de FreeCAD y exportar una copia de malla independiente para Blender. Tras importarla, comprobar una dimensión conocida y la orientación de los ejes; crear vistas en ángulo y estudios sencillos de materiales. Cualquier tejado, mueble o elemento de jardín añadido debe presentarse como una propuesta.",
+        "output": "El modelo original, imágenes claramente identificadas y un archivo de visualización separado.",
+        "tools": [
+          "blender"
+        ]
+      },
+      {
+        "title": "Preparar el modelo para colaborar",
+        "text": "Si el equipo necesita modelado de información de construcción (BIM), usar el concepto como referencia para crear o clasificar muros, puertas y otros elementos. Bonsai permite trabajar con IFC, un formato de intercambio de información del edificio. Volver a abrir el IFC y revisar la geometría y las propiedades: unos volúmenes simples no se convierten automáticamente en objetos BIM fiables.",
+        "output": "Un archivo IFC revisado y un registro de los datos ausentes o modificados.",
+        "tools": [
+          "bonsai"
+        ]
+      },
+      {
+        "title": "Comparar opciones energéticas",
+        "text": "Crear un modelo energético en OpenStudio para EnergyPlus, definiendo los espacios, el tejado y las demás superficies de la envolvente, el clima local, los materiales, la ocupación y los sistemas. Comparar alternativas, como la orientación o el aislamiento, y registrar las hipótesis. Codex puede ayudar a preparar archivos y resumir resultados para que los revise un especialista.",
+        "output": "Una ficha de hipótesis y un informe comparativo, no una predicción de la vivienda terminada.",
+        "tools": [
+          "openstudio",
+          "energyplus"
+        ]
+      },
+      {
+        "title": "Incorporar a un ingeniero de estructuras",
+        "text": "Un ingeniero de estructuras puede preparar un análisis independiente con la estructura propuesta, las propiedades de los materiales, las cargas y los apoyos. FreeCAD FEM con CalculiX es una opción; el ingeniero elige el método y comprueba los resultados frente a los requisitos aplicables.",
+        "output": "Cálculos revisados y preguntas pendientes para el equipo de diseño.",
+        "tools": [
+          "calculix"
+        ]
+      }
+    ],
+    "handoff_title": "Cuidar los intercambios entre programas",
+    "handoff": "Conservar house_v04.FCStd y sus revisiones posteriores como archivos de origen. Una malla STL sirve para visualizar, pero no conserva el historial editable ni la clasificación de los elementos; hay que comprobar la escala y la orientación. Un intercambio IFC requiere además revisar dimensiones, huecos y propiedades. Guardar versiones, hipótesis y notas de revisión junto a cada exportación.",
+    "prompt_title": "Una siguiente petición concreta para Codex",
+    "prompt_intro": "Si el software necesario está disponible en la sesión, una primera petición podría ser:",
+    "prompt": "Usa una copia de house_v04.FCStd como referencia. Exporta una malla independiente para Blender, comprueba una dimensión conocida y la orientación tras importarla y crea tres vistas en ángulo de la distribución actual. Guarda la escena de Blender por separado, enumera los detalles que falten e identifica cualquier añadido propuesto. No modifiques el archivo original.",
+    "alternatives": "También existen herramientas comerciales: SketchUp y Revit pueden participar en flujos de trabajo IFC. Antes de elegir, comprueba la edición, la licencia y los datos conservados en un intercambio de prueba."
   },
   "ending": {
     "label": "Una pregunta para llevarte",

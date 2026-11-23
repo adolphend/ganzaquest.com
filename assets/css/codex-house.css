@@ -33,6 +33,14 @@
 .house-room-key li{display:flex;align-items:center;gap:9px;font:14px/1.45 Arial,sans-serif;min-width:0}
 .house-key-number{flex:0 0 26px;height:26px;font-size:12px}
 .house-angles{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:20px 0}
+.house-roadmap-steps{padding-left:1.5em;margin:28px 0 38px}
+.house-roadmap-steps li{padding:10px 0 18px .35em;border-top:1px solid #c5d1ca}
+.house-roadmap-steps li::marker{font-weight:700;color:#27584f}
+.house-roadmap-steps h3{margin:10px 0 12px}
+.house-roadmap-steps p{margin:0 0 12px}
+.house-roadmap-meta{font:15px/1.6 Arial,sans-serif;color:#415d5a}
+.house-roadmap-prompt{margin:22px 0;padding:20px 24px;border-left:4px solid #397967;background:#e5eee6}
+.house-roadmap-prompt p{margin:0}
 .house-notes{border-top:1px solid #c5d1ca;font-size:1rem}
 @media(max-width:560px){.house-timing,.house-plans,.house-angles{grid-template-columns:1fr}.house-room-key{grid-template-columns:1fr 1fr}.house-timing div{padding:18px}.house-code{font-size:13px;padding:16px}.codex-house-feature{margin-top:48px;padding-top:40px}}
 @media(max-width:420px){.codex-house-story .story-hero h1{font-size:clamp(44px,12vw,50px);overflow-wrap:break-word}}

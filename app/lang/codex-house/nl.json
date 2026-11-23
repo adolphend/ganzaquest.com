@@ -6,7 +6,7 @@
     "excerpt": "Een opdracht, een AI-agent en een aanpasbaar huis. Bekijk het FreeCAD-model, de duur van de proef en de vragen die een ontwerper nog moet beantwoorden.",
     "topic": "AI-agenten in het ontwerp",
     "read": "Bekijk het experiment",
-    "time": "Ongeveer 7 minuten leestijd",
+    "time": "Ongeveer 10 minuten leestijd",
     "breadcrumb": "Navigatiepad"
   },
   "hero": {
@@ -143,6 +143,62 @@
       "Een ontwerper en klant zouden zo’n werkwijze kunnen gebruiken om indelingen te bespreken, een openere woonkamer te proberen, oriëntaties te vergelijken of een wijziging vast te leggen. Duidelijke instructies over wat mag veranderen, wat moet blijven en wat wordt opgeslagen maken het gesprek productiever.",
       "Codex kan helpen met geometrie en versiebeheer; FreeCAD maakt het model controleerbaar. Een ontwerper moet nog steeds beoordelen of de indeling past bij echte mensen en een echt perceel. Architecten en ingenieurs moeten een ontwerp dat gebouwd moet worden valideren."
     ]
+  },
+  "software_strategy": {
+    "label": "Een plan voor de volgende stappen",
+    "title": "Hoe kunnen andere programma’s het huis verder brengen?",
+    "intro": "Het FreeCAD-model is een beginpunt. De volgende werkwijze is een voorstel voor een toekomstig project en maakte geen deel uit van het experiment hierboven. Elke fase levert iets op dat ontwerper en opdrachtgever samen kunnen bekijken.",
+    "tools_label": "Handige hulpmiddelen",
+    "output_label": "Bewaren",
+    "steps": [
+      {
+        "title": "Begin met een echte locatie",
+        "text": "Breng beschikbare kaarten, terreingegevens en een landmeting samen in QGIS. Leg perceelgrenzen, oriëntatie, toegang en bekende beperkingen vast en laat de informatie controleren door een landmeter en lokale deskundigen. Codex kan helpen de bronnen te ordenen en open vragen op een rij te zetten.",
+        "output": "Een situatietekening en een lijst met bevestigde gegevens en open vragen.",
+        "tools": [
+          "qgis"
+        ]
+      },
+      {
+        "title": "Maak de ruimtes beter voorstelbaar",
+        "text": "Bewaar het bewerkbare FreeCAD-bestand en exporteer een afzonderlijke mesh voor Blender. Controleer na het importeren een bekende maat en de richting van de assen; maak schuine aanzichten en eenvoudige materiaalstudies. Geef een toegevoegd dak, meubels of tuinaanleg duidelijk aan als voorstel.",
+        "output": "Het oorspronkelijke model, duidelijk toegelichte afbeeldingen en een apart visualisatiebestand.",
+        "tools": [
+          "blender"
+        ]
+      },
+      {
+        "title": "Bereid het model voor op samenwerking",
+        "text": "Als het team bouwinformatiemodellering (BIM) nodig heeft, gebruik het concept dan als referentie om muren, deuren en andere elementen te maken of te classificeren. Bonsai kan werken met IFC, een uitwisselingsformaat voor gebouwinformatie. Open het IFC-bestand opnieuw en controleer de geometrie en eigenschappen: eenvoudige volumes worden niet vanzelf betrouwbare BIM-objecten.",
+        "output": "Een gecontroleerd IFC-bestand en een overzicht van ontbrekende of gewijzigde gegevens.",
+        "tools": [
+          "bonsai"
+        ]
+      },
+      {
+        "title": "Vergelijk energiekeuzes",
+        "text": "Maak in OpenStudio een energiemodel voor EnergyPlus met afgebakende ruimtes, een dak en andere schilvlakken, lokaal weer en aannames over materialen, gebruik en installaties. Vergelijk varianten, zoals oriëntatie of isolatie, en leg de invoer vast. Codex kan bestanden helpen voorbereiden en resultaten samenvatten voor beoordeling door een deskundige.",
+        "output": "Een overzicht van aannames en een vergelijkingsrapport, geen voorspelling voor de uiteindelijke woning.",
+        "tools": [
+          "openstudio",
+          "energyplus"
+        ]
+      },
+      {
+        "title": "Betrek een constructeur",
+        "text": "Een constructeur kan een afzonderlijke analyse maken met de voorgestelde draagconstructie, materiaaleigenschappen, belastingen en opleggingen. FreeCAD FEM met CalculiX is één mogelijkheid; de constructeur kiest de methode en toetst de resultaten aan de geldende eisen.",
+        "output": "Gecontroleerde berekeningen en vragen die het ontwerpteam nog moet oplossen.",
+        "tools": [
+          "calculix"
+        ]
+      }
+    ],
+    "handoff_title": "Controleer de overdracht tussen programma’s",
+    "handoff": "Bewaar house_v04.FCStd en latere versies als bronbestanden. Een mesh zoals STL is bruikbaar voor een visualisatie, maar bewaart de bewerkbare ontwerpgeschiedenis en classificatie van bouwelementen niet; controleer schaal en oriëntatie. Controleer bij een IFC-uitwisseling ook de maten, openingen en eigenschappen. Bewaar versies, aannames en controlenotities bij elke export.",
+    "prompt_title": "Een concrete volgende opdracht voor Codex",
+    "prompt_intro": "Als de benodigde software in de sessie beschikbaar is, kan een eerste opdracht zijn:",
+    "prompt": "Gebruik een kopie van house_v04.FCStd als referentie. Exporteer een afzonderlijke mesh voor Blender, controleer na het importeren een bekende maat en de oriëntatie en maak drie schuine aanzichten van de huidige indeling. Sla de Blender-scène apart op, noem ontbrekende details en markeer voorgestelde toevoegingen. Wijzig het oorspronkelijke bestand niet.",
+    "alternatives": "Commerciële programma’s zijn ook mogelijk: SketchUp en Revit kunnen deel uitmaken van IFC-werkprocessen. Controleer vóór de keuze de editie, licentie en behouden gegevens met een proefuitwisseling."
   },
   "ending": {
     "label": "Een vraag om mee te nemen",
