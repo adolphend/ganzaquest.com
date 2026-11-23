@@ -6,6 +6,7 @@ $paragraphs = static function (array $items): void {
         echo '<p>' . e($item) . '</p>';
     }
 };
+$planNames = ['Entrance', 'Living and dining', 'Kitchen', 'Corridor', 'Main bedroom', 'Private bathroom', 'Bedroom 2', 'Bedroom 3', 'Shared bathroom'];
 ?>
 <nav class="story-breadcrumb" aria-label="<?= e($ui['breadcrumb']) ?>">
 <a href="<?= e(url('home')) ?>"><?= te('nav.home') ?></a><span>/</span>
@@ -23,6 +24,7 @@ $paragraphs = static function (array $items): void {
 <section class="story-chapter" id="begin"><h2><?= e($sweetHome['intro']['title']) ?></h2><?php $paragraphs($sweetHome['intro']['paragraphs']); ?></section>
 <section class="story-chapter house-tour" id="tour"><h2><?= e($sweetHome['tour']['title']) ?></h2><p><?= e($sweetHome['tour']['intro']) ?></p>
 <figure class="house-tour-overview"><div class="house-tour-frame"><img src="<?= e(asset('img/sweet-home-v04-plan.png')) ?>" width="1665" height="1465" loading="lazy" alt="<?= e($sweetHome['tour']['plan_alt']) ?>"></div><figcaption><?= e($sweetHome['tour']['plan_caption']) ?></figcaption></figure>
+<?php if ($LANG !== 'en'): ?><h3 class="house-key-title"><?= e($sweetHome['tour']['key_title']) ?></h3><ul class="house-room-key"><?php foreach ($sweetHome['tour']['room_key'] as $index => $room): ?><li><span><strong><?= e($planNames[$index]) ?></strong><br><?= e($room) ?></span></li><?php endforeach; ?></ul><?php endif; ?>
 <div class="house-angles"><figure><img src="<?= e(asset('img/sweet-home-front.png')) ?>" width="1400" height="1050" loading="lazy" alt="<?= e($sweetHome['tour']['front_alt']) ?>"><figcaption><?= e($sweetHome['tour']['front_caption']) ?></figcaption></figure><figure><img src="<?= e(asset('img/sweet-home-rear.png')) ?>" width="1400" height="1050" loading="lazy" alt="<?= e($sweetHome['tour']['rear_alt']) ?>"><figcaption><?= e($sweetHome['tour']['rear_caption']) ?></figcaption></figure></div>
 <p class="house-figure-note"><?= e($sweetHome['tour']['note']) ?></p></section>
 <aside class="decision" aria-labelledby="sweet-question-title"><p class="eyebrow"><?= e($sweetHome['question']['label']) ?></p><h2 id="sweet-question-title"><?= e($sweetHome['question']['title']) ?></h2>

@@ -1,13 +1,147 @@
 {
-  "ui": {"title": "Can Sweet Home 3D Help Design a House?", "seo": "Can Sweet Home 3D Help Design a House? A Codex Experiment", "description": "Explore a real three-bedroom house experiment with Codex and Sweet Home 3D, from a furnished floor plan to four editable versions.", "excerpt": "A familiar house brief, a different design tool. Explore the furnished rooms, four revisions and lessons from our Sweet Home 3D experiment.", "topic": "AI agents in everyday design", "read": "Explore the house", "time": "About 6 minutes to read", "breadcrumb": "Breadcrumb"},
-  "hero": {"standfirst": "What happens when we give the same house brief to Codex and a tool made for imagining interiors?", "meta": "A real GanzaQuest experiment · Windows · 23 November 2026", "start": "Step inside", "alt": "A Sweet Home 3D view of a furnished, roofless three-bedroom house model.", "caption": "Our fourth version, viewed in Sweet Home 3D."},
-  "intro": {"title": "A familiar brief, a new perspective", "paragraphs": ["A house starts as a collection of choices: where to put the bedrooms, how to connect the kitchen to the living room, and whether there is enough room to move around the furniture. A plan helps; a view of the rooms can make those choices feel more tangible.", "After exploring the brief in FreeCAD, we tried it again with Sweet Home 3D and Codex. The aim was a one-storey concept with three bedrooms, two bathrooms, a kitchen, living and dining space, an entrance and a corridor. We began with a provisional 12 by 10 metre footprint, without a particular plot or architectural style. This is a new model of the brief, built independently; it is not an imported or exact copy of the FreeCAD house."]},
-  "tour": {"title": "Take a look around", "intro": "The entrance leads toward the shared spaces, while a corridor connects the bedrooms and bathrooms. A table, sofa, beds and kitchen fittings give the rooms a sense of scale. The main bedroom has a private bathroom; a second bathroom serves the rest of the house.", "plan_alt": "Labelled floor plan of the final furnished house, with three bedrooms, two bathrooms and shared living spaces.", "plan_caption": "The fourth floor plan, exported from the actual model. Room labels in the original image are in English.", "front_alt": "Angled 3D view of the furnished model from the front.", "front_caption": "From the front: rooms and furnishings seen from above.", "rear_alt": "Angled 3D view of the same furnished model from the other side.", "rear_caption": "From the other side: another look at the room arrangement.", "note": "These are views produced with Sweet Home 3D's own plan and 3D components. The roof and ceiling are omitted to reveal the interior; the pictures are model views, not photographs."},
-  "question": {"label": "Your turn", "title": "Which change would you explore first?", "choices": [{"title": "Make the main bedroom larger", "answer": "We tried that in the second version. The extra room creates a step in the outside wall, so it changes the shape of the house as well as the bedroom."}, {"title": "Connect the kitchen and living room", "answer": "The third version opens a three-metre section between them. It is easier to imagine the spaces together, though an opening still needs structural review."}, {"title": "Bring in more light", "answer": "The fourth version widens two windows. Their actual effect on daylight would depend on the site, orientation and surroundings, which were not evaluated here."}]},
-  "setup": {"title": "How we made the house", "paragraphs": ["Sweet Home 3D is designed around a two-dimensional plan with a three-dimensional view. For this experiment, Codex wrote Java code using the application's own model API to create rooms, walls, doors, windows and catalogue furniture. The program saved four native .sh3d files, reopened them with Sweet Home 3D's file reader and produced the views shown here.", "We used the official portable Sweet Home 3D 7.5 JAR on Windows with a Java runtime already on the computer; we did not install the application system-wide. A launch check opened the final file in Sweet Home 3D. You can also use the application's interface to draw walls and place furniture by hand; the publisher's guide is a useful starting point."], "download": "Official Sweet Home 3D downloads", "guide": "Sweet Home 3D user guide"},
-  "timing": {"title": "How long did it take?", "paragraphs": ["The recorded interval was about 27 minutes, from creating the experiment folder to documenting the results. That includes research, the download, coding, troubleshooting, revisions, checks and model views. It is an approximate elapsed time based on timestamps, not a benchmark or a promise of how long another house will take.", "The final generator run took 6.8 seconds to save and reopen the four files and make two plan images. That smaller number excludes the preparation, earlier attempts, further validation and 3D views." ]},
-  "evolution": {"title": "Four versions, four conversations", "paragraphs": ["The first plan made the brief visible. Each later version asked a more specific question, leaving the earlier files available to compare."], "before_alt": "First furnished house floor plan before the bedroom extension and larger openings.", "before_caption": "Version 1: the initial layout.", "after_alt": "Fourth furnished house floor plan showing the revised main bedroom and shared spaces.", "after_caption": "Version 4: the revised layout.", "note": "The plan images are independently framed, so compare their labelled spaces and changes rather than their displayed size.", "versions": [{"title": "Version 1.", "text": "Establish the rooms, doors, windows and furnishings within the initial footprint."}, {"title": "Version 2.", "text": "Move a 2.8-metre section of the main bedroom's outside wall one metre outward. Its modelled area grows from 14.96 to 17.64 square metres."}, {"title": "Version 3.", "text": "Replace a section of the kitchen–living partition with a three-metre, full-height opening."}, {"title": "Version 4.", "text": "Widen the living-room window from 1.2 to 1.8 metres and the kitchen window from 1.2 to 1.6 metres."}]},
-  "review": {"title": "What worked, and what needs attention", "paragraphs": ["Seeing furniture alongside the plan made it easier to discuss how the spaces might be used. The model remained editable, and all four saved files reopened. In the final version, basic checks found that the 17 door and window objects aligned with walls and that the footprints of 22 other furniture objects were inside their assigned rooms without overlapping one another.", "Those checks are only a starting point. They do not establish usable clearances, door swings or accessibility. The private bathroom is about 3.38 square metres and deserves a closer look. We did not evaluate daylight or design the roof, site, foundations, structure or building services. An architect and appropriate engineers would need to develop and review a design intended for construction.", "The process also needed correction: the first plan export failed because a Java 3D dependency was missing. After extracting the bundled dependency from the official application JAR, we reran the export. Other early views needed clearer labels and finished furniture icons. Those adjustments are part of the experiment, too."]},
-  "strategy": {"label": "Where to go next", "title": "A practical role for each tool", "intro": "The house can be a starting point for a wider workflow. These are possible next steps, not additional tests performed in this experiment.", "steps": [{"title": "Sweet Home 3D: explore the layout", "text": "Keep the .sh3d files as editable originals. Try room arrangements and furniture with the people who will use the space, and record the dimensions and decisions that matter."}, {"title": "FreeCAD and AutoCAD: develop measured drawings", "text": "Use the agreed layout and dimensions as a reference for a separate, more detailed model or drawing. Check the scale, openings and changes after any exchange; do not assume a visual export contains editable building elements. AutoCAD can be used for detailed 2D drafting when the project team works with it."}, {"title": "Blender: develop visualisations", "text": "The desktop edition of Sweet Home 3D can export the 3D view as OBJ for use in Blender. Keep the OBJ, material file and textures together, check scale and orientation, and treat the result as a visual model. This handoff was not tested in our experiment."}], "note": "Keep versions and assumptions alongside each handoff, and involve a qualified design team when moving toward a build.", "link": "Read the FreeCAD experiment and its wider software strategy", "export_link": "Sweet Home 3D guide to OBJ export"},
-  "ending": {"label": "A question to take with you", "message": "What would you change in the next version?", "back": "Return to the beginning"}
+  "ui": {
+    "title": "Can Sweet Home 3D Help Design a House?",
+    "seo": "Can Sweet Home 3D Help Design a House? A Codex Experiment",
+    "description": "Explore a real three-bedroom house experiment with Codex and Sweet Home 3D, from a furnished floor plan to four editable versions.",
+    "excerpt": "A familiar house brief, a different design tool. Explore the furnished rooms, four revisions and lessons from our Sweet Home 3D experiment.",
+    "topic": "AI agents in everyday design",
+    "read": "Explore the house",
+    "time": "About 6 minutes to read",
+    "breadcrumb": "Breadcrumb"
+  },
+  "hero": {
+    "standfirst": "What happens when we give the same house brief to Codex and a tool made for imagining interiors?",
+    "meta": "A real GanzaQuest experiment · Windows · 23 November 2026",
+    "start": "Step inside",
+    "alt": "A Sweet Home 3D view of a furnished, roofless three-bedroom house model.",
+    "caption": "Our fourth version, viewed in Sweet Home 3D."
+  },
+  "intro": {
+    "title": "A familiar brief, a new perspective",
+    "paragraphs": [
+      "A house starts as a collection of choices: where to put the bedrooms, how to connect the kitchen to the living room, and whether there is enough room to move around the furniture. A plan helps; a view of the rooms can make those choices feel more tangible.",
+      "After exploring the brief in FreeCAD, we tried it again with Sweet Home 3D and Codex. The aim was a one-storey concept with three bedrooms, two bathrooms, a kitchen, living and dining space, an entrance and a corridor. We began with a provisional 12 by 10 metre footprint, without a particular plot or architectural style. This is a new model of the brief, built independently; it is not an imported or exact copy of the FreeCAD house."
+    ]
+  },
+  "tour": {
+    "title": "Take a look around",
+    "intro": "The entrance leads toward the shared spaces, while a corridor connects the bedrooms and bathrooms. A table, sofa, beds and kitchen fittings give the rooms a sense of scale. The main bedroom has a private bathroom; a second bathroom serves the rest of the house.",
+    "plan_alt": "Labelled floor plan of the final furnished house, with three bedrooms, two bathrooms and shared living spaces.",
+    "plan_caption": "The fourth floor plan, exported from the actual model. Room labels in the original image are in English.",
+    "front_alt": "Angled 3D view of the furnished model from the front.",
+    "front_caption": "From the front: rooms and furnishings seen from above.",
+    "rear_alt": "Angled 3D view of the same furnished model from the other side.",
+    "rear_caption": "From the other side: another look at the room arrangement.",
+    "note": "These are views produced with Sweet Home 3D's own plan and 3D components. The roof and ceiling are omitted to reveal the interior; the pictures are model views, not photographs.",
+    "key_title": "Room labels in the plan",
+    "room_key": [
+      "Entrance",
+      "Living and dining",
+      "Kitchen",
+      "Corridor",
+      "Main bedroom",
+      "Private bathroom",
+      "Bedroom 2",
+      "Bedroom 3",
+      "Shared bathroom"
+    ]
+  },
+  "question": {
+    "label": "Your turn",
+    "title": "Which change would you explore first?",
+    "choices": [
+      {
+        "title": "Make the main bedroom larger",
+        "answer": "We tried that in the second version. The extra room creates a step in the outside wall, so it changes the shape of the house as well as the bedroom."
+      },
+      {
+        "title": "Connect the kitchen and living room",
+        "answer": "The third version opens a three-metre section between them. It is easier to imagine the spaces together, though an opening still needs structural review."
+      },
+      {
+        "title": "Bring in more light",
+        "answer": "The fourth version widens two windows. Their actual effect on daylight would depend on the site, orientation and surroundings, which were not evaluated here."
+      }
+    ]
+  },
+  "setup": {
+    "title": "How we made the house",
+    "paragraphs": [
+      "Sweet Home 3D is designed around a two-dimensional plan with a three-dimensional view. For this experiment, Codex wrote Java code using the application's own model API to create rooms, walls, doors, windows and catalogue furniture. The program saved four native .sh3d files, reopened them with Sweet Home 3D's file reader and produced the views shown here.",
+      "We used the official portable Sweet Home 3D 7.5 JAR on Windows with a Java runtime already on the computer; we did not install the application system-wide. A launch check opened the final file in Sweet Home 3D. You can also use the application's interface to draw walls and place furniture by hand; the publisher's guide is a useful starting point."
+    ],
+    "download": "Official Sweet Home 3D downloads",
+    "guide": "Sweet Home 3D user guide"
+  },
+  "timing": {
+    "title": "How long did it take?",
+    "paragraphs": [
+      "The recorded interval was about 27 minutes, from creating the experiment folder to documenting the results. That includes research, the download, coding, troubleshooting, revisions, checks and model views. It is an approximate elapsed time based on timestamps, not a benchmark or a promise of how long another house will take.",
+      "The final generator run took 6.8 seconds to save and reopen the four files and make two plan images. That smaller number excludes the preparation, earlier attempts, further validation and 3D views."
+    ]
+  },
+  "evolution": {
+    "title": "Four versions, four conversations",
+    "paragraphs": [
+      "The first plan made the brief visible. Each later version asked a more specific question, leaving the earlier files available to compare."
+    ],
+    "before_alt": "First furnished house floor plan before the bedroom extension and larger openings.",
+    "before_caption": "Version 1: the initial layout.",
+    "after_alt": "Fourth furnished house floor plan showing the revised main bedroom and shared spaces.",
+    "after_caption": "Version 4: the revised layout.",
+    "note": "The plan images are independently framed, so compare their labelled spaces and changes rather than their displayed size.",
+    "versions": [
+      {
+        "title": "Version 1.",
+        "text": "Establish the rooms, doors, windows and furnishings within the initial footprint."
+      },
+      {
+        "title": "Version 2.",
+        "text": "Move a 2.8-metre section of the main bedroom's outside wall one metre outward. Its modelled area grows from 14.96 to 17.64 square metres."
+      },
+      {
+        "title": "Version 3.",
+        "text": "Replace a section of the kitchen–living partition with a three-metre, full-height opening."
+      },
+      {
+        "title": "Version 4.",
+        "text": "Widen the living-room window from 1.2 to 1.8 metres and the kitchen window from 1.2 to 1.6 metres."
+      }
+    ]
+  },
+  "review": {
+    "title": "What worked, and what needs attention",
+    "paragraphs": [
+      "Seeing furniture alongside the plan made it easier to discuss how the spaces might be used. The model remained editable, and all four saved files reopened. In the final version, basic checks found that the 17 door and window objects aligned with walls and that the footprints of 22 other furniture objects were inside their assigned rooms without overlapping one another.",
+      "Those checks are only a starting point. They do not establish usable clearances, door swings or accessibility. The private bathroom is about 3.38 square metres and deserves a closer look. We did not evaluate daylight or design the roof, site, foundations, structure or building services. An architect and appropriate engineers would need to develop and review a design intended for construction.",
+      "The process also needed correction: the first plan export failed because a Java 3D dependency was missing. After extracting the bundled dependency from the official application JAR, we reran the export. Other early views needed clearer labels and finished furniture icons. Those adjustments are part of the experiment, too."
+    ]
+  },
+  "strategy": {
+    "label": "Where to go next",
+    "title": "A practical role for each tool",
+    "intro": "The house can be a starting point for a wider workflow. These are possible next steps, not additional tests performed in this experiment.",
+    "steps": [
+      {
+        "title": "Sweet Home 3D: explore the layout",
+        "text": "Keep the .sh3d files as editable originals. Try room arrangements and furniture with the people who will use the space, and record the dimensions and decisions that matter."
+      },
+      {
+        "title": "FreeCAD and AutoCAD: develop measured drawings",
+        "text": "Use the agreed layout and dimensions as a reference for a separate, more detailed model or drawing. Check the scale, openings and changes after any exchange; do not assume a visual export contains editable building elements. AutoCAD can be used for detailed 2D drafting when the project team works with it."
+      },
+      {
+        "title": "Blender: develop visualisations",
+        "text": "The desktop edition of Sweet Home 3D can export the 3D view as OBJ for use in Blender. Keep the OBJ, material file and textures together, check scale and orientation, and treat the result as a visual model. This handoff was not tested in our experiment."
+      }
+    ],
+    "note": "Keep versions and assumptions alongside each handoff, and involve a qualified design team when moving toward a build.",
+    "link": "Read the FreeCAD experiment and its wider software strategy",
+    "export_link": "Sweet Home 3D guide to OBJ export"
+  },
+  "ending": {
+    "label": "A question to take with you",
+    "message": "What would you change in the next version?",
+    "back": "Return to the beginning"
+  }
 }

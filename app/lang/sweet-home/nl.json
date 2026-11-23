@@ -1,13 +1,147 @@
 {
-  "ui": {"title": "Kan Sweet Home 3D helpen bij het ontwerpen van een huis?", "seo": "Een huis ontwerpen met Sweet Home 3D: een experiment met Codex", "description": "Bekijk een echt experiment met Codex en Sweet Home 3D: een huis met drie slaapkamers, een ingerichte plattegrond en vier bewerkbare versies.", "excerpt": "Dezelfde woonwens, een ander ontwerpprogramma. Bekijk de ingerichte kamers, vier aanpassingen en onze ervaringen met Sweet Home 3D.", "topic": "AI-agenten bij dagelijks ontwerpen", "read": "Bekijk het huis", "time": "Ongeveer 6 minuten leestijd", "breadcrumb": "Kruimelpad"},
-  "hero": {"standfirst": "Wat gebeurt er als we dezelfde woonwens voorleggen aan Codex en een programma om interieurs te verbeelden?", "meta": "Een echt GanzaQuest-experiment · Windows · 23 november 2026", "start": "Kom binnen", "alt": "Sweet Home 3D-weergave van een ingericht huis met drie slaapkamers, zonder dak zodat het interieur zichtbaar is.", "caption": "Onze vierde versie, bekeken in Sweet Home 3D."},
-  "intro": {"title": "Dezelfde opdracht, een nieuw perspectief", "paragraphs": ["Een huis begint met allerlei keuzes: waar komen de slaapkamers, hoe verbind je de keuken met de woonkamer en blijft er genoeg ruimte over om langs de meubels te lopen? Een plattegrond helpt; een beeld van de kamers maakt die keuzes tastbaarder.", "Na ons experiment in FreeCAD probeerden we dezelfde opdracht met Sweet Home 3D en Codex. Het doel was een gelijkvloers concept met drie slaapkamers, twee badkamers, een keuken, woon- en eetruimte, een entree en een gang. We begonnen met een voorlopig grondvlak van 12 bij 10 meter, zonder specifiek perceel of bouwstijl. Dit model is onafhankelijk op basis van dezelfde opdracht gemaakt; het is geen import of exacte kopie van het FreeCAD-huis."]},
-  "tour": {"title": "Kijk eens rond", "intro": "De entree leidt naar de gemeenschappelijke ruimtes, terwijl een gang de slaapkamers en badkamers verbindt. Een tafel, bank, bedden en keukenmeubels geven een indruk van de schaal. De hoofdslaapkamer heeft een eigen badkamer; een tweede badkamer is er voor de rest van het huis.", "plan_alt": "Plattegrond van het uiteindelijke ingerichte huis met drie slaapkamers, twee badkamers en benoemde gemeenschappelijke ruimtes.", "plan_caption": "De plattegrond van de vierde versie, geëxporteerd uit het echte model. De kamerlabels in de oorspronkelijke afbeelding zijn Engels.", "front_alt": "Schuine 3D-weergave van het ingerichte model vanaf de voorkant.", "front_caption": "Vanaf de voorkant: kamers en meubels van bovenaf gezien.", "rear_alt": "Schuine 3D-weergave van hetzelfde ingerichte model vanaf de andere kant.", "rear_caption": "Vanaf de andere kant: een andere blik op de indeling.", "note": "Deze beelden zijn gemaakt met de plattegrond- en 3D-onderdelen van Sweet Home 3D. Dak en plafond zijn weggelaten om het interieur te tonen; het zijn modelweergaven, geen foto’s."},
-  "question": {"label": "Aan jou de beurt", "title": "Welke verandering zou jij eerst onderzoeken?", "choices": [{"title": "De hoofdslaapkamer vergroten", "answer": "Dat probeerden we in de tweede versie. De extra ruimte zorgt voor een verspringing in de buitenmuur en verandert dus zowel de vorm van het huis als de slaapkamer."}, {"title": "De keuken en woonkamer verbinden", "answer": "In de derde versie ontstaat een opening van drie meter tussen beide ruimtes. Je kunt ze daardoor gemakkelijker samen voorstellen, al moet de opening constructief worden beoordeeld."}, {"title": "Meer licht binnenlaten", "answer": "De vierde versie maakt twee ramen breder. Het werkelijke effect op daglicht hangt af van het perceel, de oriëntatie en de omgeving; die hebben we hier niet onderzocht."}]},
-  "setup": {"title": "Zo maakten we het huis", "paragraphs": ["Sweet Home 3D combineert een tweedimensionale plattegrond met een driedimensionale weergave. Voor dit experiment schreef Codex Java-code die via de model-API van het programma kamers, muren, deuren, ramen en catalogusmeubels aanmaakte. Het programma sloeg vier eigen .sh3d-bestanden op, opende ze opnieuw met de bestandslezer van Sweet Home 3D en maakte de hier getoonde beelden.", "We gebruikten op Windows de officiële draagbare Sweet Home 3D 7.5-JAR met een Java-runtime die al op de computer stond; de toepassing is niet systeembreed geïnstalleerd. Bij een opstarttest werd het laatste bestand geopend in Sweet Home 3D. Je kunt muren en meubels ook met de hand tekenen en plaatsen in de interface; de handleiding van de maker is een goed begin."], "download": "Officiële downloads van Sweet Home 3D", "guide": "Gebruikershandleiding van Sweet Home 3D"},
-  "timing": {"title": "Hoe lang duurde het?", "paragraphs": ["De geregistreerde periode was ongeveer 27 minuten, vanaf het aanmaken van de experimentmap tot de documentatie van de resultaten. Daarin zitten onderzoek, downloaden, programmeren, problemen oplossen, aanpassingen, controles en modelbeelden. Het is een benadering van de verstreken tijd op basis van tijdstempels, geen prestatietest of belofte voor een ander huis.", "De laatste uitvoering van de generator duurde 6,8 seconden om de vier bestanden op te slaan en opnieuw te openen en twee plattegrondafbeeldingen te maken. Dat kortere getal is exclusief voorbereiding, eerdere pogingen, verdere controles en 3D-beelden."]},
-  "evolution": {"title": "Vier versies, vier gesprekken", "paragraphs": ["De eerste plattegrond maakte de opdracht zichtbaar. Elke volgende versie stelde een specifiekere vraag, terwijl de eerdere bestanden bewaard bleven om te vergelijken."], "before_alt": "Eerste ingerichte plattegrond, vóór de vergroting van de slaapkamer en de openingen.", "before_caption": "Versie 1: de oorspronkelijke indeling.", "after_alt": "Vierde ingerichte plattegrond met aangepaste hoofdslaapkamer en gemeenschappelijke ruimtes.", "after_caption": "Versie 4: de aangepaste indeling.", "note": "De plattegronden zijn afzonderlijk gekaderd. Vergelijk daarom de ruimtes en wijzigingen, niet hun grootte op het scherm.", "versions": [{"title": "Versie 1.", "text": "Kamers, deuren, ramen en meubels binnen het oorspronkelijke grondvlak bepalen."}, {"title": "Versie 2.", "text": "Een deel van 2,8 meter van de buitenmuur van de hoofdslaapkamer één meter naar buiten verplaatsen. De gemodelleerde oppervlakte groeit van 14,96 naar 17,64 vierkante meter."}, {"title": "Versie 3.", "text": "Een deel van de scheidingswand tussen keuken en woonkamer vervangen door een opening van drie meter over de volledige hoogte."}, {"title": "Versie 4.", "text": "Het woonkamerraam verbreden van 1,2 naar 1,8 meter en het keukenraam van 1,2 naar 1,6 meter."}]},
-  "review": {"title": "Wat werkte en wat aandacht vraagt", "paragraphs": ["Door meubels op de plattegrond te zien, konden we gemakkelijker bespreken hoe de ruimtes gebruikt zouden kunnen worden. Het model bleef bewerkbaar en alle vier de opgeslagen bestanden konden opnieuw worden geopend. Eenvoudige controles toonden in de laatste versie dat de 17 deur- en raamobjecten op muren waren uitgelijnd en dat de voetafdrukken van de 22 andere meubelobjecten binnen hun toegewezen kamers lagen zonder elkaar te overlappen.", "Deze controles zijn slechts een begin. Ze bevestigen niet dat loopruimte, de draaicirkel van deuren of toegankelijkheid voldoen. De privébadkamer is ongeveer 3,38 vierkante meter en verdient een nadere blik. We onderzochten het daglicht niet en ontwierpen geen dak, terrein, fundering, draagconstructie of installaties. Voor een huis dat gebouwd gaat worden, moeten een architect en de betrokken ingenieurs het ontwerp uitwerken en beoordelen.", "Ook het proces zelf had correcties nodig: de eerste export van de plattegrond mislukte door een ontbrekende Java 3D-afhankelijkheid. Nadat we de meegeleverde afhankelijkheid uit de officiële JAR hadden gehaald, herhaalden we de export. Eerdere beelden hadden ook duidelijkere labels en volledig geladen meubelpictogrammen nodig. Die aanpassingen horen bij het experiment."]},
-  "strategy": {"label": "Hoe verder?", "title": "Een praktische rol voor elk programma", "intro": "Het huis kan een vertrekpunt zijn voor een bredere werkwijze. Dit zijn mogelijke vervolgstappen, geen extra tests die we in dit experiment uitvoerden.", "steps": [{"title": "Sweet Home 3D: de indeling verkennen", "text": "Bewaar de .sh3d-bestanden als bewerkbare originelen. Probeer indelingen en meubels uit met de toekomstige gebruikers en leg belangrijke maten en keuzes vast."}, {"title": "FreeCAD en AutoCAD: tekeningen met maten uitwerken", "text": "Gebruik de afgesproken indeling en maten als uitgangspunt voor een apart, gedetailleerder model of een tekening. Controleer schaal, openingen en wijzigingen na iedere uitwisseling; een visuele export bevat niet vanzelf bewerkbare bouwelementen. AutoCAD kan worden gebruikt voor gedetailleerd 2D-tekenwerk als het projectteam daarmee werkt."}, {"title": "Blender: visualisaties uitwerken", "text": "De desktopversie van Sweet Home 3D kan de 3D-weergave als OBJ exporteren voor gebruik in Blender. Bewaar het OBJ-bestand, het materiaalbestand en de texturen bij elkaar, controleer schaal en oriëntatie en behandel het resultaat als een visueel model. Deze overdracht hebben we in ons experiment niet getest."}], "note": "Bewaar versies en aannames bij iedere overdracht en betrek gekwalificeerde ontwerpers wanneer het project richting uitvoering gaat.", "link": "Lees het FreeCAD-experiment en de strategie voor andere software", "export_link": "Sweet Home 3D-handleiding voor OBJ-export"},
-  "ending": {"label": "Een vraag om mee te nemen", "message": "Wat zou jij in de volgende versie veranderen?", "back": "Terug naar het begin"}
+  "ui": {
+    "title": "Kan Sweet Home 3D helpen bij het ontwerpen van een huis?",
+    "seo": "Een huis ontwerpen met Sweet Home 3D: een experiment met Codex",
+    "description": "Bekijk een echt experiment met Codex en Sweet Home 3D: een huis met drie slaapkamers, een ingerichte plattegrond en vier bewerkbare versies.",
+    "excerpt": "Dezelfde woonwens, een ander ontwerpprogramma. Bekijk de ingerichte kamers, vier aanpassingen en onze ervaringen met Sweet Home 3D.",
+    "topic": "AI-agenten bij dagelijks ontwerpen",
+    "read": "Bekijk het huis",
+    "time": "Ongeveer 6 minuten leestijd",
+    "breadcrumb": "Kruimelpad"
+  },
+  "hero": {
+    "standfirst": "Wat gebeurt er als we dezelfde woonwens voorleggen aan Codex en een programma om interieurs te verbeelden?",
+    "meta": "Een echt GanzaQuest-experiment · Windows · 23 november 2026",
+    "start": "Kom binnen",
+    "alt": "Sweet Home 3D-weergave van een ingericht huis met drie slaapkamers, zonder dak zodat het interieur zichtbaar is.",
+    "caption": "Onze vierde versie, bekeken in Sweet Home 3D."
+  },
+  "intro": {
+    "title": "Dezelfde opdracht, een nieuw perspectief",
+    "paragraphs": [
+      "Een huis begint met allerlei keuzes: waar komen de slaapkamers, hoe verbind je de keuken met de woonkamer en blijft er genoeg ruimte over om langs de meubels te lopen? Een plattegrond helpt; een beeld van de kamers maakt die keuzes tastbaarder.",
+      "Na ons experiment in FreeCAD probeerden we dezelfde opdracht met Sweet Home 3D en Codex. Het doel was een gelijkvloers concept met drie slaapkamers, twee badkamers, een keuken, woon- en eetruimte, een entree en een gang. We begonnen met een voorlopig grondvlak van 12 bij 10 meter, zonder specifiek perceel of bouwstijl. Dit model is onafhankelijk op basis van dezelfde opdracht gemaakt; het is geen import of exacte kopie van het FreeCAD-huis."
+    ]
+  },
+  "tour": {
+    "title": "Kijk eens rond",
+    "intro": "De entree leidt naar de gemeenschappelijke ruimtes, terwijl een gang de slaapkamers en badkamers verbindt. Een tafel, bank, bedden en keukenmeubels geven een indruk van de schaal. De hoofdslaapkamer heeft een eigen badkamer; een tweede badkamer is er voor de rest van het huis.",
+    "plan_alt": "Plattegrond van het uiteindelijke ingerichte huis met drie slaapkamers, twee badkamers en benoemde gemeenschappelijke ruimtes.",
+    "plan_caption": "De plattegrond van de vierde versie, geëxporteerd uit het echte model. De kamerlabels in de oorspronkelijke afbeelding zijn Engels.",
+    "front_alt": "Schuine 3D-weergave van het ingerichte model vanaf de voorkant.",
+    "front_caption": "Vanaf de voorkant: kamers en meubels van bovenaf gezien.",
+    "rear_alt": "Schuine 3D-weergave van hetzelfde ingerichte model vanaf de andere kant.",
+    "rear_caption": "Vanaf de andere kant: een andere blik op de indeling.",
+    "note": "Deze beelden zijn gemaakt met de plattegrond- en 3D-onderdelen van Sweet Home 3D. Dak en plafond zijn weggelaten om het interieur te tonen; het zijn modelweergaven, geen foto’s.",
+    "key_title": "Kamernamen op de plattegrond",
+    "room_key": [
+      "Entree",
+      "Woon- en eetruimte",
+      "Keuken",
+      "Gang",
+      "Hoofdslaapkamer",
+      "Priv?badkamer",
+      "Slaapkamer 2",
+      "Slaapkamer 3",
+      "Gedeelde badkamer"
+    ]
+  },
+  "question": {
+    "label": "Aan jou de beurt",
+    "title": "Welke verandering zou jij eerst onderzoeken?",
+    "choices": [
+      {
+        "title": "De hoofdslaapkamer vergroten",
+        "answer": "Dat probeerden we in de tweede versie. De extra ruimte zorgt voor een verspringing in de buitenmuur en verandert dus zowel de vorm van het huis als de slaapkamer."
+      },
+      {
+        "title": "De keuken en woonkamer verbinden",
+        "answer": "In de derde versie ontstaat een opening van drie meter tussen beide ruimtes. Je kunt ze daardoor gemakkelijker samen voorstellen, al moet de opening constructief worden beoordeeld."
+      },
+      {
+        "title": "Meer licht binnenlaten",
+        "answer": "De vierde versie maakt twee ramen breder. Het werkelijke effect op daglicht hangt af van het perceel, de oriëntatie en de omgeving; die hebben we hier niet onderzocht."
+      }
+    ]
+  },
+  "setup": {
+    "title": "Zo maakten we het huis",
+    "paragraphs": [
+      "Sweet Home 3D combineert een tweedimensionale plattegrond met een driedimensionale weergave. Voor dit experiment schreef Codex Java-code die via de model-API van het programma kamers, muren, deuren, ramen en catalogusmeubels aanmaakte. Het programma sloeg vier eigen .sh3d-bestanden op, opende ze opnieuw met de bestandslezer van Sweet Home 3D en maakte de hier getoonde beelden.",
+      "We gebruikten op Windows de officiële draagbare Sweet Home 3D 7.5-JAR met een Java-runtime die al op de computer stond; de toepassing is niet systeembreed geïnstalleerd. Bij een opstarttest werd het laatste bestand geopend in Sweet Home 3D. Je kunt muren en meubels ook met de hand tekenen en plaatsen in de interface; de handleiding van de maker is een goed begin."
+    ],
+    "download": "Officiële downloads van Sweet Home 3D",
+    "guide": "Gebruikershandleiding van Sweet Home 3D"
+  },
+  "timing": {
+    "title": "Hoe lang duurde het?",
+    "paragraphs": [
+      "De geregistreerde periode was ongeveer 27 minuten, vanaf het aanmaken van de experimentmap tot de documentatie van de resultaten. Daarin zitten onderzoek, downloaden, programmeren, problemen oplossen, aanpassingen, controles en modelbeelden. Het is een benadering van de verstreken tijd op basis van tijdstempels, geen prestatietest of belofte voor een ander huis.",
+      "De laatste uitvoering van de generator duurde 6,8 seconden om de vier bestanden op te slaan en opnieuw te openen en twee plattegrondafbeeldingen te maken. Dat kortere getal is exclusief voorbereiding, eerdere pogingen, verdere controles en 3D-beelden."
+    ]
+  },
+  "evolution": {
+    "title": "Vier versies, vier gesprekken",
+    "paragraphs": [
+      "De eerste plattegrond maakte de opdracht zichtbaar. Elke volgende versie stelde een specifiekere vraag, terwijl de eerdere bestanden bewaard bleven om te vergelijken."
+    ],
+    "before_alt": "Eerste ingerichte plattegrond, vóór de vergroting van de slaapkamer en de openingen.",
+    "before_caption": "Versie 1: de oorspronkelijke indeling.",
+    "after_alt": "Vierde ingerichte plattegrond met aangepaste hoofdslaapkamer en gemeenschappelijke ruimtes.",
+    "after_caption": "Versie 4: de aangepaste indeling.",
+    "note": "De plattegronden zijn afzonderlijk gekaderd. Vergelijk daarom de ruimtes en wijzigingen, niet hun grootte op het scherm.",
+    "versions": [
+      {
+        "title": "Versie 1.",
+        "text": "Kamers, deuren, ramen en meubels binnen het oorspronkelijke grondvlak bepalen."
+      },
+      {
+        "title": "Versie 2.",
+        "text": "Een deel van 2,8 meter van de buitenmuur van de hoofdslaapkamer één meter naar buiten verplaatsen. De gemodelleerde oppervlakte groeit van 14,96 naar 17,64 vierkante meter."
+      },
+      {
+        "title": "Versie 3.",
+        "text": "Een deel van de scheidingswand tussen keuken en woonkamer vervangen door een opening van drie meter over de volledige hoogte."
+      },
+      {
+        "title": "Versie 4.",
+        "text": "Het woonkamerraam verbreden van 1,2 naar 1,8 meter en het keukenraam van 1,2 naar 1,6 meter."
+      }
+    ]
+  },
+  "review": {
+    "title": "Wat werkte en wat aandacht vraagt",
+    "paragraphs": [
+      "Door meubels op de plattegrond te zien, konden we gemakkelijker bespreken hoe de ruimtes gebruikt zouden kunnen worden. Het model bleef bewerkbaar en alle vier de opgeslagen bestanden konden opnieuw worden geopend. Eenvoudige controles toonden in de laatste versie dat de 17 deur- en raamobjecten op muren waren uitgelijnd en dat de voetafdrukken van de 22 andere meubelobjecten binnen hun toegewezen kamers lagen zonder elkaar te overlappen.",
+      "Deze controles zijn slechts een begin. Ze bevestigen niet dat loopruimte, de draaicirkel van deuren of toegankelijkheid voldoen. De privébadkamer is ongeveer 3,38 vierkante meter en verdient een nadere blik. We onderzochten het daglicht niet en ontwierpen geen dak, terrein, fundering, draagconstructie of installaties. Voor een huis dat gebouwd gaat worden, moeten een architect en de betrokken ingenieurs het ontwerp uitwerken en beoordelen.",
+      "Ook het proces zelf had correcties nodig: de eerste export van de plattegrond mislukte door een ontbrekende Java 3D-afhankelijkheid. Nadat we de meegeleverde afhankelijkheid uit de officiële JAR hadden gehaald, herhaalden we de export. Eerdere beelden hadden ook duidelijkere labels en volledig geladen meubelpictogrammen nodig. Die aanpassingen horen bij het experiment."
+    ]
+  },
+  "strategy": {
+    "label": "Hoe verder?",
+    "title": "Een praktische rol voor elk programma",
+    "intro": "Het huis kan een vertrekpunt zijn voor een bredere werkwijze. Dit zijn mogelijke vervolgstappen, geen extra tests die we in dit experiment uitvoerden.",
+    "steps": [
+      {
+        "title": "Sweet Home 3D: de indeling verkennen",
+        "text": "Bewaar de .sh3d-bestanden als bewerkbare originelen. Probeer indelingen en meubels uit met de toekomstige gebruikers en leg belangrijke maten en keuzes vast."
+      },
+      {
+        "title": "FreeCAD en AutoCAD: tekeningen met maten uitwerken",
+        "text": "Gebruik de afgesproken indeling en maten als uitgangspunt voor een apart, gedetailleerder model of een tekening. Controleer schaal, openingen en wijzigingen na iedere uitwisseling; een visuele export bevat niet vanzelf bewerkbare bouwelementen. AutoCAD kan worden gebruikt voor gedetailleerd 2D-tekenwerk als het projectteam daarmee werkt."
+      },
+      {
+        "title": "Blender: visualisaties uitwerken",
+        "text": "De desktopversie van Sweet Home 3D kan de 3D-weergave als OBJ exporteren voor gebruik in Blender. Bewaar het OBJ-bestand, het materiaalbestand en de texturen bij elkaar, controleer schaal en oriëntatie en behandel het resultaat als een visueel model. Deze overdracht hebben we in ons experiment niet getest."
+      }
+    ],
+    "note": "Bewaar versies en aannames bij iedere overdracht en betrek gekwalificeerde ontwerpers wanneer het project richting uitvoering gaat.",
+    "link": "Lees het FreeCAD-experiment en de strategie voor andere software",
+    "export_link": "Sweet Home 3D-handleiding voor OBJ-export"
+  },
+  "ending": {
+    "label": "Een vraag om mee te nemen",
+    "message": "Wat zou jij in de volgende versie veranderen?",
+    "back": "Terug naar het begin"
+  }
 }
