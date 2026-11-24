@@ -1,0 +1,225 @@
+<?php
+// English texts. "\n" creates a line break.
+return [
+    'lang_name' => 'English',
+    'locale' => 'en_GB',
+
+    'meta' => [
+        'home_title' => 'App development, AI and cybersecurity | GanzaQuest',
+        'home_description' => 'GanzaQuest (NCIATA Ltd): iOS and Android mobile app development, artificial intelligence and automation, cybersecurity training and custom software development.',
+        'not_found_title' => 'Page not found | GanzaQuest',
+        'not_found_description' => 'The page you requested is not available.',
+    ],
+
+    'seo_titles' => [
+        'about' => 'About us: GanzaQuest and NCIATA Ltd',
+        'services' => 'App development, AI, cybersecurity and custom software',
+        'products' => 'Digital products and software solutions',
+        'blog' => 'Technology, AI and cybersecurity blog',
+        'contact' => 'Contact us about your digital project',
+        'privacy' => 'Privacy',
+    ],
+
+    'faq' => [
+        'title' => 'Frequently asked questions',
+        'items' => [
+            ['q' => 'What services does GanzaQuest offer?', 'a' => 'Mobile app development for iOS and Android, artificial intelligence and process automation, cybersecurity training for individuals and companies, and custom software development with technology consulting.'],
+            ['q' => 'Who is behind GanzaQuest?', 'a' => 'GanzaQuest is a branch of NCIATA Ltd, a technology company registered in Rwanda.'],
+            ['q' => 'Do you work with individuals or only with companies?', 'a' => 'Both. You can contact us as an individual with an idea, or on behalf of your company to improve a process or build a new digital product.'],
+            ['q' => 'How do I start a project with GanzaQuest?', 'a' => 'Tell us about your idea or challenge through the contact form. We will get back to you to understand what you need and suggest the next step.'],
+        ],
+    ],
+
+    'a11y' => [
+        'skip' => 'Skip to content',
+        'home' => 'NCIATA Ltd, home',
+        'main_nav' => 'Main navigation',
+        'mobile_nav' => 'Mobile navigation',
+        'footer_nav' => 'Footer navigation',
+        'menu_open' => 'Open menu',
+        'menu_close' => 'Close menu',
+        'language' => 'Language',
+    ],
+
+    'brand' => [
+        'tagline' => 'Technology with purpose',
+        'motto' => 'We explore possibilities. We create progress.',
+        'owner' => 'A branch of NCIATA Ltd',
+    ],
+
+    'nav' => [
+        'home' => 'Home',
+        'about' => 'About us',
+        'services' => 'Services',
+        'products' => 'Products',
+        'blog' => 'Blog',
+        'contact' => 'Contact',
+        'privacy' => 'Privacy',
+    ],
+    'header_cta' => 'Let’s talk',
+
+    'hero' => [
+        'eyebrow' => 'Technology with purpose',
+        'title_1' => 'Technology that',
+        'title_2' => 'works for',
+        'title_2_em' => 'you.',
+        'description' => 'We build apps, software and AI tools that solve practical problems and are easy to use.',
+        'cta_primary' => 'Let’s talk about your project',
+        'cta_secondary' => 'Explore services',
+        'note' => 'For people with ideas. For companies with vision.',
+        'bottom_left' => 'Exploring is only the beginning.',
+        'discover' => 'Discover GanzaQuest',
+        'discover_label' => 'Discover our services',
+        'coordinate' => 'Idea → Solution → Progress',
+    ],
+
+    'services' => [
+        'eyebrow' => 'What we do best',
+        'title' => "Four paths.\nEndless possibilities.",
+        'intro' => "From the first idea to the next challenge.\nSolutions designed for what really matters.",
+        'more' => 'Find out more',
+        'more_label' => 'Explore',
+        'ask' => 'Tell us what you need',
+        'ask_label' => 'Ask about',
+        'general' => 'I want to explore an idea',
+        'items' => [
+            ['icon' => 'smartphone', 'title' => 'Mobile apps', 'short' => 'Ideas that become experiences.', 'description' => 'App development for iOS and Android, including AI-powered solutions. We design intuitive experiences around the needs of each project.', 'tags' => ['iOS and Android', 'AI-powered apps', 'User experience']],
+            ['icon' => 'workflow', 'title' => 'AI and automation', 'short' => 'Fewer repetitive tasks. More possibilities.', 'description' => 'AI agents, intelligent automation and workflow engineering to connect processes and reduce repetitive work. Technology serving concrete goals.', 'tags' => ['AI agents', 'Automation', 'Workflows']],
+            ['icon' => 'shield-check', 'title' => 'Cybersecurity training', 'short' => 'Knowledge is your first line of defence.', 'description' => 'Cybersecurity awareness training and online courses for individuals and companies. A practical approach to recognising risks and building safer digital habits.', 'tags' => ['Awareness', 'Online courses', 'Security culture']],
+            ['icon' => 'code', 'title' => 'Software and consulting', 'short' => 'Technology that adapts to you.', 'description' => 'Custom software development and technology consulting. We explore your needs to define solutions that fit your processes and support your digital decisions.', 'tags' => ['Custom software', 'Consulting', 'Technology strategy']],
+        ],
+    ],
+
+    'cta' => [
+        'eyebrow' => 'Your next step',
+        'title' => "A good conversation\ncan change everything.",
+        'button' => 'Let’s make it happen',
+    ],
+
+    'pages' => [
+        'about' => ['label' => 'Who we are', 'title' => 'Technology should feel like yours', 'intro' => 'GanzaQuest is a branch of NCIATA Ltd, a technology company registered in Rwanda. We build apps, software and AI tools that are easy to use and fit the way people work.', 'description' => 'Learn how GanzaQuest makes apps, software and AI easier to use and adapt to the way people work.'],
+        'services' => ['label' => 'What we do', 'title' => 'Your next step, with the right technology.', 'intro' => 'Four areas of expertise. One approach: understand what you need and turn it into a useful solution.', 'description' => 'Explore our services: mobile apps, AI and automation, cybersecurity training, custom software and technology consulting.'],
+        'products' => ['label' => 'Digital solutions', 'title' => 'Products', 'intro' => 'Browse our courses and digital tools.', 'description' => 'Browse GanzaQuest’s self-paced cybersecurity awareness course for small teams and custom AI agent design and deployment.'],
+        'blog' => ['label' => 'Insights', 'title' => 'Knowledge to keep moving forward.', 'intro' => 'Technology, artificial intelligence, digital security and new ways of working.', 'description' => 'The GanzaQuest blog: articles on technology, artificial intelligence, automation and digital security.'],
+        'contact' => ['label' => 'Let’s start a conversation', 'title' => 'What do you want to make possible?', 'intro' => 'Tell us about your idea, your challenge or what you need to improve. The first step is understanding you.', 'description' => 'Contact GanzaQuest to talk about mobile apps, artificial intelligence, cybersecurity training or custom software development.'],
+        'privacy' => ['label' => 'Your data', 'title' => 'Privacy and contact.', 'intro' => 'We handle your enquiries discreetly and only to respond to your request.', 'description' => 'Information about the data collected by the GanzaQuest (NCIATA Ltd) contact form, why we collect it and your options.'],
+    ],
+
+    'about' => [
+        'approach' => 'We bridge the gap between what technology can do and what people need. We start by listening, then use AI and other advances where they can make a task simpler or give people more control.',
+        'goal' => 'We want people to understand the tools they use, shape them to their needs and feel confident using them as technology changes.',
+    ],
+
+    'product_starting_at' => 'From',
+
+    'course' => [
+        'terms' => 'Free to register interest.',
+        'launch' => 'Launching January 2027',
+        'title' => 'Cybersecurity Awareness Basics',
+        'description' => 'For teams at small businesses and organizations. Learn to spot scams, protect work information, and report suspicious requests. No technical experience needed.',
+        'pace' => 'Self-paced',
+        'category' => 'Training',
+        'details' => 'Pricing and launch signup',
+        'pricing' => 'Team pricing at launch',
+        'small_team' => '1–50 people',
+        'large_team' => '51–200 people',
+        'enterprise' => 'Enterprise',
+        'enterprise_price' => 'Contact for pricing',
+        'interest_title' => 'Get notified at launch',
+        'interest_description' => 'Leave your email if you’re interested. You won’t be charged.',
+        'email' => 'Email address',
+        'email_use' => 'We’ll use your email to follow up about this course.',
+        'submit' => 'Register interest',
+        'success' => 'You’re on the interest list. We’ll use your email to follow up about the launch.',
+        'error_email' => 'Enter a valid email address.',
+        'error_send' => 'We couldn’t register your interest right now. Please try again later.',
+        'privacy_title' => 'Course interest list',
+        'privacy_text' => 'If you register interest in the cybersecurity course, we collect your email address to follow up about the launch. We receive it by email and use it for that course. You can ask us to remove it through the contact form. The interest form uses the same technical session cookie as the contact form.',
+    ],
+
+    'agent' => [
+        'category' => 'AI and automation',
+        'title' => 'Custom AI Agent Design & Deployment',
+        'description' => 'Get an AI agent built for a task your team wants to simplify, from answering customer questions to handling routine work.',
+        'launch' => 'Available from December 2026',
+        'details' => 'Request an AI agent',
+        'payment' => 'Pay only when you’re satisfied.',
+        'deployment' => 'Choose a smaller model that runs on your own equipment or a larger model accessed through an API. We can deploy the agent on your own systems if you prefer. If you already have a model or API in mind, tell us below.',
+        'form_title' => 'Tell us what you need',
+        'reply' => 'One short form gets us started. We’ll reply within one business day.',
+        'success' => 'Request received. We’ll reply within one business day.',
+        'use_case' => 'What should your agent do?',
+        'choose' => 'Choose a use case',
+        'sector' => 'Industry or sector',
+        'hosting' => 'Deployment preference',
+        'model' => 'Preferred model or API',
+        'goal' => 'Anything else we should know?',
+        'data_use' => 'We’ll use these details to respond to your request.',
+        'submit' => 'Send request',
+        'error_invalid' => 'Enter a valid email, your sector, and a use case and hosting preference.',
+        'error_send' => 'We couldn’t send your request right now. Please try again later.',
+        'privacy_title' => 'AI agent requests',
+        'privacy_text' => 'If you request a custom AI agent, we receive your email address and the project details you provide so we can respond and discuss your project. This form uses the same technical session cookie as the contact form.',
+        'use_cases' => ['support' => 'Customer support', 'knowledge' => 'Internal knowledge assistant', 'workflows' => 'Routine tasks and workflows', 'other' => 'Something else'],
+        'hosting_options' => ['local' => 'Local agent with a local model', 'local_api' => 'Local agent with an external model API', 'api' => 'Hosted agent with an external model API', 'unsure' => 'Help me choose'],
+    ],
+
+    'blog_preview' => [
+        'title' => 'Would You Open the Door?',
+        'example' => 'Someone knocks and says the landlord sent them. Before handing over your house key, you’d call the landlord using a number you already know.',
+        'takeaway' => 'Do the same when someone unexpectedly asks for a work file: check with them separately before sharing it. Keep passwords and sign-in codes to yourself.',
+    ],
+
+    'contact' => [
+        'eyebrow' => 'Direct contact',
+        'title' => 'Your idea starts here.',
+        'text' => 'Use this form to contact GanzaQuest, a branch of NCIATA Ltd. You can get in touch as an individual or on behalf of your company.',
+        'private_title' => 'A private conversation',
+        'private_text' => 'We use your details only to respond to your enquiry. They are never published on the site.',
+        'footnote' => 'The company’s email, phone number and address will be added once confirmed.',
+        'name' => 'Name',
+        'name_ph' => 'Your name',
+        'email' => 'Email',
+        'email_ph' => 'you@email.com',
+        'company' => 'Company',
+        'optional' => '(optional)',
+        'company_ph' => 'Your company name',
+        'service' => 'How can we help?',
+        'message' => 'Tell us about your project',
+        'message_ph' => 'What do you have in mind, and what would you like to achieve?',
+        'consent_before' => 'I have read the',
+        'consent_link' => 'privacy information',
+        'consent_after' => 'and agree to my data being processed to respond to this enquiry.',
+        'submit' => 'Send enquiry',
+        'sending' => 'Sending enquiry…',
+        'success' => 'Your enquiry has been sent. Thank you for contacting GanzaQuest.',
+        'error_invalid' => 'Please check the form: your name, a valid email, a message of at least 10 characters and the privacy box.',
+        'error_rate' => 'Too many attempts. Please wait a few minutes and try again.',
+        'error_expired' => 'The form has expired. Please send it again.',
+        'error_send' => 'Your enquiry could not be sent. Please try again later.',
+    ],
+
+    'privacy' => [
+        'translation_note' => 'This is a translation. In case of differences, the Spanish version prevails.',
+        'sections' => [
+            ['title' => 'Data controller', 'text' => "NCIATA Ltd (GanzaQuest), a company registered in Rwanda.\nRegistration number: [RDB REGISTRATION NUMBER]\nAddress: [REGISTERED ADDRESS]\nContact email: [CONTACT EMAIL]"],
+            ['title' => 'What data we collect and why', 'text' => 'NCIATA Ltd collects the name, email address, optional company, area of interest and message you enter in the form. This data is used only to respond to your enquiry and to manage the conversation about the services requested.'],
+            ['title' => 'How we handle your enquiry', 'text' => 'The form sends your enquiry by email to our team. It is not stored in a database on the site, it is not accessible to other visitors and it is not used to send you marketing communications. It is kept for as long as necessary to handle your request and meet applicable obligations.'],
+            ['title' => 'Cookies', 'text' => 'The contact, course interest and AI agent forms use one technical session cookie to protect against abuse. We do not use analytics or advertising cookies.'],
+            ['title' => 'Your rights', 'text' => 'You can request access to, correction of or deletion of your data through the contact form, using the email address from your original enquiry. Sending the form requires your consent, which you can withdraw the same way.'],
+        ],
+    ],
+
+    'footer' => [
+        'connect' => 'Get in touch',
+        'rights' => 'All rights reserved.',
+        'branch_line' => 'GanzaQuest is a branch of NCIATA Ltd, a technology company registered in Rwanda.',
+    ],
+
+    'not_found' => [
+        'label' => 'Error 404',
+        'title' => 'This page doesn’t exist.',
+        'intro' => 'The link may be old, or the address may be misspelled.',
+        'link' => 'Back to home',
+    ],
+];

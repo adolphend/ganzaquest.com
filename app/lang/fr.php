@@ -1,0 +1,225 @@
+<?php
+// Textes en français. "\n" crée un retour à la ligne.
+return [
+    'lang_name' => 'Français',
+    'locale' => 'fr_FR',
+
+    'meta' => [
+        'home_title' => 'Développement d’applications, IA et cybersécurité | GanzaQuest',
+        'home_description' => 'GanzaQuest (NCIATA Ltd) : développement d’applications mobiles iOS et Android, intelligence artificielle et automatisation, formation en cybersécurité et logiciels sur mesure.',
+        'not_found_title' => 'Page introuvable | GanzaQuest',
+        'not_found_description' => 'La page demandée n’est pas disponible.',
+    ],
+
+    'seo_titles' => [
+        'about' => 'À propos : GanzaQuest et NCIATA Ltd',
+        'services' => 'Applications mobiles, IA, cybersécurité et logiciels sur mesure',
+        'products' => 'Produits numériques et solutions logicielles',
+        'blog' => 'Blog technologie, IA et cybersécurité',
+        'contact' => 'Contact : parlez-nous de votre projet numérique',
+        'privacy' => 'Confidentialité',
+    ],
+
+    'faq' => [
+        'title' => 'Questions fréquentes',
+        'items' => [
+            ['q' => 'Quels services propose GanzaQuest ?', 'a' => 'Le développement d’applications mobiles iOS et Android, l’intelligence artificielle et l’automatisation des processus, la formation en cybersécurité pour les particuliers et les entreprises, ainsi que le développement de logiciels sur mesure et le conseil technologique.'],
+            ['q' => 'Qui est derrière GanzaQuest ?', 'a' => 'GanzaQuest est une branche de NCIATA Ltd, une entreprise technologique enregistrée au Rwanda.'],
+            ['q' => 'Travaillez-vous avec des particuliers ou seulement avec des entreprises ?', 'a' => 'Avec les deux. Vous pouvez nous contacter à titre personnel avec une idée, ou au nom de votre entreprise pour améliorer un processus ou créer un nouveau produit numérique.'],
+            ['q' => 'Comment démarrer un projet avec GanzaQuest ?', 'a' => 'Parlez-nous de votre idée ou de votre défi via le formulaire de contact. Nous vous répondrons pour comprendre vos besoins et vous proposer la prochaine étape.'],
+        ],
+    ],
+
+    'a11y' => [
+        'skip' => 'Aller au contenu',
+        'home' => 'NCIATA Ltd, accueil',
+        'main_nav' => 'Navigation principale',
+        'mobile_nav' => 'Navigation mobile',
+        'footer_nav' => 'Navigation du pied de page',
+        'menu_open' => 'Ouvrir le menu',
+        'menu_close' => 'Fermer le menu',
+        'language' => 'Langue',
+    ],
+
+    'brand' => [
+        'tagline' => 'Une technologie qui a du sens',
+        'motto' => 'Nous explorons les possibles. Nous créons le progrès.',
+        'owner' => 'Une branche de NCIATA Ltd',
+    ],
+
+    'nav' => [
+        'home' => 'Accueil',
+        'about' => 'À propos',
+        'services' => 'Services',
+        'products' => 'Produits',
+        'blog' => 'Blog',
+        'contact' => 'Contact',
+        'privacy' => 'Confidentialité',
+    ],
+    'header_cta' => 'Parlons-en',
+
+    'hero' => [
+        'eyebrow' => 'Une technologie qui a du sens',
+        'title_1' => 'L’avenir ne s’attend pas.',
+        'title_2' => 'Il se',
+        'title_2_em' => 'construit.',
+        'description' => "Nous transformons les idées en solutions numériques.\nDes applications, de l’intelligence artificielle et des technologies\nqui vous aident à passer à l’étape suivante.",
+        'cta_primary' => 'Parlons de votre projet',
+        'cta_secondary' => 'Découvrir nos services',
+        'note' => 'Pour les personnes qui ont des idées. Pour les entreprises qui ont une vision.',
+        'bottom_left' => 'Explorer n’est que le début.',
+        'discover' => 'Découvrir GanzaQuest',
+        'discover_label' => 'Découvrir nos services',
+        'coordinate' => 'Idée → Solution → Progrès',
+    ],
+
+    'services' => [
+        'eyebrow' => 'Notre spécialité',
+        'title' => "Quatre chemins.\nDes possibilités infinies.",
+        'intro' => "De la première idée au prochain défi.\nDes solutions pensées pour ce qui compte vraiment.",
+        'more' => 'En savoir plus',
+        'more_label' => 'Découvrir',
+        'ask' => 'Dites-nous ce dont vous avez besoin',
+        'ask_label' => 'Se renseigner sur',
+        'general' => 'Je veux explorer une idée',
+        'items' => [
+            ['icon' => 'smartphone', 'title' => 'Applications mobiles', 'short' => 'Des idées qui deviennent des expériences.', 'description' => 'Développement d’applications iOS et Android, y compris des solutions basées sur l’intelligence artificielle. Nous concevons des expériences intuitives autour des besoins de chaque projet.', 'tags' => ['iOS et Android', 'Applications avec IA', 'Expérience utilisateur']],
+            ['icon' => 'workflow', 'title' => 'IA et automatisation', 'short' => 'Moins de tâches répétitives. Plus de possibilités.', 'description' => 'Agents IA, automatisation intelligente et ingénierie des flux de travail pour relier vos processus et réduire les tâches répétitives. La technologie au service d’objectifs concrets.', 'tags' => ['Agents IA', 'Automatisation', 'Flux de travail']],
+            ['icon' => 'shield-check', 'title' => 'Formation en cybersécurité', 'short' => 'Le savoir est votre première défense.', 'description' => 'Formations de sensibilisation à la cybersécurité et cours en ligne pour les particuliers et les entreprises. Une approche pratique pour reconnaître les risques et adopter des habitudes numériques plus sûres.', 'tags' => ['Sensibilisation', 'Cours en ligne', 'Culture de la sécurité']],
+            ['icon' => 'code', 'title' => 'Logiciels et conseil', 'short' => 'Une technologie qui s’adapte à vous.', 'description' => 'Développement de logiciels sur mesure et conseil technologique. Nous étudions vos besoins pour définir des solutions cohérentes avec vos processus et accompagner vos décisions numériques.', 'tags' => ['Logiciels sur mesure', 'Conseil', 'Stratégie technologique']],
+        ],
+    ],
+
+    'cta' => [
+        'eyebrow' => 'Votre prochaine étape',
+        'title' => "Une bonne conversation\npeut tout changer.",
+        'button' => 'Rendons-le possible',
+    ],
+
+    'pages' => [
+        'about' => ['label' => 'Notre essence', 'title' => 'Des outils que vous pouvez vous approprier', 'intro' => 'GanzaQuest est une branche de NCIATA Ltd, une entreprise technologique enregistrée au Rwanda. Nous créons des applications, des logiciels et des outils d’IA simples à utiliser et adaptés aux façons de travailler de chacun.', 'description' => 'Découvrez comment GanzaQuest crée des applications, des logiciels et des outils d’IA simples à utiliser et adaptés aux besoins de chacun.'],
+        'services' => ['label' => 'Ce que nous faisons', 'title' => 'Votre prochaine étape, avec la bonne technologie.', 'intro' => 'Quatre domaines d’expertise. Une même approche : comprendre ce dont vous avez besoin et le transformer en solution utile.', 'description' => 'Découvrez nos services : applications mobiles, IA et automatisation, formation en cybersécurité, logiciels sur mesure et conseil technologique.'],
+        'products' => ['label' => 'Solutions numériques', 'title' => 'Produits', 'intro' => 'Découvrez nos cours et nos outils numériques.', 'description' => 'Découvrez le cours de cybersécurité à votre rythme pour les petites équipes et la conception et le déploiement d’agents IA sur mesure.'],
+        'blog' => ['label' => 'Perspectives', 'title' => 'Des connaissances pour continuer d’avancer.', 'intro' => 'Technologie, intelligence artificielle, sécurité numérique et nouvelles façons de travailler.', 'description' => 'Le blog de GanzaQuest : des articles sur la technologie, l’intelligence artificielle, l’automatisation et la sécurité numérique.'],
+        'contact' => ['label' => 'Commençons à échanger', 'title' => 'Que voulez-vous rendre possible ?', 'intro' => 'Parlez-nous de votre idée, de votre défi ou de ce que vous souhaitez améliorer. La première étape, c’est de vous comprendre.', 'description' => 'Contactez GanzaQuest pour parler d’applications mobiles, d’intelligence artificielle, de formation en cybersécurité ou de développement de logiciels sur mesure.'],
+        'privacy' => ['label' => 'Vos données', 'title' => 'Confidentialité et contact.', 'intro' => 'Nous traitons vos demandes avec discrétion et uniquement pour y répondre.', 'description' => 'Informations sur les données collectées par le formulaire de contact de GanzaQuest (NCIATA Ltd), leur finalité et vos options.'],
+    ],
+
+    'about' => [
+        'approach' => 'Nous rapprochons les possibilités de la technologie des besoins des personnes. Nous commençons par écouter, puis utilisons l’IA et d’autres avancées là où elles peuvent simplifier une tâche ou donner plus de contrôle aux utilisateurs.',
+        'goal' => 'Nous voulons que chacun comprenne ses outils, puisse les adapter à ses besoins et les utilise avec confiance à mesure que la technologie évolue.',
+    ],
+
+    'product_starting_at' => 'À partir de',
+
+    'course' => [
+        'terms' => 'Signaler votre intérêt est gratuit.',
+        'launch' => 'Disponible en janvier 2027',
+        'title' => 'Les bases de la sensibilisation à la cybersécurité',
+        'description' => 'Pour les équipes des petites entreprises et organisations. Apprenez à repérer les arnaques, à protéger vos informations professionnelles et à signaler les demandes suspectes. Aucune connaissance technique requise.',
+        'pace' => 'À votre rythme',
+        'category' => 'Formation',
+        'details' => 'Tarifs et inscription au lancement',
+        'pricing' => 'Tarifs des équipes au lancement',
+        'small_team' => '1 à 50 personnes',
+        'large_team' => '51 à 200 personnes',
+        'enterprise' => 'Grandes entreprises',
+        'enterprise_price' => 'Tarif sur demande',
+        'interest_title' => 'Recevez une alerte au lancement',
+        'interest_description' => 'Laissez votre adresse e-mail si le cours vous intéresse. Aucun paiement ne sera demandé.',
+        'email' => 'Adresse e-mail',
+        'email_use' => 'Nous utiliserons votre adresse pour vous informer sur ce cours.',
+        'submit' => 'Signaler mon intérêt',
+        'success' => 'Votre intérêt est enregistré. Nous vous écrirons au sujet du lancement.',
+        'error_email' => 'Saisissez une adresse e-mail valide.',
+        'error_send' => 'Nous n’avons pas pu enregistrer votre intérêt. Réessayez plus tard.',
+        'privacy_title' => 'Liste d’intérêt pour le cours',
+        'privacy_text' => 'Si vous signalez votre intérêt, nous recevons votre adresse e-mail pour vous informer du lancement de ce cours. Vous pouvez demander sa suppression via le formulaire de contact. Les deux formulaires utilisent le même cookie technique de session.',
+    ],
+
+    'agent' => [
+        'category' => 'IA et automatisation',
+        'title' => 'Conception et déploiement d’agents IA',
+        'description' => 'Un agent IA conçu pour simplifier une tâche de votre équipe, comme répondre aux clients ou traiter le travail récurrent.',
+        'launch' => 'Disponible à partir de décembre 2026',
+        'details' => 'Demander un agent IA',
+        'payment' => 'Vous payez uniquement si l’agent vous convient.',
+        'deployment' => 'Choisissez un modèle léger sur votre propre matériel ou un modèle plus puissant accessible par API. Nous pouvons déployer l’agent sur vos systèmes. Indiquez ci-dessous le modèle ou l’API que vous préférez, si vous en avez déjà une en tête.',
+        'form_title' => 'Dites-nous ce dont vous avez besoin',
+        'reply' => 'Un court formulaire suffit pour commencer. Nous vous répondons sous un jour ouvré.',
+        'success' => 'Demande reçue. Nous vous répondons sous un jour ouvré.',
+        'use_case' => 'Que doit faire votre agent ?',
+        'choose' => 'Choisissez un cas d’usage',
+        'sector' => 'Secteur d’activité',
+        'hosting' => 'Préférence de déploiement',
+        'model' => 'Modèle ou API préféré',
+        'goal' => 'Autre chose à nous préciser ?',
+        'data_use' => 'Nous utilisons ces informations pour répondre à votre demande.',
+        'submit' => 'Envoyer la demande',
+        'error_invalid' => 'Indiquez une adresse valide, votre secteur, un cas d’usage et une préférence d’hébergement.',
+        'error_send' => 'Nous n’avons pas pu envoyer votre demande. Réessayez plus tard.',
+        'privacy_title' => 'Demandes d’agents IA',
+        'privacy_text' => 'Si vous demandez un agent IA, nous recevons votre adresse e-mail et les détails de votre projet pour vous répondre. Ce formulaire utilise le même cookie technique de session que le formulaire de contact.',
+        'use_cases' => ['support' => 'Service client', 'knowledge' => 'Assistant de connaissances internes', 'workflows' => 'Tâches et processus récurrents', 'other' => 'Autre besoin'],
+        'hosting_options' => ['local' => 'Agent local avec un modèle local', 'local_api' => 'Agent local avec une API de modèles externe', 'api' => 'Agent hébergé avec une API de modèles externe', 'unsure' => 'M’aider à choisir'],
+    ],
+
+    'blog_preview' => [
+        'title' => 'Ouvririez-vous la porte ?',
+        'example' => 'Quelqu’un frappe à votre porte et dit venir de la part du propriétaire. Avant de lui remettre vos clés, vous appelleriez le propriétaire à un numéro que vous connaissez déjà.',
+        'takeaway' => 'Faites de même si quelqu’un vous demande un fichier professionnel de façon inattendue : vérifiez la demande par un autre canal avant de le partager. Gardez vos mots de passe et codes de connexion pour vous.',
+    ],
+
+    'contact' => [
+        'eyebrow' => 'Contact direct',
+        'title' => 'Votre idée commence ici.',
+        'text' => 'Utilisez ce formulaire pour contacter GanzaQuest, une branche de NCIATA Ltd. Vous pouvez nous écrire à titre personnel ou au nom de votre entreprise.',
+        'private_title' => 'Un échange confidentiel',
+        'private_text' => 'Nous utilisons vos données uniquement pour répondre à votre demande. Elles ne sont jamais publiées sur le site.',
+        'footnote' => 'L’adresse e-mail, le téléphone et l’adresse postale de l’entreprise seront ajoutés dès leur confirmation.',
+        'name' => 'Nom',
+        'name_ph' => 'Votre nom',
+        'email' => 'E-mail',
+        'email_ph' => 'vous@email.com',
+        'company' => 'Entreprise',
+        'optional' => '(facultatif)',
+        'company_ph' => 'Nom de votre entreprise',
+        'service' => 'Comment pouvons-nous vous aider ?',
+        'message' => 'Parlez-nous de votre projet',
+        'message_ph' => 'Qu’avez-vous en tête et que souhaitez-vous accomplir ?',
+        'consent_before' => 'J’ai lu les',
+        'consent_link' => 'informations sur la confidentialité',
+        'consent_after' => 'et j’accepte le traitement de mes données pour répondre à cette demande.',
+        'submit' => 'Envoyer la demande',
+        'sending' => 'Envoi en cours…',
+        'success' => 'Votre demande a bien été envoyée. Merci d’avoir contacté GanzaQuest.',
+        'error_invalid' => 'Vérifiez le formulaire : votre nom, une adresse e-mail valide, un message d’au moins 10 caractères et la case de confidentialité.',
+        'error_rate' => 'Trop de tentatives. Patientez quelques minutes avant de réessayer.',
+        'error_expired' => 'Le formulaire a expiré. Veuillez l’envoyer à nouveau.',
+        'error_send' => 'Votre demande n’a pas pu être envoyée. Réessayez plus tard.',
+    ],
+
+    'privacy' => [
+        'translation_note' => 'Ceci est une traduction. En cas de divergence, la version espagnole prévaut.',
+        'sections' => [
+            ['title' => 'Responsable du traitement', 'text' => "NCIATA Ltd (GanzaQuest), entreprise enregistrée au Rwanda.\nNuméro d’enregistrement : [NUMÉRO D’ENREGISTREMENT RDB]\nAdresse : [ADRESSE ENREGISTRÉE]\nE-mail de contact : [E-MAIL DE CONTACT]"],
+            ['title' => 'Données collectées et finalité', 'text' => 'NCIATA Ltd collecte le nom, l’adresse e-mail, l’entreprise (facultative), le domaine d’intérêt et le message que vous saisissez dans le formulaire. Ces données servent uniquement à répondre à votre demande et à gérer l’échange sur les services demandés.'],
+            ['title' => 'Traitement de votre demande', 'text' => 'Le formulaire envoie votre demande par e-mail à notre équipe. Elle n’est pas enregistrée dans une base de données du site, n’est pas accessible aux autres visiteurs et n’est pas utilisée pour vous envoyer des communications commerciales. Elle est conservée le temps nécessaire pour traiter votre demande et respecter les obligations applicables.'],
+            ['title' => 'Cookies', 'text' => 'Les formulaires de contact, d’intérêt pour le cours et de demande d’agent IA utilisent un cookie technique de session pour éviter les abus. Nous n’utilisons aucun cookie d’analyse ni de publicité.'],
+            ['title' => 'Vos droits', 'text' => 'Vous pouvez demander l’accès à vos données, leur rectification ou leur suppression via le formulaire de contact, en indiquant l’adresse e-mail utilisée lors de votre demande initiale. L’envoi du formulaire nécessite votre consentement, que vous pouvez retirer de la même manière.'],
+        ],
+    ],
+
+    'footer' => [
+        'connect' => 'Contactez-nous',
+        'rights' => 'Tous droits réservés.',
+        'branch_line' => 'GanzaQuest est une branche de NCIATA Ltd, une entreprise technologique enregistrée au Rwanda.',
+    ],
+
+    'not_found' => [
+        'label' => 'Erreur 404',
+        'title' => 'Cette page n’existe pas.',
+        'intro' => 'Le lien est peut-être ancien, ou l’adresse contient une erreur.',
+        'link' => 'Retour à l’accueil',
+    ],
+];

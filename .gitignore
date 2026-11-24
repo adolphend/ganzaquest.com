@@ -1,0 +1,7 @@
+# Runtime files created on the server
+app/storage/*
+!app/storage/.htaccess
+!app/storage/.gitkeep
+
+# Hosting-specific settings
+/app/config.local.php

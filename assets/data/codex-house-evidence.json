@@ -1,0 +1,57 @@
+{
+  "experiment_date": "2026-11-22",
+  "time_zone": "Europe/Madrid",
+  "environment": {
+    "operating_system": "Windows 11 Pro, 64-bit",
+    "codex_version": "0.171.0",
+    "codex_was_already_installed": true,
+    "freecad_version": "1.1.4",
+    "freecad_setup": "Official portable Windows archive, not a system-wide installer",
+    "archive_size_bytes": 418088341,
+    "archive_sha256": "4828741fc91ee37fafcdb97a1abacb18b04ba451ac4372d9ff7a7349b36f4d6d",
+    "release_metadata": "https://github.com/FreeCAD/FreeCAD/releases/tag/1.1.4"
+  },
+  "timing": {
+    "method": "Elapsed wall time estimated from local file creation/write timestamps, not a controlled benchmark. Includes setup, scripting, checks, an early reopen and waits; excludes the final independent comparison of all four files and subsequent editorial work.",
+    "archive_created": "2026-11-22T01:22:01.141+01:00",
+    "first_model_written": "2026-11-22T01:29:41.823+01:00",
+    "fourth_model_written": "2026-11-22T01:32:48.982+01:00",
+    "first_model_elapsed_seconds": 460.682,
+    "fourth_model_elapsed_seconds": 647.841
+  },
+  "model": {
+    "initial_footprint_m": [
+      12,
+      10
+    ],
+    "initial_footprint_was_provisional": true,
+    "bedroom_tags": 3,
+    "bathroom_tags": 2,
+    "opening_checks_per_version": 19,
+    "versions": [
+      {
+        "id": "v01",
+        "change": "Initial editable conceptual model"
+      },
+      {
+        "id": "v02",
+        "change": "Main-bedroom extension of a 1.76 m by 1 m floor-marker strip; exterior footprint changes"
+      },
+      {
+        "id": "v03",
+        "change": "Three-metre full-height opening in kitchen/living partition"
+      },
+      {
+        "id": "v04",
+        "change": "West living window widened from 1.2 m to 1.8 m; south kitchen window from 1.2 m to 1.6 m"
+      }
+    ],
+    "limits": "Visual concept only. No site, furnishings, roof, services, structural analysis, daylight calculation, accessibility, fire safety or building-code assessment. Room tags and boolean checks do not establish fitness for construction."
+  },
+  "later_visualization": {
+    "source_model": "v04",
+    "method": "Additional FreeCAD viewport exports created after the timed experiment. Floor markers were recoloured for clarity, white margins were cropped, and numbered room labels were added in the article.",
+    "geometry_changed": false,
+    "furnishings_added": false
+  }
+}

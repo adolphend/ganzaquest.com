@@ -1,0 +1,213 @@
+{
+  "ui": {
+    "title": "Kann Codex beim Hausentwurf helfen?",
+    "seo": "Kann Codex beim Hausentwurf helfen? Ein FreeCAD-Experiment",
+    "description": "Ein echtes Experiment mit Codex und FreeCAD: Einrichtung unter Windows, ein Haus mit drei Schlafzimmern, Zeitangaben, Bilder und Bewertung.",
+    "excerpt": "Eine Aufgabe, ein KI-Agent und ein bearbeitbares Haus. Entdecke das FreeCAD-Modell, die Dauer des Versuchs und die Fragen an einen Planer.",
+    "topic": "KI-Agenten im Entwurf",
+    "read": "Das Experiment entdecken",
+    "time": "Etwa 10 Minuten Lesezeit",
+    "breadcrumb": "Navigationspfad"
+  },
+  "hero": {
+    "standfirst": "Eine Aufgabe. Vier Versionen. Ein Blick darauf, was ein KI-Agent zum Entwurf beitragen kann und wo seine Grenzen liegen.",
+    "meta": "Ein echtes GanzaQuest-Experiment · Windows · 22. November 2026",
+    "start": "Das Experiment beginnen",
+    "alt": "Tatsächliche FreeCAD-Ansicht eines eingeschossigen Hausmodells ohne Dach mit Wänden, Türen und Fenstern.",
+    "caption": "Das vierte Modell, aus FreeCAD exportiert. Ein Konzept, kein Bauplan."
+  },
+  "intro": {
+    "title": "Ein Haus beginnt mit einer Frage",
+    "paragraphs": [
+      "Stell dir vor, ein Kunde beschreibt sein Zuhause: drei Schlafzimmer, zwei Bäder, eine Küche und einen Raum zum Zusammensein. Bevor eine Wand gebaut wird, müssen aus diesen Worten Unterlagen werden, die Kunde und Planer gemeinsam betrachten können.",
+      "Kann Codex, ein KI-Agent für Programmieraufgaben, helfen, ein erstes Modell in FreeCAD zu erstellen und zu ändern? Wir haben es auf einem Windows-Rechner ausprobiert, die Dateien aufbewahrt und Möglichkeiten wie Grenzen betrachtet."
+    ]
+  },
+  "tour": {
+    "title": "Ein Blick ins Haus",
+    "intro": "Stell dir vor, das Dach wäre abgenommen, damit du die Räume sehen kannst. Diese schrägen Ansichten entstanden nach dem zeitlich erfassten Versuch aus dem gespeicherten FreeCAD-Modell; Farben und Nummern helfen bei der Orientierung.",
+    "overview_alt": "Schräge Ansicht des Hausmodells ohne Dach von der Eingangsseite. Nummern kennzeichnen Schlafzimmer, Bäder, Wohnbereich, Küche und Eingang in der Legende darunter.",
+    "overview_caption": "Das vierte Modell von der Eingangsseite. Die Nummern wurden der FreeCAD-Ansicht hinzugefügt.",
+    "key_title": "Die Räume erkennen",
+    "rooms": ["Schlafzimmer 2", "Schlafzimmer 3", "Hauptschlafzimmer", "Privates Bad", "Wohn- und Essbereich", "Küche", "Eingang", "Gemeinsames Bad"],
+    "front_alt": "Tiefere schräge Ansicht der Vorderwand des Hausmodells mit Eingangs- und Fensteröffnungen.",
+    "front_caption": "Von vorne: In der Außenwand sind die Eingangsöffnung und zwei Fensteröffnungen zu erkennen.",
+    "rear_alt": "Schräge Ansicht von der anderen Seite des Modells ohne Dach mit Schlafzimmerwänden und Fensteröffnungen.",
+    "rear_caption": "Von der anderen Seite: Schlafzimmerwände und Fensteröffnungen sind besser zu sehen.",
+    "note": "Der Flur verläuft durch die Mitte. Das Modell zeigt Öffnungen: Türblätter, Fensterglas, Möbel und ein Dach wurden nicht hinzugefügt. Die Bodenfarben kennzeichnen Räume, keine Oberflächen."
+  },
+  "question": {
+    "label": "Ein Moment zum Nachdenken",
+    "title": "Was würde ein KI-Modell nützlich machen?",
+    "intro": "Wähle eine Antwort. Es gibt keine Punkte.",
+    "choices": [
+      {
+        "title": "Ein überzeugendes Bild",
+        "answer": "Ein Bild kann ein Gespräch eröffnen. Räume, Öffnungen und Maße sollten sich aber auch prüfen und ändern lassen."
+      },
+      {
+        "title": "Ein bearbeitbares Modell",
+        "answer": "Eine bearbeitbare Datei ermöglicht es, einen Wunsch auszuprobieren und Versionen zu vergleichen. Ihre Geometrie muss dennoch fachkundig geprüft werden."
+      },
+      {
+        "title": "Ein baureifes Haus",
+        "answer": "Dafür wäre viel mehr nötig: ein reales Grundstück, Tragwerks- und Haustechnikplanung, örtliche Anforderungen und die Prüfung durch qualifizierte Fachleute."
+      }
+    ]
+  },
+  "brief": {
+    "title": "Die Aufgabe",
+    "paragraphs": [
+      "Die Anleitung verlangte ein eingeschossiges Haus mit drei Schlafzimmern, einem privaten Bad am Hauptschlafzimmer, einem gemeinsamen Bad, Wohn- und Essbereich, Küche, Eingang, Türen und Fenstern.",
+      "Grundstück, Stil und Grundfläche waren noch nicht freigegeben. Für den Versuch verwendeten wir vorläufig ein Rechteck von 12 × 10 Metern. Das Dach ließen wir weg, damit die Räume sichtbar bleiben. Das war eine Arbeitsannahme, kein vom Kunden genehmigter Entwurf."
+    ]
+  },
+  "setup": {
+    "title": "Zuerst die Werkstatt vorbereiten",
+    "paragraphs": [
+      "Ein Terminal ist ein Ort, an dem du Anweisungen für den Computer eingibst. Öffne unter Windows das Startmenü, suche nach PowerShell oder Windows Terminal und wähle einen PowerShell-Tab. Die folgenden Befehle sind ein Beispiel; beachte die aktuellen offiziellen Anleitungen für dein System.",
+      "In unserem Versuch waren Node.js, npm und Codex bereits vorhanden. Wir prüften die Versionen und stellten fest, dass Codex mit ChatGPT angemeldet war; eine Neuinstallation oder erste Anmeldung haben wir nicht wiederholt."
+    ],
+    "steps": [
+      {
+        "title": "Werkzeuge prüfen",
+        "text": "Führe node --version und npm --version aus. Falls sie fehlen, installiere Node.js von der offiziellen Website und öffne das Terminal erneut."
+      },
+      {
+        "title": "Codex einrichten",
+        "text": "Der npm-Befehl unten ist ein dokumentierter Weg. Öffne deinen Projektordner, starte codex und folge den angezeigten Anmeldehinweisen. Prüfe die Berechtigungen deiner Sitzung, bevor ein Agent Dateien ändern darf."
+      },
+      {
+        "title": "FreeCAD vorbereiten",
+        "text": "Die offizielle Downloadseite bietet einen Windows-Installer und ein portables Archiv. Für diesen Versuch luden wir das offizielle portable Archiv von FreeCAD 1.1.4 herunter, verglichen seinen SHA-256-Wert mit den Veröffentlichungsdaten, entpackten es im Projekt und starteten FreeCAD.exe. Eine systemweite Installation war das nicht."
+      }
+    ],
+    "code_intro": "Für eine neue Einrichtung der Codex CLI mit npm:",
+    "code_note": "Die Installations- und Anmeldebefehle oben beschreiben eine neue Einrichtung; im Experiment wurden sie nicht als Erstinstallation ausgeführt. Versionen und Schritte können sich ändern.",
+    "codex_link": "Codex-CLI-Anleitung",
+    "node_link": "Node.js herunterladen",
+    "freecad_link": "FreeCAD herunterladen"
+  },
+  "timing": {
+    "title": "Wie lange dauerte dieser Versuch?",
+    "intro": "Wir verglichen lokale Zeitstempel: die Erstellung des Downloadarchivs um 01:22:01 Uhr und das Speichern der Modelle am 22. November 2026, Madrider Zeit.",
+    "first": "Bis das erste bearbeitbare Modell um 01:29:41 Uhr gespeichert war.",
+    "last": "Bis die vierte Version um 01:32:48 Uhr gespeichert war.",
+    "note": "Dies sind ungef?hre verstrichene Zeiten aus Dateizeitstempeln, keine Stoppuhrmessung. Sie umfassen Vorbereitung, Skripterstellung, Pr?fungen, ein fr?hes erneutes ?ffnen und Wartezeiten; der abschlie?ende Vergleich aller vier Dateien und die sp?tere redaktionelle Arbeit sind nicht enthalten. Codex war bereits installiert. Ein Rechner und ein Versuch sind weder ein Benchmark noch ein Geschwindigkeitsversprechen."
+  },
+  "evolution": {
+    "title": "Von der Aufgabe zu vier Versionen",
+    "paragraphs": [
+      "Codex schrieb ein FreeCAD-Makro, das bearbeitbare Wandkörper und Öffnungen erzeugt und die Räume mit farbigen Bodenflächen markiert. Anschließend öffneten wir jede gespeicherte Datei erneut in FreeCAD.",
+      "Die folgenden Pläne sind Schnitte durch die tatsächlichen Modelle in 1,1 Metern Höhe. Es sind FreeCAD-Exporte, keine Fotos oder generierten Illustrationen."
+    ],
+    "before_alt": "Schnitt des ersten FreeCAD-Hausmodells mit drei Schlafzimmerbereichen oben und getrennter Küche und Wohnbereich unten.",
+    "after_alt": "Schnitt des vierten Modells mit Erweiterung des Hauptschlafzimmers und größerer Öffnung zwischen Küche und Wohnbereich.",
+    "before_caption": "Version 1 · die erste Aufteilung.",
+    "after_caption": "Version 4 · nach drei Änderungen.",
+    "figure_note": "Jede Ansicht wurde einzeln eingepasst; die Bilder haben daher nicht denselben visuellen Maßstab. Die kleinen hohen Badfenster liegen über der Schnitthöhe.",
+    "versions": [
+      {
+        "title": "Version 2:",
+        "text": "Ein Streifen von 1,76 × 1 Meter erweitert das Hauptschlafzimmer und verändert die Außenform."
+      },
+      {
+        "title": "Version 3:",
+        "text": "Eine 3 Meter breite Öffnung verbindet Küche und Wohnbereich stärker."
+      },
+      {
+        "title": "Version 4:",
+        "text": "Zwei vorhandene Fenster werden breiter. Eine Tageslichtberechnung wurde nicht durchgeführt."
+      }
+    ],
+    "correction": "Die erste Draufsicht war leicht geneigt, und die Stürze verdeckten die Türen. Wir deaktivierten die Kameraanimation und erzeugten stattdessen diese Schnitte. Das Ergebnis zu prüfen ist wichtiger, als sich auf eine Erfolgsmeldung zu verlassen.",
+    "legend": "Zum Lesen des Plans: Die Schlafzimmer liegen oben; das Hauptschlafzimmer befindet sich rechts neben dem eigenen Bad. Unten liegen von links nach rechts Wohn- und Essbereich, K?che, Eingang und gemeinsames Bad. Der Flur verl?uft durch die Mitte."
+  },
+  "review": {
+    "title": "Wie gut ist das Haus?",
+    "paragraphs": [
+      "Als Grundlage für ein Gespräch ist das Modell nützlich: Die Räume sind unterscheidbar, das Hauptschlafzimmer hat ein eigenes Bad und die Änderungen liegen in separaten bearbeitbaren Dateien vor. Jedes der vier erneut geöffneten Modelle enthielt drei Schlafzimmermarkierungen und zwei Badmarkierungen; jeweils 19 geometrische Öffnungsprüfungen bestanden.",
+      "Als Wohnhaus bleibt es ein grobes Konzept. Das Hauptschlafzimmer hat einen schmalen, unregelmäßigen Teil, das gemeinsame Bad und der Eingang beanspruchen viel Platz und die Flurmarkierung ist nur etwa 0,96 Meter breit. Möblierung, tatsächliche Durchgänge und Wege brauchen eine fachliche Prüfung; dies ist keine Aussage zur Einhaltung von Vorschriften.",
+      "Es gibt weder Dach und Möblierung noch Tragwerksplanung, Fundamente, Sanitär- oder Elektroplanung. Grundstück, lokale Regeln, Barrierefreiheit, Brandschutz und Tageslicht haben wir nicht geprüft. Die Kontrollen bestätigen einzelne Modelleigenschaften, nicht die Bewohnbarkeit oder Baureife."
+    ]
+  },
+  "reflection": {
+    "label": "Jetzt bist du dran",
+    "title": "Was würdest du als Nächstes sehen wollen?",
+    "summary": "Vor der Freigabe des Konzepts",
+    "answer": "Stelle Möbel auf, untersuche das schmale Schlafzimmer und den Flur und prüfe Grundstück, Licht, Tragwerk, Haustechnik und örtliche Anforderungen mit qualifizierten Fachleuten. Vergleiche dann eine neue Version mit der Aufgabe."
+  },
+  "potential": {
+    "title": "Möglichkeiten anders erkunden",
+    "paragraphs": [
+      "Planer und Kunden könnten einen solchen Ablauf nutzen, um Grundrisse zu besprechen, einen offeneren Wohnbereich auszuprobieren, Ausrichtungen zu vergleichen oder Änderungen zu dokumentieren. Klare Anweisungen dazu, was sich ändern darf, was bleiben muss und was gespeichert wird, machen das Gespräch produktiver.",
+      "Codex kann beim Erstellen der Geometrie und beim Ordnen von Versionen helfen; FreeCAD macht das Modell überprüfbar. Ein Planer muss weiterhin beurteilen, ob die Aufteilung zu realen Menschen und einem realen Grundstück passt. Architekten und Ingenieure müssen einen Entwurf für den Bau prüfen."
+    ]
+  },
+  "software_strategy": {
+    "label": "Ein Plan für die nächsten Schritte",
+    "title": "Wie könnten andere Programme das Haus weiterbringen?",
+    "intro": "Das FreeCAD-Modell ist ein Ausgangspunkt. Der folgende Ablauf ist ein Vorschlag für ein zukünftiges Projekt und gehört nicht zum oben beschriebenen Experiment. Jede Phase liefert ein Ergebnis, das Planungsteam und Auftraggeber gemeinsam prüfen können.",
+    "tools_label": "Nützliche Werkzeuge",
+    "output_label": "Aufbewahren",
+    "steps": [
+      {
+        "title": "Mit einem realen Grundstück beginnen",
+        "text": "Mit QGIS verfügbare Karten, Geländedaten und eine Vermessung zusammenführen. Grundstücksgrenzen, Ausrichtung, Zufahrt und bekannte Einschränkungen festhalten und von Vermessungsfachleuten und lokalen Fachleuten prüfen lassen. Codex kann helfen, Quellen zu ordnen und offene Fragen aufzulisten.",
+        "output": "Einen Lageplan sowie eine Liste bestätigter Angaben und offener Fragen.",
+        "tools": [
+          "qgis"
+        ]
+      },
+      {
+        "title": "Die Räume anschaulicher machen",
+        "text": "Die bearbeitbare FreeCAD-Datei behalten und eine separate Netzkopie für Blender exportieren. Nach dem Import ein bekanntes Maß und die Achsenausrichtung prüfen; schräge Ansichten und einfache Materialstudien erstellen. Hinzugefügte Dächer, Möbel oder Außenanlagen als Vorschläge kennzeichnen.",
+        "output": "Das Originalmodell, eindeutig beschriftete Bilder und eine separate Visualisierungsdatei.",
+        "tools": [
+          "blender"
+        ]
+      },
+      {
+        "title": "Das Modell für die Zusammenarbeit vorbereiten",
+        "text": "Wenn das Team Building Information Modeling (BIM) benötigt, den Entwurf als Vorlage nutzen, um Wände, Türen und andere Elemente zu erstellen oder zu klassifizieren. Bonsai kann mit IFC arbeiten, einem Austauschformat für Bauwerksinformationen. Die IFC-Datei erneut öffnen und Geometrie und Eigenschaften prüfen: Einfache Körper werden nicht automatisch zu verlässlichen BIM-Objekten.",
+        "output": "Eine geprüfte IFC-Datei und ein Protokoll fehlender oder veränderter Informationen.",
+        "tools": [
+          "bonsai"
+        ]
+      },
+      {
+        "title": "Energieoptionen vergleichen",
+        "text": "In OpenStudio ein Energiemodell für EnergyPlus erstellen: mit definierten Räumen, Dach und weiteren Hüllflächen, lokalem Wetter sowie Annahmen zu Materialien, Nutzung und Gebäudetechnik. Varianten wie Ausrichtung oder Dämmung vergleichen und die Eingaben dokumentieren. Codex kann bei Dateien und Ergebnisübersichten für die fachliche Prüfung helfen.",
+        "output": "Ein Annahmenblatt und einen Vergleichsbericht, keine Vorhersage für das fertige Haus.",
+        "tools": [
+          "openstudio",
+          "energyplus"
+        ]
+      },
+      {
+        "title": "Tragwerksfachleute einbeziehen",
+        "text": "Eine Tragwerksplanerin oder ein Tragwerksplaner kann mit dem vorgesehenen Tragwerk, Materialwerten, Lasten und Auflagern eine separate Analyse erstellen. FreeCAD FEM mit CalculiX ist eine mögliche Wahl; die Fachperson wählt die Methode und prüft die Ergebnisse anhand der geltenden Anforderungen.",
+        "output": "Geprüfte Berechnungen und offene Fragen für das Planungsteam.",
+        "tools": [
+          "calculix"
+        ]
+      }
+    ],
+    "handoff_title": "Die Übergaben sorgfältig prüfen",
+    "handoff": "house_v04.FCStd und spätere Revisionen als Quelldateien behalten. Ein Netz wie STL eignet sich für die Visualisierung, bewahrt aber weder die bearbeitbare Modellhistorie noch die Klassifizierung der Bauteile; Maßstab und Ausrichtung müssen geprüft werden. Auch beim IFC-Austausch Maße, Öffnungen und Eigenschaften kontrollieren. Versionen, Annahmen und Prüfnachweise zu jedem Export aufbewahren.",
+    "prompt_title": "Ein konkreter nächster Auftrag für Codex",
+    "prompt_intro": "Wenn die nötigen Programme in der Sitzung verfügbar sind, könnte ein erster Auftrag lauten:",
+    "prompt": "Verwende eine Kopie von house_v04.FCStd als Referenz. Exportiere ein separates Netz für Blender, prüfe nach dem Import ein bekanntes Maß und die Ausrichtung und erstelle drei schräge Ansichten des aktuellen Grundrisses. Speichere die Blender-Szene separat, liste fehlende Details auf und kennzeichne vorgeschlagene Ergänzungen. Verändere die Originaldatei nicht.",
+    "alternatives": "Auch kommerzielle Programme sind möglich: SketchUp und Revit können an IFC-Abläufen teilnehmen. Vor der Entscheidung Edition, Lizenz und die bei einem Probeaustausch erhaltenen Informationen prüfen."
+  },
+  "ending": {
+    "label": "Eine Frage zum Mitnehmen",
+    "message": "Was würdest du in der nächsten Version ändern?",
+    "back": "Zurück zum Anfang"
+  },
+  "evidence": {
+    "title": "Die Nachweise ansehen",
+    "text": "Für den Versuch wurden FreeCAD 1.1.4 und eine vorhandene Codex-CLI-Sitzung mit Version 0.171.0 verwendet. Die Bilder sind echte FreeCAD-Exporte. Die Zeiten stammen aus Dateien, nicht von einer Stoppuhr. Erstinstallation, Berechtigungsmenü und Sprachsteuerung wurden nicht aufgenommen.",
+    "link": "Versuchsdaten und Methode der Zeitberechnung ansehen (JSON)"
+  }
+}

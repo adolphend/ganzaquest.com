@@ -1,0 +1,129 @@
+{
+  "hero": {
+    "standfirst": "Un ralentisseur, un trajet plus doux et une autre manière de mettre l’IA au travail.",
+    "meta": "Une étude d’ingénierie GanzaQuest · 8 minutes de lecture",
+    "start": "Commençons par le ralentisseur",
+    "diagram_alt": "Schéma simplifié d’un quart de voiture : la caisse est reliée par un ressort et un amortisseur à une roue au-dessus d’un ralentisseur.",
+    "labels": {
+      "body": "Caisse du véhicule",
+      "spring": "Ressort",
+      "damper": "Amortisseur",
+      "wheel": "Roue et pneu",
+      "road": "Route"
+    },
+    "caption": "Un seul coin de voiture. De quoi commencer une enquête."
+  },
+  "bump": {
+    "title": "Le ralentisseur que vous connaissez déjà",
+    "paragraphs": [
+      "Vous le voyez et ralentissez. Les roues avant montent sur le ralentisseur. Vous sentez une secousse dans le siège, puis la voiture monte et redescend avant de se stabiliser.",
+      "Supposons que vous puissiez modifier la suspension. Un ressort plus souple rendrait-il ce passage plus doux ? La voiture cesserait-elle de rebondir plus vite, ou continuerait-elle à bouger plus longtemps ?",
+      "Cette expérience ordinaire cache une question d’ingénierie. Pour y répondre, il faut construire un modèle, choisir les mesures, essayer différents réglages et comprendre les résultats.",
+      "J’ai confié cette enquête à un agent IA. Le projet s’appelait SuspensionLab AI ; le cahier des charges demandait à Codex d’utiliser MATLAB et Simulink pour chercher un meilleur réglage de suspension.",
+      "Avant de parler des outils, une question méritait toutefois d’être posée."
+    ]
+  },
+  "decision": {
+    "label": "Un instant pour décider",
+    "title": "Qu’est-ce qui rendrait le trajet meilleur ?",
+    "intro": "Explorez une possibilité. Il n’y a pas de score.",
+    "choices": [
+      {
+        "title": "Une secousse plus douce",
+        "answer": "C’est un objectif utile. Mesurer l’accélération de la caisse permet de comparer les réglages. Il faut aussi observer ce qui se passe après la première secousse."
+      },
+      {
+        "title": "Moins de rebonds ensuite",
+        "answer": "Cela compte aussi. Un réglage qui réduit l’accélération peut mettre plus de temps à se stabiliser. Il faut relever les deux mesures avant de choisir."
+      },
+      {
+        "title": "Un bon comportement sur d’autres routes",
+        "answer": "Un réglage choisi sur certaines routes mérite un nouveau test. On peut réserver d’autres conditions et ne les utiliser qu’après avoir choisi les paramètres."
+      }
+    ]
+  },
+  "assignment": {
+    "title": "Le travail derrière la réponse",
+    "paragraphs": [
+      "Le cahier des charges précisait la méthode : inspecter l’environnement, vérifier les logiciels, tester le modèle avant l’expérience, enregistrer les paramètres et les résultats, et garder une trace des erreurs.",
+      "Il exigeait aussi une comparaison entre MATLAB et Simulink, puis un test final sur des routes qui n’avaient pas servi à choisir la suspension.",
+      "Ces instructions transforment une ambition générale en travail que l’on peut examiner. Si le résultat semble prometteur, il faut retrouver le modèle, les entrées, les calculs et les vérifications. En cas d’erreur, il faut pouvoir enquêter.",
+      "Pour qui utilise la simulation au quotidien, la démarche est familière : changer un paramètre, lancer le modèle, examiner une courbe et se demander si un résultat inattendu vient de la physique ou d’une erreur. On vérifie les conditions initiales, les équations ou le solveur, puis on recommence.",
+      "Je voulais explorer la possibilité qu’un agent réalise cette séquence en suivant un cahier des charges d’ingénierie."
+    ]
+  },
+  "tools": {
+    "title": "D’abord, peut-il accéder au laboratoire ?",
+    "paragraphs": [
+      "Codex a coordonné le travail. MATLAB a effectué les calculs et Simulink a fourni une autre implémentation du modèle. Pour passer de l’un à l’autre, l’agent avait besoin d’une connexion fonctionnelle aux logiciels.",
+      "Cette connexion utilisait MCP, pour Model Context Protocol. Imaginez un collègue qui demande à un programme d’effectuer un calcul et en reçoit le résultat. MCP fournit à l’agent et au serveur d’outils une façon commune d’échanger ces demandes et réponses.",
+      "Les contrôles de connexion consignés étaient volontairement simples : additionner deux nombres dans MATLAB, résoudre un problème numérique, puis enregistrer une valeur et la relire. Ces opérations établissaient que l’agent pouvait réellement utiliser l’outil prévu.",
+      "Les termes deviennent alors plus clairs : l’agent coordonne les étapes ; un outil effectue une action disponible, comme exécuter du code MATLAB ; une compétence fournit des instructions réutilisables. Le cahier des charges ajoute les objectifs et les règles propres à l’enquête.",
+      "Attribuer un rôle d’ingénierie à l’agent n’est qu’un point de départ. Le processus doit aussi préciser ce qu’il faut vérifier avant d’accepter un résultat."
+    ]
+  },
+  "model": {
+    "title": "Un petit morceau de voiture",
+    "paragraphs": [
+      "L’agent a construit un modèle de quart de voiture : une partie de la caisse, une roue, un ressort et un amortisseur de suspension, ainsi qu’un pneu représenté par sa rigidité. La route se déplace sous la roue et les équations décrivent la réponse de la roue et de la caisse.",
+      "Cette représentation est volontairement simplifiée. Elle permet d’étudier la question sans reproduire chaque élément du véhicule.",
+      "Les vérifications enregistrées portent sur l’équilibre, le bilan d’énergie et la sensibilité des résultats aux réglages d’intégration numérique. L’agent a aussi comparé MATLAB et Simulink avec les mêmes entrées de route.",
+      "Des erreurs se sont produites : une demande à un outil omettait un argument obligatoire ; une autre utilisait un mauvais nom de paramètre pour configurer un bloc Simulink. Les journaux décrivent la recherche d’informations, la correction et une nouvelle vérification.",
+      "Cela fait partie du travail : une méthode d’ingénierie doit permettre d’examiner un échec et d’en conserver la trace."
+    ]
+  },
+  "search": {
+    "title": "Une route. Puis une autre.",
+    "paragraphs": [
+      "La suspension initiale a été simulée sur trois surfaces : une route presque lisse, un ralentisseur et une route irrégulière. L’expérience a relevé pour chacune l’accélération de la caisse, le débattement de la suspension et la réponse de la roue.",
+      "L’Optimization Toolbox de MATLAB a ensuite cherché des réglages du ressort et de l’amortisseur dans des limites définies. Codex coordonnait le travail ; le solveur MATLAB fmincon, avec son algorithme SQP, effectuait la recherche numérique.",
+      "La recherche a évalué 56 configurations sur un maximum de 60. Elle visait une accélération plus faible en respectant les limites de débattement et de charge minimale sur la roue. Le solveur a signalé un possible minimum local dans cette recherche bornée.",
+      "Après sélection, le réglage a affronté un autre ralentisseur et un autre profil de route irrégulière. La suspension initiale et celle retenue ont subi les mêmes nouvelles entrées."
+    ]
+  },
+  "result": {
+    "title": "Un trajet plus doux. Un rebond plus long.",
+    "before": [
+      "Sur le nouveau ralentisseur, le réglage retenu a réduit l’accélération RMS de la caisse d’environ 45 %. Sur la nouvelle route irrégulière, la réduction était d’environ 28 %. L’accélération RMS résume l’ampleur de l’accélération pendant l’intervalle simulé ; le projet l’utilisait comme indicateur de confort.",
+      "Mais un autre chiffre compte. Après le nouveau ralentisseur, la caisse initiale s’est stabilisée en environ 2,8 secondes. Le réglage retenu a mis environ 4 secondes, selon le critère de stabilisation de l’expérience.",
+      "L’accélération était plus faible. Le mouvement a mis plus longtemps à se stabiliser."
+    ],
+    "plot_alt": "Graphique enregistré du test indépendant sur ralentisseur, comparant les réponses de la suspension initiale et du réglage retenu.",
+    "plot_caption": "Résultat enregistré du test indépendant. Les légendes sont en anglais : bleu continu = réglage initial ; orange pointillé = réglage retenu. Ouvrez l’image pour l’agrandir.",
+    "after": [
+      "Revenons au choix du début. Accepteriez-vous une secousse plus douce si la caisse continuait à bouger plus longtemps ? Cela dépend de l’objectif : le résultat présente un compromis à évaluer.",
+      "Le réglage retenu est resté dans les limites de débattement et de charge minimale imposées lors des deux tests indépendants. Sur la route irrégulière, il a toutefois utilisé davantage de débattement et atteint une charge minimale plus basse que la suspension initiale. Respecter une limite ne signifie pas que toutes les mesures se sont améliorées.",
+      "Ces résultats décrivent une simulation simplifiée. Pour établir le comportement d’un vrai véhicule, il faudrait d’autres modèles et des essais physiques."
+    ]
+  },
+  "review": {
+    "label": "À vous d’examiner",
+    "title": "Accepteriez-vous ce résultat ?",
+    "summary": "Que vérifier avant de choisir le réglage ?",
+    "answer": "Examinez les compromis autant que la baisse d’accélération : entrées de route, hypothèses du modèle, critère de stabilisation, débattement et charge sur la roue. Les conditions de test séparées représentent-elles l’usage prévu ? L’amélioration d’une mesure reste un élément à interpréter."
+  },
+  "work": {
+    "title": "Le savoir-faire consiste à organiser le travail",
+    "paragraphs": [
+      "Pour moi, le plus intéressant est la séquence derrière les chiffres. L’agent a utilisé des logiciels d’ingénierie, vérifié le comportement d’un modèle, coordonné une recherche numérique et rapporté des résultats obtenus dans des conditions séparées.",
+      "Cette séquence couvre la modélisation, l’analyse numérique, les tests et le compte rendu. Un agent peut aider à relier ces tâches lorsqu’il dispose des outils et d’instructions adaptées.",
+      "Imaginez cela au quotidien pour une personne qui maîtrise MATLAB et la simulation : un agent pourrait préparer une comparaison, lancer des scénarios, examiner une erreur et organiser les preuves. L’expertise de l’ingénieur définirait la mission et les conclusions admissibles.",
+      "Concevoir le processus devient donc une compétence à part entière. Que mesurer ? Quelles limites comptent ? Qu’est-ce qui révélerait une erreur ? Quel test réserver hors de la recherche ? Que faut-il enregistrer pour qu’une autre personne puisse suivre ?",
+      "Mieux nous répondons à ces questions, plus le travail confié à un agent peut être utile.",
+      "Nous sommes partis d’un ralentisseur. Pensez maintenant à une tâche que vous répétez : les outils ouverts, les vérifications effectuées et les preuves nécessaires avant une décision. Un agent pourrait peut-être vous aider à mener cette enquête."
+    ]
+  },
+  "ending": {
+    "label": "Une question à emporter",
+    "question": "Que lui demanderiez-vous de faire ?",
+    "follow": "Et comment sauriez-vous que le travail a été bien fait ?",
+    "back": "Revenir au début"
+  },
+  "evidence": {
+    "title": "Explorer l’expérience",
+    "intro": "Les simulations SuspensionLab AI ont été réalisées par l’auteur pour cet article. Les dossiers du projet comprennent les fichiers sources, paramètres, graphiques et journaux de correction. Ils indiquent MATLAB R2024a et MATLAB MCP Server 0.16.1, reliés à Codex par sa connexion MATLAB MCP native. Les chiffres présentés proviennent des dossiers fournis.",
+    "link": "Consulter les données numériques et les paramètres (JSON)",
+    "parameters": "La suspension initiale utilisait une rigidité de ressort de 16 000 N/m et un amortissement de 1 000 N·s/m ; les valeurs retenues étaient 8 000 N/m et environ 594 N·s/m. La rigidité retenue atteint la borne inférieure de la recherche : ce résultat dépend de l’espace choisi et ne démontre pas un optimum universel.",
+    "projects": "Découvrez les projets officiels MathWorks :"
+  }
+}

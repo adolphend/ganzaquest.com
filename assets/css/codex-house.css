@@ -1,0 +1,47 @@
+.codex-house-feature{margin-top:80px;padding-top:60px;border-top:1px solid #c8cfc1}
+.codex-house-story{--paper:#f5f7f1;--ink:#183a40;background:var(--paper)}
+.codex-house-story .story-hero{background:#e8eee7}
+.codex-house-story .story-illustration{transform:none}
+.codex-house-story .story-illustration img{border-radius:20px;box-shadow:none;background:#fff}
+.codex-house-story .story-illustration figcaption,.house-plans figcaption{font:1rem/1.6 Arial,sans-serif;margin-top:12px;color:#415d5a}
+.codex-house-story .decision{background:#e5eee6}
+.codex-house-story .decision details{background:#fff;border-color:#afc6b8}
+.codex-house-story a{text-decoration:underline;text-underline-offset:3px}
+.house-steps,.house-versions{padding-left:1.4em}
+.house-steps li,.house-versions li{padding-left:.35em;margin:1em 0}
+.house-steps li p{margin:.3em 0 0}
+.house-code{padding:20px 24px;background:#173e3f;color:#f9f7e9;border-radius:10px;overflow:auto;font:15px/1.8 Consolas,monospace}
+.house-links{font:15px/1.8 Arial,sans-serif}
+.house-timing{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:28px 0}
+.house-timing div{display:flex;flex-direction:column;gap:8px;padding:22px;background:#e1ece6;border-radius:10px}
+.house-timing strong{font:normal clamp(29px,4vw,38px)/1.1 Georgia,serif}
+.house-timing span,.house-figure-note{font:15px/1.6 Arial,sans-serif}
+.house-plans{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:28px 0 12px}
+.house-plans figure{margin:0;min-width:0}
+.house-plans img{width:100%;height:auto;display:block;background:white;border:1px solid #c5d1ca;border-radius:10px}
+.house-figure-note{color:#4b625c}
+.house-tour-overview,.house-angles figure{margin:0}
+.house-tour-frame{position:relative;line-height:0}
+.house-tour-frame img,.house-angles img{display:block;width:100%;height:auto;background:#fff;border:1px solid #c5d1ca;border-radius:10px}
+.house-tour figcaption{font:15px/1.6 Arial,sans-serif;color:#415d5a;margin-top:10px}
+.house-room-marker,.house-key-number{display:flex;align-items:center;justify-content:center;border-radius:50%;font:700 14px/1 Arial,sans-serif;color:#fff;background:#174c49}
+.house-room-marker{position:absolute;width:clamp(22px,3.2vw,32px);aspect-ratio:1;border:2px solid #fff;box-shadow:0 1px 4px #173a3d80;transform:translate(-50%,-50%)}
+.house-room-marker-1{left:28.5%;top:28.4%}.house-room-marker-2{left:52.7%;top:31.2%}.house-room-marker-3{left:69.1%;top:35.9%}.house-room-marker-4{left:83.8%;top:31.7%}
+.house-room-marker-5{left:25%;top:62.4%}.house-room-marker-6{left:47.5%;top:68.1%}.house-room-marker-7{left:61.3%;top:69.5%}.house-room-marker-8{left:74.7%;top:71%}
+.house-key-title{font:700 16px/1.4 Arial,sans-serif;margin:26px 0 12px}
+.house-room-key{list-style:none;padding:0;margin:0 0 32px;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px 18px}
+.house-room-key li{display:flex;align-items:center;gap:9px;font:14px/1.45 Arial,sans-serif;min-width:0}
+.house-key-number{flex:0 0 26px;height:26px;font-size:12px}
+.house-angles{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:20px 0}
+.house-roadmap-steps{padding-left:1.5em;margin:28px 0 38px}
+.house-roadmap-steps li{padding:10px 0 18px .35em;border-top:1px solid #c5d1ca}
+.house-roadmap-steps li::marker{font-weight:700;color:#27584f}
+.house-roadmap-steps h3{margin:10px 0 12px}
+.house-roadmap-steps p{margin:0 0 12px}
+.house-roadmap-meta{font:15px/1.6 Arial,sans-serif;color:#415d5a}
+.house-roadmap-prompt{margin:22px 0;padding:20px 24px;border-left:4px solid #397967;background:#e5eee6}
+.house-roadmap-prompt p{margin:0}
+.house-notes{border-top:1px solid #c5d1ca;font-size:1rem}
+@media(max-width:560px){.house-timing,.house-plans,.house-angles{grid-template-columns:1fr}.house-room-key{grid-template-columns:1fr 1fr}.house-timing div{padding:18px}.house-code{font-size:13px;padding:16px}.codex-house-feature{margin-top:48px;padding-top:40px}}
+@media(max-width:420px){.codex-house-story .story-hero h1{font-size:clamp(44px,12vw,50px);overflow-wrap:break-word}}
+@media print{.house-code{color:#000;background:#fff;border:1px solid #999}.house-timing div{border:1px solid #999}.house-plans{break-inside:avoid}}

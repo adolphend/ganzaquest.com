@@ -1,0 +1,171 @@
+{
+  "provenance": "Results extracted from supplied SuspensionLab AI experiment manifests. The author states that the simulations were run for this article. The translation work used those records and did not run new simulations. The recorded source commit is not present in the local imported repository history.",
+  "optimizationId": "20261121T131742056-optimization-b2194cbb-24c1-4418-8213-4563c4884923",
+  "matlabVersion": "24.1.0.2537033 (R2024a)",
+  "mcpServerVersion": "0.16.1",
+  "executionMethodReported": "Codex native MATLAB MCP",
+  "solver": "fmincon sqp",
+  "evaluations": 56,
+  "baseline": {
+    "ms": 300,
+    "mu": 60,
+    "ks": 16000,
+    "cs": 1000,
+    "kt": 190000,
+    "g": 9.80665
+  },
+  "selected": {
+    "ms": 300,
+    "mu": 60,
+    "ks": 8000,
+    "cs": 593.9318122416682,
+    "kt": 190000,
+    "g": 9.80665
+  },
+  "validation": [
+    {
+      "id": "20261121T131911188-holdoutBump-5e5aa5d9-9b3e-4cd3-b4f1-84a27f069195",
+      "configuration": {
+        "road": "holdoutBump",
+        "dt": 0.001,
+        "start": 0,
+        "stop": 10,
+        "initialState": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "solver": "ode45",
+        "refinement": 4
+      },
+      "parameters": {
+        "ms": 300,
+        "mu": 60,
+        "ks": 16000,
+        "cs": 1000,
+        "kt": 190000,
+        "g": 9.80665
+      },
+      "metrics": {
+        "accelerationRMS": 0.6163644141903516,
+        "peakTravel": 0.05852470285251765,
+        "peakTireDeflection": 0.005752074738583489,
+        "dynamicLoadRMS": 184.848992567815,
+        "peakDynamicLoad": 1092.894200330863,
+        "minNormalLoad": 2437.499799669137,
+        "settlingTime": 2.7619999999999996,
+        "settlingStatus": "settled"
+      },
+      "status": "PASSED"
+    },
+    {
+      "id": "20261121T131913719-holdoutBump-86f3d36e-3ada-4432-89df-3ea2c3a614a7",
+      "configuration": {
+        "road": "holdoutBump",
+        "dt": 0.001,
+        "start": 0,
+        "stop": 10,
+        "initialState": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "solver": "ode45",
+        "refinement": 4
+      },
+      "parameters": {
+        "ms": 300,
+        "mu": 60,
+        "ks": 8000,
+        "cs": 593.9318122416682,
+        "kt": 190000,
+        "g": 9.80665
+      },
+      "metrics": {
+        "accelerationRMS": 0.3395975665367999,
+        "peakTravel": 0.05215498211592907,
+        "peakTireDeflection": 0.003909909508937796,
+        "dynamicLoadRMS": 105.43417294736284,
+        "peakDynamicLoad": 742.8828066981813,
+        "minNormalLoad": 2961.709990740715,
+        "settlingTime": 3.9589999999999996,
+        "settlingStatus": "settled"
+      },
+      "status": "PASSED"
+    },
+    {
+      "id": "20261121T131920070-holdoutRough-bd3218d9-1008-4bf1-aa9f-3694346dbdcc",
+      "configuration": {
+        "road": "holdoutRough",
+        "dt": 0.001,
+        "start": 0,
+        "stop": 10,
+        "initialState": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "solver": "ode45",
+        "refinement": 4
+      },
+      "parameters": {
+        "ms": 300,
+        "mu": 60,
+        "ks": 16000,
+        "cs": 1000,
+        "kt": 190000,
+        "g": 9.80665
+      },
+      "metrics": {
+        "accelerationRMS": 0.7811390348806312,
+        "peakTravel": 0.021324612719519073,
+        "peakTireDeflection": 0.008951702703537397,
+        "dynamicLoadRMS": 605.7093650632199,
+        "peakDynamicLoad": 1700.8235136721055,
+        "minNormalLoad": 1906.5574881696757,
+        "settlingTime": null,
+        "settlingStatus": "not_applicable"
+      },
+      "status": "PASSED"
+    },
+    {
+      "id": "20261121T131924609-holdoutRough-f3629559-664a-4fb1-997a-393889df8f53",
+      "configuration": {
+        "road": "holdoutRough",
+        "dt": 0.001,
+        "start": 0,
+        "stop": 10,
+        "initialState": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "solver": "ode45",
+        "refinement": 4
+      },
+      "parameters": {
+        "ms": 300,
+        "mu": 60,
+        "ks": 8000,
+        "cs": 593.9318122416682,
+        "kt": 190000,
+        "g": 9.80665
+      },
+      "metrics": {
+        "accelerationRMS": 0.5621420457915609,
+        "peakTravel": 0.02832390251403129,
+        "peakTireDeflection": 0.011143752940717143,
+        "dynamicLoadRMS": 802.8460036903173,
+        "peakDynamicLoad": 2117.313058736257,
+        "minNormalLoad": 1413.0809412637427,
+        "settlingTime": null,
+        "settlingStatus": "not_applicable"
+      },
+      "status": "PASSED"
+    }
+  ]
+}
